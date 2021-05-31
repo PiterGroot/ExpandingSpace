@@ -10,11 +10,11 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     public int speed;
     [SerializeField] private float Playewidth;
-    private FlipSpriteScale flip;
+ 
 
     private void Start()
     {
-        flip = gameObject.GetComponent<FlipSpriteScale>();
+        
     }
     void Update()
     {
@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour
             //rechts
             if (Input.GetKey("a"))
             {
-                flip.FlipRight();
+               
                 rb.velocity = new Vector3(-speed, 0, 0);
             }
             //achter
@@ -39,7 +39,7 @@ public class Movement : MonoBehaviour
             //links
             if (Input.GetKey("d"))
             {
-                flip.FlipLeft();
+               
                 rb.velocity = new Vector3(speed, 0, 0);
             }
 

@@ -13,6 +13,14 @@ public class LVL2MovementScript : MonoBehaviour
     public GameObject SlowIcon;
     public float timer = 0;
     public float GameTimer = 20;
+
+    //art
+    public SpriteRenderer spriteRenderer;
+    public Sprite LSprite;
+    public Sprite RSprite;
+    public Sprite UpSprite;
+    public Sprite DownSprite;
+
     private void Awake()
     {
         StartCoroutine(Timer(20));
@@ -28,6 +36,10 @@ public class LVL2MovementScript : MonoBehaviour
             print($"nog: {timeInSeconds} seconden");
         }
         SceneManager.LoadScene("Hub");
+    }
+    private void Start()
+    {
+        spriteRenderer.sprite = UpSprite;
     }
     void Update()
     {
@@ -47,24 +59,25 @@ public class LVL2MovementScript : MonoBehaviour
         {
 
             rb.velocity = new Vector3(0, speed, 0);
+            spriteRenderer.sprite = UpSprite;
         }
         //rechts
         if (Input.GetKey("a"))
         {
-
             rb.velocity = new Vector3(-speed, 0, 0);
+            spriteRenderer.sprite = LSprite;
         }
         //achter
         if (Input.GetKey("s"))
         {
-
             rb.velocity = new Vector3(0, -speed, 0);
+            spriteRenderer.sprite = DownSprite;
         }
         //links
         if (Input.GetKey("d"))
         {
-
             rb.velocity = new Vector3(speed, 0, 0);
+            spriteRenderer.sprite = RSprite;
         }
 
 
