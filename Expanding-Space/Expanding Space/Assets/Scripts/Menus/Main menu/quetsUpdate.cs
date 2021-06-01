@@ -14,7 +14,7 @@ public class quetsUpdate : MonoBehaviour
         if (collisionInfo.collider.tag == "Player" && PlayerPrefs.GetInt("lvl1Done")== 0)
         {
             PlayerPrefs.SetInt("lvl1Done", 1);
-            PlayerPrefs.SetInt("punten",PlayerPrefs.GetInt("punten")+1);
+            PlayerPrefs.SetInt("quest1",PlayerPrefs.GetInt("quest1")+1);
             SceneManager.LoadScene("Hub");
 
         }
