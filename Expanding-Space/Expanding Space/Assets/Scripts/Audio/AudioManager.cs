@@ -32,10 +32,6 @@ public class AudioManager : MonoBehaviour
             s.source.outputAudioMixerGroup = s.mixer;
         }      
     }
-    private void OnApplicationQuit()
-    {
-        PlayerPrefs.SetInt("Entrance", 0);
-    }
 
     // Update is called once per frame
     public void Play(string name)

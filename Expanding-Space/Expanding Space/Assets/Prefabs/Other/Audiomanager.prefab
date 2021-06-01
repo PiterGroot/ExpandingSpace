@@ -45,6 +45,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: BackgroundMusic
+    clip: {fileID: 8300000, guid: bf73021638b9c5745a9ae43d2baf1431, type: 3}
+    volume: 0.411
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
     name: Test
     clip: {fileID: 8300000, guid: a39f14171bcd99946a5b11c7ad656af4, type: 3}
     volume: 0.079
