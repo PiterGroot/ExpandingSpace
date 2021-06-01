@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9143986177725444091}
   - component: {fileID: 5290388080328451927}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5763337341405489632}
   - component: {fileID: 5763337341405489638}
   - component: {fileID: 3571939455615933677}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Meteor2 (programmer art) 1
   m_TagString: Meteor
   m_Icon: {fileID: 0}
@@ -155,6 +155,7 @@ MonoBehaviour:
   RotSpeed: 0.25
   MoveSpeed: 0
   MinMaxMoveSpeed: {x: 1, y: 3.5}
+  MinMaxSize: {x: 0.8, y: 1.2}
 --- !u!60 &3571939455615933677
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -205,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5438536139213570508}
   - component: {fileID: 6859617822113437925}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5580477694827849912}
   - component: {fileID: 1423609165017395212}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}

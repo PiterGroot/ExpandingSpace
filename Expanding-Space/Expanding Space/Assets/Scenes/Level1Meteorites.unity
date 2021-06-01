@@ -645,6 +645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trail
       objectReference: {fileID: 0}
+    - target: {fileID: 4154167984405087178, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4154167984405087179, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1283,6 +1287,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 318964864}
+    - target: {fileID: 6008894318598739510, guid: 4b09915b112e8d44886a839eb37f8996, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082107481096697566, guid: 4b09915b112e8d44886a839eb37f8996, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b09915b112e8d44886a839eb37f8996, type: 3}
 --- !u!1 &1554694131 stripped
