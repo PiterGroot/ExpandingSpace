@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 2410021257204633988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.03, y: 1.36, z: 980.52}
-  m_LocalScale: {x: 1.6210103, y: 1.4601246, z: 1}
+  m_LocalScale: {x: 0.60701793, y: 0.54677135, z: 0.37446892}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 955164f6a59f8a14383b918bbceb7bfe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55f2bd781e9934e45b586a8ac71ba89f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,9 +101,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50a56c19c2403f4fb5019ea16112540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introTrigger: {fileID: 0}
+  canMove: 1
   rb: {fileID: 2410021257204633989}
   speed: 4
   Playewidth: 0
+  spriteRenderer: {fileID: 0}
+  LSprite: {fileID: 21300000, guid: 91ca115c8c14dfd46b8a2102de176012, type: 3}
+  RSprite: {fileID: 21300000, guid: 835f8651daae6c0438b002ed748ab75e, type: 3}
+  UpSprite: {fileID: 21300000, guid: 8faa674e1fa2fce4c999c7cb5a6359ec, type: 3}
+  DownSprite: {fileID: 21300000, guid: 55f2bd781e9934e45b586a8ac71ba89f, type: 3}
 --- !u!114 &6419514770341995927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,8 +136,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.23152885}
-  m_Size: {x: 0.8, y: 0.888149}
+  m_Offset: {x: -0.00000004909628, y: -0.00939967}
+  m_Size: {x: 1.5336343, y: 3.4056067}
   m_Direction: 0
 --- !u!50 &2410021257204633989
 Rigidbody2D:
@@ -196,5 +203,7 @@ MonoBehaviour:
   Bosjesdialogue: {fileID: 0}
   Randomdialogue: {fileID: 0}
   KindergardenDialogue: {fileID: 0}
+  Snail1Random: {fileID: 0}
+  Snail2Random: {fileID: 0}
   quest: {fileID: 0}
   canTalk: 0

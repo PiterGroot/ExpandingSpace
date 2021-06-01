@@ -2158,6 +2158,10 @@ PrefabInstance:
       propertyPath: intro1Trigger
       value: 
       objectReference: {fileID: 896857059}
+    - target: {fileID: 2410021257204633991, guid: 216918bf98ffc3e4b80b2856dfb4761c, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1004349535}
     - target: {fileID: 2410021257204634009, guid: 216918bf98ffc3e4b80b2856dfb4761c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2204,6 +2208,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 216918bf98ffc3e4b80b2856dfb4761c, type: 3}
+--- !u!212 &1004349535 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2410021257204634008, guid: 216918bf98ffc3e4b80b2856dfb4761c, type: 3}
+  m_PrefabInstance: {fileID: 1004349534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1141073509
 GameObject:
   m_ObjectHideFlags: 0

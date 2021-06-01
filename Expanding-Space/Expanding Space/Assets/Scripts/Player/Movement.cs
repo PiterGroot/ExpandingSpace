@@ -12,6 +12,13 @@ public class Movement : MonoBehaviour
     [SerializeField] private float Playewidth;
     private FlipSpriteScale flip;
 
+    //art
+    public SpriteRenderer spriteRenderer;
+    public Sprite LSprite;
+    public Sprite RSprite;
+    public Sprite UpSprite;
+    public Sprite DownSprite;
+
     private void Start()
     {
         flip = gameObject.GetComponent<FlipSpriteScale>();
@@ -23,24 +30,27 @@ public class Movement : MonoBehaviour
             //voor
             if (Input.GetKey("w"))
             {
+
                 rb.velocity = new Vector3(0, speed, 0);
+                spriteRenderer.sprite = UpSprite;
             }
             //rechts
             if (Input.GetKey("a"))
             {
-                flip.FlipRight();
                 rb.velocity = new Vector3(-speed, 0, 0);
+                spriteRenderer.sprite = LSprite;
             }
             //achter
             if (Input.GetKey("s"))
             {
                 rb.velocity = new Vector3(0, -speed, 0);
+                spriteRenderer.sprite = DownSprite;
             }
             //links
             if (Input.GetKey("d"))
             {
-                flip.FlipLeft();
                 rb.velocity = new Vector3(speed, 0, 0);
+                spriteRenderer.sprite = RSprite;
             }
 
 
