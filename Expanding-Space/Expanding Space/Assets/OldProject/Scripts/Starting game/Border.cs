@@ -20,7 +20,6 @@ public class Border : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "UpWall")
         {
-            Debug.Log("L");
             rb.velocity = new Vector3(0, 0, 0);
         }
     }
