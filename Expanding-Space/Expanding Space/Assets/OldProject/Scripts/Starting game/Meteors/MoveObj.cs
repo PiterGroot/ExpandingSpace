@@ -6,6 +6,7 @@ public class MoveObj : MonoBehaviour
 {
     private bool _Magnitude;
     private Rigidbody2D rb2d;
+    [SerializeField]private WaveSpawner spawner;
     [SerializeField]private bool canMove = true;
     [SerializeField]private float RotSpeed = 10;
     [SerializeField] private float MoveSpeed;
@@ -13,6 +14,8 @@ public class MoveObj : MonoBehaviour
     public Vector2 MinMaxSize = new Vector2(.8f, 1.2f);
     private void Start()
     {
+        spawner = FindObjectOfType<WaveSpawner>();
+
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         MoveSpeed = Random.Range(MinMaxMoveSpeed.x, MinMaxMoveSpeed.y);
         
@@ -40,6 +43,7 @@ public class MoveObj : MonoBehaviour
     {
         if (collision.collider.CompareTag("Despawn"))
         {
+            spawner.EnemyKilled();
             Destroy(gameObject);
         }
         if (collision.collider.CompareTag("Player"))
