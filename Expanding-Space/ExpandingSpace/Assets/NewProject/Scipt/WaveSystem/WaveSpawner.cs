@@ -30,6 +30,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField]private TextMeshProUGUI EnemiesLeft;
     
     private void Awake() {
+        SpawnRate += .05f;
         StartEnemyCount--;
         foreach (GameObject spawnpoint in GameObject.FindGameObjectsWithTag("SpawnPoint")){
             SpawnPositions.Add(spawnpoint.GetComponent<Transform>().position);

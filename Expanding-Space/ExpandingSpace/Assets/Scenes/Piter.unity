@@ -562,7 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CountingDown: 0
   SpawnedAllEnemies: 0
-  StartDelay: 10
+  StartDelay: 15
   TimeBetweenWaves: 15
   StartEnemyCount: 10
   CurrentWave: 0
@@ -788,8 +788,52 @@ PrefabInstance:
       value: Trail
       objectReference: {fileID: 0}
     - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.collisionMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.m_Dampen.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 6205366036995699202, guid: 3d15b9f601a8d5241aa31b1d71b5d8dc, type: 3}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[1]
+      value: 
+      objectReference: {fileID: 1866354254362526983, guid: 2f41f80c3e574bd4085c24d57c5b32b9, type: 3}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1866354254362526983, guid: 23f89a2e4c2cbd848960acd60f0e89cf, type: 3}
+    - target: {fileID: 4154167984405087177, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4154167984405087178, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
       propertyPath: m_SortingOrder
@@ -1123,7 +1167,7 @@ Transform:
   m_Children:
   - {fileID: 467517335}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1177505986
 PolygonCollider2D:
@@ -1482,7 +1526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780154, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780154, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: m_LocalPosition.x
