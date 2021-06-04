@@ -46,7 +46,7 @@ public class CollisionManager : MonoBehaviour
         {
             print("DEAD");
             Destroy(gameObject);
-            SceneManager.LoadScene("Hub");
+            SceneManager.LoadScene("Level1Meteorites");
         }
     }
 }
