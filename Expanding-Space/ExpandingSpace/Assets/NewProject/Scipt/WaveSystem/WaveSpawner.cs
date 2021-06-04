@@ -31,8 +31,7 @@ public class WaveSpawner : MonoBehaviour
     
     private void Awake() {
         StartEnemyCount--;
-        foreach (GameObject spawnpoint in GameObject.FindGameObjectsWithTag("SpawnPoint"))
-        {
+        foreach (GameObject spawnpoint in GameObject.FindGameObjectsWithTag("SpawnPoint")){
             SpawnPositions.Add(spawnpoint.GetComponent<Transform>().position);
         }
     }
@@ -63,6 +62,7 @@ public class WaveSpawner : MonoBehaviour
     void FillWaveSpawner(){
         CanSpawn = true;
         StartEnemyCount++;
+        SpawnRate -= .05f;
         for (int i = 0; i < StartEnemyCount; i++){
             if(CurrentWave <= 5){
                 CurrentEnemies.Add(EasyEnemies[RandInt(0, EasyEnemies.Count)]);
