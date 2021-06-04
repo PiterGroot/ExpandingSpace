@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class MeteorManager : MonoBehaviour
 {
+
+    private List<Vector2> SpawnPositions = new List<Vector2>();
+    private float TimeBetweenWaves = 15f;
+    private bool canSpawn = false;
+    [SerializeField] private int CurrentWave;
     [SerializeField]private float ActivateTimer = 11f;
     [Range(.3f, .8f), SerializeField]private float SpawnRate = .45f;
     [SerializeField] private bool Activate = false; 
     // Start is called before the first frame update
     [SerializeField]private List<GameObject> Meteors = new List<GameObject>();
-    [SerializeField] private List<Vector2> SpawnPositions = new List<Vector2>();
 
 
     private void Awake()
@@ -19,11 +23,31 @@ public class MeteorManager : MonoBehaviour
             SpawnPositions.Add(spawnpoint.GetComponent<Transform>().position);
         }
         Invoke("ActivateSpawner", ActivateTimer);
-        InvokeRepeating("IncreaseDifficulty", ActivateTimer, 15f);
+        StartCoroutine(DisableTimer(15f));
+        CurrentWave++;
+    }
+    private IEnumerator DisableTimer(float timeInSeconds){
+        while (timeInSeconds != 0){
+            yield return new WaitForSeconds(1f);
+            timeInSeconds--;
+        }
+        canSpawn = false;
+    }
+    private IEnumerator NextWaveTimer(float timeInSeconds)
+    {
+        while (timeInSeconds != 0)
+        {
+            yield return new WaitForSeconds(1f);
+            timeInSeconds--;
+        }
+        CurrentWave++;
     }
     public void ActivateSpawner()
     {
-        StartCoroutine(SpawnMeteor());
+        if (canSpawn)
+        {
+            StartCoroutine(SpawnMeteor());
+        } 
     }
     public void IncreaseDifficulty()
     {
