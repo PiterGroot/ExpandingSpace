@@ -10,13 +10,11 @@ TagManager:
   - NameTag
   - SpawnPoint
   - Despawn
-  - Npc
   - DialoguePicture
-  - Bush
-  - Wall
   - Snail
   - IntroTrigger
   - UpWall
+  - Npc
   layers:
   - Default
   - TransparentFX

@@ -17,7 +17,7 @@ public class InteractWitNPC : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       if(collision.gameObject.tag == "NPC")
+       if(collision.gameObject.tag == "Npc")
         {
             if (Input.GetKey("f"))
             {
