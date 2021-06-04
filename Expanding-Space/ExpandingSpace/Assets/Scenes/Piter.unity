@@ -560,8 +560,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797f1d7d1d503874082e4a240daceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanSpawn: 1
   CountingDown: 0
   SpawnedAllEnemies: 0
+  waitForPlayerChoice: 1
   StartDelay: 15
   TimeBetweenWaves: 15
   StartEnemyCount: 10

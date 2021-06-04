@@ -5,9 +5,10 @@ using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {   
-    private bool CanSpawn = true;
+    [HideInInspector]public bool CanSpawn = true;
     [HideInInspector]public bool CountingDown = false;
     [HideInInspector]public bool SpawnedAllEnemies = false;
+    public bool waitForPlayerChoice = false;
     List<Vector2> SpawnPositions = new List<Vector2>();
     [Tooltip("De tijd in seconden voordat de spawner begint als de game start")]
     [SerializeField] private float StartDelay;
@@ -46,7 +47,7 @@ public class WaveSpawner : MonoBehaviour
     }
     private IEnumerator CountDownDisplay(float timeInSeconds)
     {
-        yield return new WaitUntil(() => CanSpawn == true);
+        yield return new WaitUntil(() => waitForPlayerChoice == true);
         SpawnedAllEnemies = false;
         print($"Timer for: {timeInSeconds} seconds");
         while(timeInSeconds != 0){
@@ -87,6 +88,7 @@ public class WaveSpawner : MonoBehaviour
         CurrentWave++;
         SpawnedAllEnemies = true;
         CanSpawn = false;
+        waitForPlayerChoice = false;
         InvokeRepeating("GetAllEnemies", 0f, 1f);
         StartCoroutine(CountDownDisplay(TimeBetweenWaves));
     }
