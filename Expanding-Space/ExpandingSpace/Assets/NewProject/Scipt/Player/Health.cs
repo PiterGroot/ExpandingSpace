@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public Slider slider;
     public Gradient colors;
     public Image fill;
-   
+    public int Hp;
 
     public void SetMaxHp(int Health)
     {
