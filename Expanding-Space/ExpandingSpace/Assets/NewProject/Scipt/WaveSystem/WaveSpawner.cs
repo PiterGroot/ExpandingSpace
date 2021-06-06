@@ -29,7 +29,6 @@ public class WaveSpawner : MonoBehaviour
     [Space, SerializeField]List<GameObject> CurrentEnemies = new List<GameObject>();
     [SerializeField]private TextMeshProUGUI WaveDisplay;
     [SerializeField]private TextMeshProUGUI EnemiesLeft;
-    [SerializeField]private TriggerDialogue PlayerChoice;
     
     private void Awake() {
         SpawnRate += .05f;
@@ -49,7 +48,6 @@ public class WaveSpawner : MonoBehaviour
     private IEnumerator CountDownDisplay(float timeInSeconds)
     {
         yield return new WaitUntil(() => waitForPlayerChoice == true);
-        EnemiesLeft.enabled = false;
         SpawnedAllEnemies = false;
         print($"Timer for: {timeInSeconds} seconds");
         while(timeInSeconds != 0){
@@ -81,7 +79,6 @@ public class WaveSpawner : MonoBehaviour
        StartCoroutine(SpawnCurrentWave());
     }
     IEnumerator SpawnCurrentWave(){
-        EnemiesLeft.enabled = true;
         for (int i = 0; i < CurrentEnemies.Count; i++){
             yield return new WaitForSeconds(SpawnRate);
             GameObject Enemy;
@@ -93,7 +90,6 @@ public class WaveSpawner : MonoBehaviour
         CanSpawn = false;
         waitForPlayerChoice = false;
         InvokeRepeating("GetAllEnemies", 0f, 1f);
-        InvokeRepeating("PlayerChoiceDialogue", 0f, 1f);
         StartCoroutine(CountDownDisplay(TimeBetweenWaves));
     }
     int RandInt(int min, int max){
@@ -110,14 +106,14 @@ public class WaveSpawner : MonoBehaviour
             CanSpawn = true;
         }
     }
-    private void PlayerChoiceDialogue(){
-        if(CanSpawn){
-            CancelInvoke("PlayerChoiceDialogue");
-            StartCoroutine(PlayerChoice.ActivateDialogue());
-        }
-    }
     private void FixedUpdate() {
         PlayerPrefs.SetInt("Wave", CurrentWave);
         EnemiesLeft.text = $"ENEMIES LEFT:{CurrentEnemies.Count.ToString()}";
+        if(SpawnedAllEnemies){
+            EnemiesLeft.enabled = true;
+        }
+        else{
+            EnemiesLeft.enabled = false;
+        }
     }
 }

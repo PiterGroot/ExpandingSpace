@@ -49,7 +49,6 @@ public class MoveObj : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             collision.collider.GetComponent<CollisionManager>().Health--;
-            spawner.EnemyKilled();
             Destroy(gameObject);
         }
     }
