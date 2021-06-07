@@ -8,7 +8,6 @@ public class Shooting : MonoBehaviour
     public GameObject Bullet;
     public int ShootTimer;
     [HideInInspector]public int shootTimerMax;
-    public Vector2 Spawnpoint;
     private void Awake(){
         shootTimerMax = ShootTimer;
     }
@@ -18,28 +17,25 @@ public class Shooting : MonoBehaviour
     {
         if (!godMode)
         {
-            Spawnpoint = this.gameObject.transform.position;
             ShootTimer -= 1;
 
             if (ShootTimer <= 0 && Input.GetKey("space"))
             {
                 ShootTimer = shootTimerMax;
                 FindObjectOfType<AudioManager>().Play("Laser");
-                Instantiate(Bullet, Spawnpoint, Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(1.2f, -.2f), Quaternion.identity);
             }
         }
         else
-        {
-            Spawnpoint = this.gameObject.transform.position;
+        { 
             ShootTimer -= 1;
-
             if (ShootTimer <= 0 && Input.GetKey("space"))
             {
                 ShootTimer = 0;
                 FindObjectOfType<AudioManager>().Play("Laser");
-                Instantiate(Bullet, Spawnpoint + new Vector2(0, 1f), Quaternion.identity);
-                Instantiate(Bullet, Spawnpoint + new Vector2(0, -1f), Quaternion.identity);
-                Instantiate(Bullet, Spawnpoint, Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(1.2f, -.7f), Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(1.2f, .7f), Quaternion.identity);
+                Instantiate(Bullet, transform.position, Quaternion.identity);
             }
         }
     }
