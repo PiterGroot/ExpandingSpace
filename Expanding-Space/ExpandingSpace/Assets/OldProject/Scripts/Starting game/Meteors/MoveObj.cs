@@ -39,6 +39,11 @@ public class MoveObj : MonoBehaviour
             rb2d.velocity = new Vector2(-MoveSpeed, 0f);
         }
     }
+    public void KillSelf()
+    {
+        spawner.EnemyKilled();
+        Destroy(gameObject);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Despawn"))
