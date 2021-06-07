@@ -4,78 +4,50 @@ using UnityEngine;
 
 public class Randomizer : MonoBehaviour
 {
-    int randomNumberItem1;
-    int randomNumberItem2;
-    int randomNumberItem3;
+    public static int randomNumberItem;
+    public GameObject Speed;
+    public GameObject Health;
+    public GameObject Shield;
+    public GameObject Firerange;
+    public GameObject Shotgun;
+    private void Awake()
+    {
+        randomNumberItem = Random.Range(1, 6);
+    }
     // Start is called before the first frame update
     void Start()
     {
-        randomNumberItem1 = RandomNum();
-        randomNumberItem2 = RandomNum();
-        randomNumberItem3 = RandomNum();
+        Speed.SetActive(false);
+        Health.SetActive(false);
+        Shield.SetActive(false);
+        Firerange.SetActive(false);
+        Shotgun.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (randomNumberItem1)
+        switch (randomNumberItem)
         {
             case 1:
-                
-                return;
+                Speed.SetActive(true);
+                break;
             case 2:
-              
-                return;
+                Health.SetActive(true);
+                break;
             case 3:
-                
-                return;
+                Shield.SetActive(true);
+                break;
             case 4:
-                
-                return;
+                Firerange.SetActive(true);
+                break;
             case 5:
-                return;
+                Shotgun.SetActive(true);
+                break;
         }
-        switch (randomNumberItem2)
-        {
-            case 1:
-
-                return;
-            case 2:
-
-                return;
-            case 3:
-
-                return;
-            case 4:
-
-                return;
-            case 5:
-                return;
-        }
-        switch (randomNumberItem3)
-        {
-            case 1:
-
-                return;
-            case 2:
-
-                return;
-            case 3:
-
-                return;
-            case 4:
-
-                return;
-            case 5:
-                return;
-        }
-
 
     }
 
-    int RandomNum()
-    {
-        int Number = Random.Range(1, 6);
-        return Number;
-    }
+   
 }
