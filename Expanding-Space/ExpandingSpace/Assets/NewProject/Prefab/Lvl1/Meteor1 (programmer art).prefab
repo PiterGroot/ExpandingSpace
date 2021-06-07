@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9143986177725444091}
   - component: {fileID: 5290388080328451927}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5763337341405489632}
   - component: {fileID: 5763337341405489638}
   - component: {fileID: 3571939455615933677}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: Meteor1 (programmer art)
   m_TagString: Meteor
   m_Icon: {fileID: 0}
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5e74c89fb656946a77c405cf1409df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
   canMove: 1
   RotSpeed: 0.25
   MoveSpeed: 0
@@ -206,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5438536139213570508}
   - component: {fileID: 6859617822113437925}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5580477694827849912}
   - component: {fileID: 1423609165017395212}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
