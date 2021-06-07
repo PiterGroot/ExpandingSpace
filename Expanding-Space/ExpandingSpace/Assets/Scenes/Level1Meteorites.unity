@@ -1783,7 +1783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[1]
-      value: '*ALERT ALERT* We hebben een meteoriet regen gedecteerd!'
+      value: '*ALERT ALERT* We hebben een meteorietregen gedecteerd!'
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[2]
