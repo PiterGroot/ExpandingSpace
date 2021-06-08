@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
             HubFoundation.SetActive(false);
             spawner.waitForPlayerChoice = true;
             SpaceShip.SetActive(true);
+            FindObjectOfType<AudioManager>().Stop("OST");
         }
     }
 }
