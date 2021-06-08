@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Randomizer : MonoBehaviour
 {
-    public static int randomNumberItem;
+    [SerializeField] RandomText CallFunction;
+    int randomNumberItem;
     public GameObject Speed;
     public GameObject Health;
     public GameObject Shield;
@@ -17,6 +18,7 @@ public class Randomizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Speed.SetActive(false);
         Health.SetActive(false);
         Shield.SetActive(false);
@@ -32,18 +34,23 @@ public class Randomizer : MonoBehaviour
         {
             case 1:
                 Speed.SetActive(true);
+                CallFunction.ActivedSpeed();
                 break;
             case 2:
                 Health.SetActive(true);
+                CallFunction.ActivedHealth();
                 break;
             case 3:
                 Shield.SetActive(true);
+                CallFunction.ActivedShield();
                 break;
             case 4:
                 Firerange.SetActive(true);
+                CallFunction.ActivedFireRate();
                 break;
             case 5:
                 Shotgun.SetActive(true);
+                CallFunction.ActivedShotgun();
                 break;
         }
 
