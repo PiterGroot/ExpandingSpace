@@ -7,9 +7,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject SpaceShip;
     [SerializeField] private WaveSpawner spawner;
     [SerializeField]private GameObject HubFoundation;
+    [SerializeField] private GameObject Shop;
     public bool canMove;
     [SerializeField] private Rigidbody2D rb;
-    public float speed = 10;
+    public float speed = 4;
     void Update()
     {
         if (canMove)
@@ -53,6 +54,13 @@ public class PlayerMovement : MonoBehaviour
             spawner.waitForPlayerChoice = true;
             SpaceShip.SetActive(true);
             FindObjectOfType<AudioManager>().Stop("OST");
+        }
+        if (collision.gameObject.tag == "Shop" && Input.GetKey(KeyCode.F))
+        {
+            HubFoundation.SetActive(false);
+            Shop.SetActive(true);
+
+
         }
     }
 }
