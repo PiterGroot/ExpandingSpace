@@ -7,6 +7,7 @@ public class RandomText : MonoBehaviour
 {
     int NumberOftext;
     public Text TextChanger;
+    public Button Button; 
 
     // Start is called before the first frame update
     void Start()
@@ -21,22 +22,28 @@ public class RandomText : MonoBehaviour
         {
             case 1:
                 TextChanger.text = "Snelheid";
+                Button.onClick.AddListener(ButtonSpeed);
                 break;
             case 2:
                 TextChanger.text = "Repareren";
+                Button.onClick.AddListener(ButtonHealth);
                 break;
             case 3:
                 TextChanger.text = "Schild";
+                Button.onClick.AddListener(ButtonShield);
                 break;
             case 4:
                 TextChanger.text = "Vuur Snelheid";
+                Button.onClick.AddListener(ButtonFirerate);
                 break;
             case 5:
                 TextChanger.text = "Meer Pew Pew";
+                Button.onClick.AddListener(ButtonShotgun);
                 break;
         }
     }
 
+    //Change text
     public int ActivedSpeed()
     {
         NumberOftext = 1;
@@ -62,4 +69,33 @@ public class RandomText : MonoBehaviour
         NumberOftext = 5;
         return NumberOftext;
     }
+
+    //Button action
+
+    void ButtonSpeed()
+    {
+        Debug.Log("Test Speed");
+    }
+
+    void ButtonHealth()
+    {
+        Debug.Log("Test Health");
+    }
+
+    void ButtonShield()
+    {
+        Debug.Log("Test Shield");
+    }
+
+    void ButtonFirerate()
+    {
+        Debug.Log("Test Firerate");
+    }
+
+    void ButtonShotgun()
+    {
+        Debug.Log("Test Shotgun");
+    }
+
+
 }

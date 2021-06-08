@@ -713,6 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextChanger: {fileID: 739316456}
+  Button: {fileID: 266285253}
 --- !u!1 &273770144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextChanger: {fileID: 1688912976}
+  Button: {fileID: 543164941}
 --- !u!1 &681508623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,6 +2053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextChanger: {fileID: 1746383237}
+  Button: {fileID: 1341480149}
 --- !u!1001 &1368807643
 PrefabInstance:
   m_ObjectHideFlags: 0
