@@ -5,6 +5,7 @@ using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {   
+    [SerializeField]private int currentEnemyCount;
     [HideInInspector]public bool CanSpawn = true;
     [HideInInspector]public bool CountingDown = false;
     [HideInInspector]public bool SpawnedAllEnemies = false;
@@ -64,6 +65,7 @@ public class WaveSpawner : MonoBehaviour
     }
 
     void FillWaveSpawner(){
+        currentEnemyCount = 0;
         CanSpawn = true;
         StartEnemyCount++;
         SpawnRate -= .05f;
@@ -82,6 +84,7 @@ public class WaveSpawner : MonoBehaviour
     }
     IEnumerator SpawnCurrentWave(){
         EnemiesLeft.enabled = true;
+        currentEnemyCount = CurrentEnemies.Count;
         for (int i = 0; i < CurrentEnemies.Count; i++){
             yield return new WaitForSeconds(SpawnRate);
             GameObject Enemy;
@@ -96,16 +99,18 @@ public class WaveSpawner : MonoBehaviour
         InvokeRepeating("PlayerChoiceDialogue", 0f, 1f);
         StartCoroutine(CountDownDisplay(TimeBetweenWaves));
     }
+
+
     int RandInt(int min, int max){
         return Random.Range(min, max);
     }
     
     public void EnemyKilled(){
-        CurrentEnemies.Remove(CurrentEnemies[0]);
+        currentEnemyCount--;
     }
 
     public void GetAllEnemies(){
-        if(CurrentEnemies.Count <= 0){
+        if(currentEnemyCount <= 0){
             CancelInvoke("GetAllEnemies");
             CanSpawn = true;
         }
@@ -118,6 +123,6 @@ public class WaveSpawner : MonoBehaviour
     }
     private void FixedUpdate() {
         PlayerPrefs.SetInt("Wave", CurrentWave);
-        EnemiesLeft.text = $"ENEMIES LEFT:{CurrentEnemies.Count.ToString()}";
+        EnemiesLeft.text = $"ENEMIES LEFT:{currentEnemyCount.ToString()}";
     }
 }
