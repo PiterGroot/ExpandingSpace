@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5e74c89fb656946a77c405cf1409df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Particle: {fileID: 3932786869825341019, guid: f4d17287d6903f043acc914332996f88, type: 3}
   spawner: {fileID: 0}
   canMove: 1
   RotSpeed: 0.25

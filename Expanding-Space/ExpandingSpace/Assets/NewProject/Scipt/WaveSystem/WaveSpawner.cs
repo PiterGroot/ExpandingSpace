@@ -6,6 +6,7 @@ using TMPro;
 public class WaveSpawner : MonoBehaviour
 {   
     [SerializeField]private int currentEnemyCount;
+    [HideInInspector] public bool isInWave;
     [HideInInspector]public bool CanSpawn = true;
     [HideInInspector]public bool CountingDown = false;
     [HideInInspector]public bool SpawnedAllEnemies = false;
@@ -51,6 +52,7 @@ public class WaveSpawner : MonoBehaviour
     {
         yield return new WaitUntil(() => waitForPlayerChoice == true);
         EnemiesLeft.enabled = false;
+        isInWave = false;
         SpawnedAllEnemies = false;
         print($"Timer for: {timeInSeconds} seconds");
         while(timeInSeconds != 0){
@@ -84,6 +86,7 @@ public class WaveSpawner : MonoBehaviour
     }
     IEnumerator SpawnCurrentWave(){
         EnemiesLeft.enabled = true;
+        isInWave = true;
         currentEnemyCount = CurrentEnemies.Count;
         for (int i = 0; i < CurrentEnemies.Count; i++){
             yield return new WaitForSeconds(SpawnRate);
@@ -99,7 +102,6 @@ public class WaveSpawner : MonoBehaviour
         InvokeRepeating("PlayerChoiceDialogue", 0f, 1f);
         StartCoroutine(CountDownDisplay(TimeBetweenWaves));
     }
-
 
     int RandInt(int min, int max){
         return Random.Range(min, max);
@@ -119,6 +121,7 @@ public class WaveSpawner : MonoBehaviour
         if(CanSpawn){
             CancelInvoke("PlayerChoiceDialogue");
             StartCoroutine(PlayerChoice.ActivateDialogue());
+            isInWave = false;
         }
     }
     private void FixedUpdate() {

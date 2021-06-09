@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private GameObject MeteorExplosion;
     // Update is called once per frame
     void Update()
     {
@@ -15,6 +16,14 @@ public class Bullet : MonoBehaviour
         if (collision.collider.tag == "Meteor")
         {
             collision.gameObject.GetComponent<MoveObj>().KillSelf();
+            Instantiate(MeteorExplosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "DespawnBullet")
+        {
             Destroy(gameObject);
         }
     }
