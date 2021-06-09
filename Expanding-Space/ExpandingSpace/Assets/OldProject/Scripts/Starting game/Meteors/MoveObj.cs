@@ -6,6 +6,7 @@ public class MoveObj : MonoBehaviour
 {
     private bool _Magnitude;
     private Rigidbody2D rb2d;
+    [SerializeField] private GameObject Particle;
     [SerializeField]private WaveSpawner spawner;
     [SerializeField]private bool canMove = true;
     [SerializeField]private float RotSpeed = 10;
@@ -54,6 +55,7 @@ public class MoveObj : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             collision.collider.GetComponent<CollisionManager>().Health--;
+            Instantiate(Particle, transform.position, Quaternion.identity);
             spawner.EnemyKilled();
             Destroy(gameObject);
         }
