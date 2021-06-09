@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] Randomizer CallFunctionRandomizer1;
+    [SerializeField] Randomizer CallFunctionRandomizer2;
+    [SerializeField] Randomizer CallFunctionRandomizer3;
     [SerializeField] private GameObject SpaceShip;
     [SerializeField] private WaveSpawner spawner;
     [SerializeField]private GameObject HubFoundation;
@@ -53,13 +56,16 @@ public class PlayerMovement : MonoBehaviour
             HubFoundation.SetActive(false);
             spawner.waitForPlayerChoice = true;
             SpaceShip.SetActive(true);
+            CallFunctionRandomizer1.Randomized();
+            CallFunctionRandomizer2.Randomized();
+            CallFunctionRandomizer3.Randomized();
             FindObjectOfType<AudioManager>().Stop("OST");
         }
         if (collision.gameObject.tag == "Shop" && Input.GetKey(KeyCode.F))
         {
             HubFoundation.SetActive(false);
             Shop.SetActive(true);
-
+            
 
         }
     }

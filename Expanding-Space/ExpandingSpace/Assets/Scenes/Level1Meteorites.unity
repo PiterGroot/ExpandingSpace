@@ -1257,6 +1257,22 @@ PrefabInstance:
       propertyPath: SpaceShip
       value: 
       objectReference: {fileID: 1177505982}
+    - target: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: CallFunctionRandomizer
+      value: 
+      objectReference: {fileID: 2033233604}
+    - target: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: CallFunctionRandomizer1
+      value: 
+      objectReference: {fileID: 2033233604}
+    - target: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: CallFunctionRandomizer2
+      value: 
+      objectReference: {fileID: 2007271228}
+    - target: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: CallFunctionRandomizer3
+      value: 
+      objectReference: {fileID: 1669520207}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74b518efad596ff40b8319c74362977e, type: 3}
 --- !u!1 &315643849 stripped
@@ -4501,6 +4517,7 @@ MonoBehaviour:
   Shield: {fileID: 650678108}
   Firerange: {fileID: 1400044353}
   Shotgun: {fileID: 1223198839}
+  Hub: {fileID: 0}
 --- !u!114 &1669520208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5254,6 +5271,7 @@ MonoBehaviour:
   Shield: {fileID: 1491821249}
   Firerange: {fileID: 1564406489}
   Shotgun: {fileID: 2126469597}
+  Hub: {fileID: 0}
 --- !u!114 &2007271229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5353,6 +5371,7 @@ MonoBehaviour:
   Shield: {fileID: 1296200227}
   Firerange: {fileID: 319445087}
   Shotgun: {fileID: 1942193052}
+  Hub: {fileID: 0}
 --- !u!114 &2033233605
 MonoBehaviour:
   m_ObjectHideFlags: 0
