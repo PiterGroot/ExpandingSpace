@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level1Meteorites.unity
+    path: Assets/Scenes/Maingame/MainMenu.unity
+    guid: 5d98d7005ed35fa4dbd64e6c7fdef92d
+  - enabled: 1
+    path: Assets/Scenes/Maingame/Level1Meteorites.unity
     guid: 75c40b0adf055a244a7257fac4eebeef
+  - enabled: 1
+    path: Assets/Scenes/Maingame/GameOver.unity
+    guid: 24bef5614c0009247b7c5ebc95f8a783
+  - enabled: 1
+    path: Assets/Scenes/Maingame/end screen 1.unity
+    guid: 4afcfb7fb1e96704eb63e60b54299c74
   m_configObjects: {}
