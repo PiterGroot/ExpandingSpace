@@ -11,7 +11,7 @@ public class SchootingEnemie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 1000;
+        timer = 500;
         ShootTimer = 600;
     }
 

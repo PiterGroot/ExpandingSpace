@@ -961,6 +961,7 @@ MonoBehaviour:
   - {fileID: 6183940315651126409, guid: 3d15b9f601a8d5241aa31b1d71b5d8dc, type: 3}
   - {fileID: 1885521922497545100, guid: 2f41f80c3e574bd4085c24d57c5b32b9, type: 3}
   - {fileID: 1885521922497545100, guid: 23f89a2e4c2cbd848960acd60f0e89cf, type: 3}
+  - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
   MediumEnemies: []
   HardEnemies: []
   CurrentEnemies: []
@@ -2465,7 +2466,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.20081162}
+  m_Offset: {x: 0, y: 0.20797253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2476,7 +2477,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 10.058819}
+  m_Size: {x: 1, y: 14.088133}
   m_EdgeRadius: 0
 --- !u!1001 &591810487
 PrefabInstance:

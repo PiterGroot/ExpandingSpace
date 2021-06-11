@@ -14,7 +14,7 @@ public class EnemieBullet : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
         {
-            collision.gameObject.GetComponent<MoveObj>().KillSelf();
+            collision.gameObject.GetComponent<CollisionManager>().Health--;
             Destroy(gameObject);
         }
     }

@@ -19,6 +19,12 @@ public class Bullet : MonoBehaviour
             Instantiate(MeteorExplosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+        if (collision.collider.tag == "Snail")
+        {
+            collision.gameObject.GetComponent<Moving>().KillSelf();
+            Destroy(gameObject);
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
