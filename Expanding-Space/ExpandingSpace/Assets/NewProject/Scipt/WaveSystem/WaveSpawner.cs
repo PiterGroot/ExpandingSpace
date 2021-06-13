@@ -76,10 +76,10 @@ public class WaveSpawner : MonoBehaviour
                 CurrentEnemies.Add(EasyEnemies[RandInt(0, EasyEnemies.Count)]);
             }
             else if(CurrentWave <= 10 && CurrentWave > 5){
-                CurrentEnemies.Add(MediumEnemies[RandInt(0, EasyEnemies.Count)]);
+                CurrentEnemies.Add(MediumEnemies[RandInt(0, MediumEnemies.Count)]);
             }
              else if(CurrentWave >= 11){
-                CurrentEnemies.Add(HardEnemies[RandInt(0, EasyEnemies.Count)]);
+                CurrentEnemies.Add(HardEnemies[RandInt(0, HardEnemies.Count)]);
             }
         }
        StartCoroutine(SpawnCurrentWave());
