@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<MoveObj>().KillSelf();
             Instantiate(MeteorExplosion, transform.position, Quaternion.identity);
+            RandomExplosionSound();
             Destroy(gameObject);
         }
         if (collision.collider.tag == "Snail")
@@ -31,6 +32,25 @@ public class Bullet : MonoBehaviour
         if(collision.tag == "DespawnBullet")
         {
             Destroy(gameObject);
+        }
+    }
+    private void RandomExplosionSound()
+    {
+        int randInt = Random.Range(0, 3);
+        switch (randInt)
+        {
+            case 0:
+                FindObjectOfType<AudioManager>().Play("Explosion");
+                break;
+            case 1:
+                FindObjectOfType<AudioManager>().Play("Explosion1");
+                break;
+            case 2:
+                FindObjectOfType<AudioManager>().Play("Explosion2");
+                break;
+            case 3:
+                FindObjectOfType<AudioManager>().Play("Explosion3");
+                break;
         }
     }
 }

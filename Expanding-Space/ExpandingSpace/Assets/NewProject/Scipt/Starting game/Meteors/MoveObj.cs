@@ -56,8 +56,27 @@ public class MoveObj : MonoBehaviour
         {
             collision.collider.GetComponent<CollisionManager>().Health--;
             Instantiate(Particle, transform.position, Quaternion.identity);
+            RandomExplosionSound();
             spawner.EnemyKilled();
             Destroy(gameObject);
+        }
+    }
+
+    private void RandomExplosionSound(){
+        int randInt = Random.Range(0, 3);
+        switch (randInt){
+            case 0:
+                FindObjectOfType<AudioManager>().Play("Explosion");
+                break;
+            case 1:
+                FindObjectOfType<AudioManager>().Play("Explosion1");
+                break;
+            case 2:
+                FindObjectOfType<AudioManager>().Play("Explosion2");
+                break;
+            case 3:
+                FindObjectOfType<AudioManager>().Play("Explosion3");
+                break;
         }
     }
 }
