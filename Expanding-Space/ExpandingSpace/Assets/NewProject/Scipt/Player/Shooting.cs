@@ -4,26 +4,39 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-
+    [SerializeField] private bool godMode;
     public GameObject Bullet;
     public int ShootTimer;
-    public Vector2 Spawnpoint;
-    // Start is called before the first frame update
-    void Start()
-    {
-        ShootTimer = 200;
+    [HideInInspector]public int shootTimerMax;
+    private void Awake(){
+        shootTimerMax = ShootTimer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Spawnpoint = this.gameObject.transform.position;
-        ShootTimer -= 1;
-   
-        if (ShootTimer <= 0 && Input.GetKey("space"))
+        if (!godMode)
         {
-            Instantiate(Bullet, Spawnpoint, Quaternion.identity);
-            ShootTimer = 200;
+            ShootTimer -= 1;
+
+            if (ShootTimer <= 0 && Input.GetKey("space"))
+            {
+                ShootTimer = shootTimerMax;
+                FindObjectOfType<AudioManager>().Play("Laser");
+                Instantiate(Bullet, transform.position + new Vector3(1.2f, -.2f), Quaternion.identity);
+            }
+        }
+        else
+        { 
+            ShootTimer -= 1;
+            if (ShootTimer <= 0 && Input.GetKey("space"))
+            {
+                ShootTimer = 0;
+                FindObjectOfType<AudioManager>().Play("Laser");
+                Instantiate(Bullet, transform.position + new Vector3(1.2f, -.7f), Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(1.2f, .7f), Quaternion.identity);
+                Instantiate(Bullet, transform.position, Quaternion.identity);
+            }
         }
     }
 }

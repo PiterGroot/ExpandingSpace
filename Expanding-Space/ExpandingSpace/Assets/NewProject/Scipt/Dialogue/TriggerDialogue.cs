@@ -34,7 +34,7 @@ public class TriggerDialogue : MonoBehaviour
     [Header("Dialogue settings")]
     public string DialogueID = "Example";
     [SerializeField]private KeyCode ActivateKey = KeyCode.L;
-    [SerializeField]private float TalkingSpeed = 0.05f;
+    [SerializeField]private float TalkingSpeed = PlayerPrefs.GetFloat("DialogueSpeed");
     [SerializeField]private float PauseTime = 2.3f;
     [SerializeField]private string VoiceSoundEffectName;
     public string NameTag;
@@ -44,7 +44,7 @@ public class TriggerDialogue : MonoBehaviour
     [SerializeField]private Vector3 DialogueOffset;
     [SerializeField]private GameObject MissionSelect;
     [SerializeField]private TriggerDialogue NextDialogue;
-
+   
 
     private void Start() {
         if(DialogueID == string.Empty){

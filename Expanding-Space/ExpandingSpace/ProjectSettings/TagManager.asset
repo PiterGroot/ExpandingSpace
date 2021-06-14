@@ -15,6 +15,7 @@ TagManager:
   - IntroTrigger
   - UpWall
   - Npc
+  - Shop
   layers:
   - Default
   - TransparentFX
