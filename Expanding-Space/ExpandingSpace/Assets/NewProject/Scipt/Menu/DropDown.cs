@@ -50,6 +50,9 @@ public class DropDown : MonoBehaviour
     }
     public void Fast()
     {
+        
+
+        PlayerPrefs.SetFloat("DialogueSpeed", 0.05f);
         MenuOpen = false;
         Button1.SetActive(false);
         Button2.SetActive(false);
