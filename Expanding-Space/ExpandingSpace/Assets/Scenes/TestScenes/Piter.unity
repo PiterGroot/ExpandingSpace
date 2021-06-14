@@ -438,6 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentEnemyCount: 0
+  isInWave: 0
   CanSpawn: 1
   CountingDown: 0
   SpawnedAllEnemies: 0
@@ -447,10 +448,7 @@ MonoBehaviour:
   StartEnemyCount: 10
   CurrentWave: 0
   SpawnRate: 0.8
-  EasyEnemies:
-  - {fileID: 6183940315651126409, guid: 3d15b9f601a8d5241aa31b1d71b5d8dc, type: 3}
-  - {fileID: 1885521922497545100, guid: 2f41f80c3e574bd4085c24d57c5b32b9, type: 3}
-  - {fileID: 1885521922497545100, guid: 23f89a2e4c2cbd848960acd60f0e89cf, type: 3}
+  EasyEnemies: []
   MediumEnemies: []
   HardEnemies: []
   CurrentEnemies: []

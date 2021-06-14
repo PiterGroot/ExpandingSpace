@@ -34,7 +34,7 @@ public class TriggerDialogue : MonoBehaviour
     [Header("Dialogue settings")]
     public string DialogueID = "Example";
     [SerializeField]private KeyCode ActivateKey = KeyCode.L;
-    [SerializeField]private float TalkingSpeed = 0.05f;
+    [SerializeField]private float TalkingSpeed ;
     [SerializeField]private float PauseTime = 2.3f;
     [SerializeField]private string VoiceSoundEffectName;
     public string NameTag;
@@ -47,6 +47,7 @@ public class TriggerDialogue : MonoBehaviour
 
 
     private void Start() {
+        TalkingSpeed = PlayerPrefs.GetFloat("DialogueSpeed");
         if(DialogueID == string.Empty){
             DialogueID = "NULL";
             Debug.LogError("Please fill in a valid DialogueID to stay organised", this.gameObject);
