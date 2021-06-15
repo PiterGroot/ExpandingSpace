@@ -16,6 +16,7 @@ TagManager:
   - UpWall
   - Npc
   - Shop
+  - DespawnBullet
   layers:
   - Default
   - TransparentFX
@@ -25,9 +26,9 @@ TagManager:
   - UI
   - Enemy
   - Postprocessing
-  - 
-  - 
-  - 
+  - EnemyBullet
+  - FriendlyBullet
+  - Player
   - 
   - 
   - 

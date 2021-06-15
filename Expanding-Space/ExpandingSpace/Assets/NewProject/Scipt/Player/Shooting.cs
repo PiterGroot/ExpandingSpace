@@ -4,18 +4,33 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    [SerializeField] private WaveSpawner waveSpawner;
+    [SerializeField] private int fpsLimiter;
+    [SerializeField] private bool canShoot;
     [SerializeField] private bool godMode;
     public GameObject Bullet;
     public int ShootTimer;
     [HideInInspector]public int shootTimerMax;
     private void Awake(){
         shootTimerMax = ShootTimer;
+        Application.targetFrameRate = fpsLimiter;
+        InvokeRepeating("CheckWaveSpawner", 0, 1f);
     }
-
+    private void CheckWaveSpawner()
+    {
+        if (waveSpawner.isInWave)
+        {
+            canShoot = true;
+        }
+        else
+        {
+            canShoot = false;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        if (!godMode)
+        if (!godMode && canShoot)
         {
             ShootTimer -= 1;
 
@@ -26,7 +41,7 @@ public class Shooting : MonoBehaviour
                 Instantiate(Bullet, transform.position + new Vector3(1.2f, -.2f), Quaternion.identity);
             }
         }
-        else
+        else if(godMode && canShoot)
         { 
             ShootTimer -= 1;
             if (ShootTimer <= 0 && Input.GetKey("space"))

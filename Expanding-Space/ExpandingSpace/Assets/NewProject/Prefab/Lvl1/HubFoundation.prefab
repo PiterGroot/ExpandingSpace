@@ -371,7 +371,6 @@ MonoBehaviour:
   SpaceShip: {fileID: 0}
   spawner: {fileID: 0}
   HubFoundation: {fileID: 2390876756640367926}
-  Shop: {fileID: 0}
   canMove: 0
   rb: {fileID: 6601797400631278427}
   speed: 10

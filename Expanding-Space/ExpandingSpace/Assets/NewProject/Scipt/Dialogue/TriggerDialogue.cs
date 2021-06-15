@@ -15,7 +15,6 @@ public class TriggerDialogue : MonoBehaviour
     private string SentenceOrder;
     private bool isDisabled = false;
 
-
     [SerializeField]private bool ActivateThisDialogue;
     [Header("Refrences")]
     [SerializeField]private Animator DialogueAnim;
@@ -45,11 +44,11 @@ public class TriggerDialogue : MonoBehaviour
     [SerializeField]private Vector3 DialogueOffset;
     [SerializeField]private GameObject MissionSelect;
     [SerializeField]private TriggerDialogue NextDialogue;
-   
+
 
     private void Start() {
         TalkingSpeed = PlayerPrefs.GetFloat("DialogueSpeed");
-        if (DialogueID == string.Empty){
+        if(DialogueID == string.Empty){
             DialogueID = "NULL";
             Debug.LogError("Please fill in a valid DialogueID to stay organised", this.gameObject);
         }

@@ -20,13 +20,12 @@ public class Pauze : MonoBehaviour
     }
 
     void Update()
-    { 
-        if (Input.GetKeyDown(KeyCode.Escape)&& Hub.activeSelf == true)
-        {
-            UIBattlescene.SetActive(false);
-            Debug.Log("hub is true");
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)){
             Menu();
         }
+            
+        
 
     }
 
@@ -36,6 +35,7 @@ public class Pauze : MonoBehaviour
         {
             Debug.Log("Eerste keer");
             playGame = false;
+            UIBattlescene.SetActive(false);
             Opties.SetActive(false);
             PauzeMenu.SetActive(true);
             //zorgt ervoor dat de hele game stopt
@@ -49,6 +49,7 @@ public class Pauze : MonoBehaviour
             playGame = true;
             Opties.SetActive(false);
             PauzeMenu.SetActive(false);
+            UIBattlescene.SetActive(true);
             //zorgt ervoor dat de hele game verder gaat
             Time.timeScale = 1f;
 
@@ -59,6 +60,7 @@ public class Pauze : MonoBehaviour
             Opt = false;
             Opties.SetActive(false);
             PauzeMenu.SetActive(true);
+            UIBattlescene.SetActive(false);
             //zorgt ervoor dat de hele game stopt
             Time.timeScale = 0f;
 
@@ -69,6 +71,7 @@ public class Pauze : MonoBehaviour
         UIBattlescene.SetActive(true);
         playGame = true;
         PauzeMenu.SetActive(false);
+        UIBattlescene.SetActive(true);
         //zorgt ervoor dat de hele game stopt
         Time.timeScale = 1f;
     }
@@ -88,6 +91,8 @@ public class Pauze : MonoBehaviour
 
     public void Stop(string Name)
     {
+        UIBattlescene.SetActive(true);
+        Time.timeScale = 1f;
         SceneManager.LoadScene(Name);
     }
 }

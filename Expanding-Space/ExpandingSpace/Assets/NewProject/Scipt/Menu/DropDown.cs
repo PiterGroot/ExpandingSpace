@@ -47,6 +47,7 @@ public class DropDown : MonoBehaviour
         Selected = "Normal";
         selected.text = Selected;
         PlayerPrefs.SetFloat("DialogueSpeed", 0.05f);
+        Debug.Log(PlayerPrefs.GetFloat("DialogueSpeed"));
     }
     public void Fast()
     {
@@ -59,5 +60,6 @@ public class DropDown : MonoBehaviour
         Selected = "Fast ";
         selected.text = Selected;
         PlayerPrefs.SetFloat("DialogueSpeed",PlayerPrefs.GetFloat("DialogueSpeed") -0.02f);
+        Debug.Log(PlayerPrefs.GetFloat("DialogueSpeed"));
     }
 }

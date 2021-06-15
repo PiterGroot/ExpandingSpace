@@ -13,86 +13,54 @@ public class Movement : MonoBehaviour
     private FlipSpriteScale flip;
 
     //art
-    public SpriteRenderer spriteRenderer;
-    public Sprite LSprite;
-    public Sprite RSprite;
-    public Sprite UpSprite;
+    [SerializeField] private GameObject RightWalk;
+    [SerializeField] private GameObject LeftWalk;
+    [SerializeField] private GameObject Standing;
+
     public Sprite DownSprite;
 
     private void Start()
     {
-        flip = gameObject.GetComponent<FlipSpriteScale>();
+        
     }
     void Update()
     {
         if (canMove)
         {
-            //voor
-            if (Input.GetKey("w"))
-            {
 
-                rb.velocity = new Vector3(0, speed, 0);
-                spriteRenderer.sprite = UpSprite;
-            }
+
             //rechts
             if (Input.GetKey("a"))
             {
                 rb.velocity = new Vector3(-speed, 0, 0);
-                spriteRenderer.sprite = LSprite;
-            }
-            //achter
-            if (Input.GetKey("s"))
-            {
-                rb.velocity = new Vector3(0, -speed, 0);
-                spriteRenderer.sprite = DownSprite;
+                RightWalk.SetActive(true);
+                LeftWalk.SetActive(false);
+                Standing.SetActive(false);
             }
             //links
             if (Input.GetKey("d"))
             {
                 rb.velocity = new Vector3(speed, 0, 0);
-                spriteRenderer.sprite = RSprite;
+                RightWalk.SetActive(true);
+                LeftWalk.SetActive(false);
+                Standing.SetActive(false);
             }
 
-
-            //rechts boven
-            if (Input.GetKey("w") && Input.GetKey("d"))
-            {
-                rb.velocity = new Vector3(speed, speed, 0f);
-            }
-            //rechts beneden
-            if (Input.GetKey("s") && Input.GetKey("d"))
-            {
-                rb.velocity = new Vector3(speed, -speed, 0f);
-            }
-            //links boven
-            if (Input.GetKey("w") && Input.GetKey("a"))
-            {
-                rb.velocity = new Vector3(-speed, speed, 0f);
-            }
-            //links beneden
-            if (Input.GetKey("a") && Input.GetKey("s"))
-            {
-                rb.velocity = new Vector3(-speed, -speed, 0f);
-            }
-
-            if (Input.GetKeyUp("w"))
-            {
-                rb.velocity = new Vector3(0, 0, 0);
-            }
 
             if (Input.GetKeyUp("a"))
             {
                 rb.velocity = new Vector3(0, 0, 0);
-            }
-
-            if (Input.GetKeyUp("s"))
-            {
-                rb.velocity = new Vector3(0, 0, 0);
+                RightWalk.SetActive(true);
+                LeftWalk.SetActive(false);
+                Standing.SetActive(false);
             }
 
             if (Input.GetKeyUp("d"))
             {
                 rb.velocity = new Vector3(0, 0, 0);
+                RightWalk.SetActive(true);
+                LeftWalk.SetActive(false);
+                Standing.SetActive(false);
             }
         }
     }
