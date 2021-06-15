@@ -2310,6 +2310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeteorExplosion
       objectReference: {fileID: 0}
+    - target: {fileID: 3932786869825341019, guid: f4d17287d6903f043acc914332996f88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3936142818570509738, guid: f4d17287d6903f043acc914332996f88, type: 3}
       propertyPath: m_RootOrder
       value: 11

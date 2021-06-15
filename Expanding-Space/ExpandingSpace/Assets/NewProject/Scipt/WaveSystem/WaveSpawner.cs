@@ -128,4 +128,7 @@ public class WaveSpawner : MonoBehaviour
         PlayerPrefs.SetInt("Wave", CurrentWave);
         EnemiesLeft.text = $"ENEMIES LEFT:{currentEnemyCount.ToString()}";
     }
+    public void StartedBossFight(){
+        Destroy(gameObject);
+    }
 }
