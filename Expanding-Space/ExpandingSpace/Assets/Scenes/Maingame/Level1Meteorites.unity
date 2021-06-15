@@ -1030,15 +1030,17 @@ MonoBehaviour:
   StartDelay: 13
   TimeBetweenWaves: 0
   StartEnemyCount: 15
-  CurrentWave: 0
+  CurrentWave: 6
   SpawnRate: 0.8
   EasyEnemies:
   - {fileID: 6183940315651126409, guid: 3d15b9f601a8d5241aa31b1d71b5d8dc, type: 3}
   - {fileID: 1885521922497545100, guid: 2f41f80c3e574bd4085c24d57c5b32b9, type: 3}
   - {fileID: 1885521922497545100, guid: 23f89a2e4c2cbd848960acd60f0e89cf, type: 3}
+  MediumEnemies:
   - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
-  MediumEnemies: []
-  HardEnemies: []
+  - {fileID: 4795494663067430447, guid: 846db254268a3f349a5e46be0402b331, type: 3}
+  HardEnemies:
+  - {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
   CurrentEnemies: []
   WaveDisplay: {fileID: 1846125034}
   EnemiesLeft: {fileID: 325207216}
@@ -5928,7 +5930,7 @@ Transform:
   m_GameObject: {fileID: 1177505982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3974, y: 0.3184, z: 1}
+  m_LocalScale: {x: 0.29029673, y: 0.23258802, z: 0.73049}
   m_Children:
   - {fileID: 467517335}
   - {fileID: 1290311014}
@@ -6655,7 +6657,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290311013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.46, y: -2.38, z: 0}
+  m_LocalPosition: {x: 4.34, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1177505985}
