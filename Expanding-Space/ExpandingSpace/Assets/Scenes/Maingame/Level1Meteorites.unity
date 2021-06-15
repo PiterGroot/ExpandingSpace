@@ -1030,7 +1030,7 @@ MonoBehaviour:
   StartDelay: 13
   TimeBetweenWaves: 0
   StartEnemyCount: 15
-  CurrentWave: 6
+  CurrentWave: 0
   SpawnRate: 0.8
   EasyEnemies:
   - {fileID: 6183940315651126409, guid: 3d15b9f601a8d5241aa31b1d71b5d8dc, type: 3}

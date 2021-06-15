@@ -58,9 +58,10 @@ GameObject:
   - component: {fileID: 8632583922817070693}
   - component: {fileID: 3501360487107060628}
   - component: {fileID: 8091368628991578149}
+  - component: {fileID: 1362842331058439816}
   m_Layer: 6
   m_Name: sprite_snailwithgun10
-  m_TagString: Snail
+  m_TagString: SnailShooting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,3 +188,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.2200003
+--- !u!114 &1362842331058439816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632583922817070690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa38984c7c4bc194b81592ab159237e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
+  MoveSpeed: 3
+  MinMaxMoveSpeed: {x: 1, y: 3}

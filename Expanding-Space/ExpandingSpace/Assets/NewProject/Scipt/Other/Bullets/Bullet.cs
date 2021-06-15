@@ -20,9 +20,14 @@ public class Bullet : MonoBehaviour
             RandomExplosionSound();
             Destroy(gameObject);
         }
-        if (collision.collider.tag == "Snail")
+        if (collision.collider.tag == "SnailMoving")
         {
             collision.gameObject.GetComponent<Moving>().KillSelf();
+            Destroy(gameObject);
+        }
+        if (collision.collider.tag == "SnailShooting")
+        {
+            collision.gameObject.GetComponent<MovingForShooting>().KillSelf();
             Destroy(gameObject);
         }
 

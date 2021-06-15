@@ -11,12 +11,13 @@ TagManager:
   - SpawnPoint
   - Despawn
   - DialoguePicture
-  - Snail
   - IntroTrigger
   - UpWall
   - Npc
   - Shop
   - DespawnBullet
+  - SnailMoving
+  - SnailShooting
   layers:
   - Default
   - TransparentFX
