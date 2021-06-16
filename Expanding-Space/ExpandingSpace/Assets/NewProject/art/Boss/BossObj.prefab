@@ -205,5 +205,6 @@ MonoBehaviour:
   BossDialogue: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
   GunPos: {fileID: 672983832}
   bullet: {fileID: 5084456572454157646, guid: 3ced2103f748d584fa0b067e1a66cdf4, type: 3}
-  ShootSpeed: 0.08
-  BulletCount: 150
+  ShootSpeed: 0.286
+  BulletCount: 300
+  BulletMultiplier: 1
