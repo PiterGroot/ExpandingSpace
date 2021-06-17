@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    //slider code
 
+    /*
     public Slider slider;
     public Gradient colors;
     public Image fill;
@@ -30,6 +32,38 @@ public class Health : MonoBehaviour
         fill.color = colors.Evaluate(slider.normalizedValue);
 
     }
+    */
 
+
+    public int hp;
+    public CollisionManager CollitionManager;
+    public GameObject life3;
+    public GameObject life2;
+    public GameObject life1;
+
+
+
+    public void Start()
+    {
+       
+    }
+
+    public void Update()
+    {
+        hp = CollitionManager.Health;
+        Debug.Log(hp);
+        if(hp==2)
+        {
+            life3.SetActive(false);
+        }
+        else if(hp== 1)
+        {
+            life2.SetActive(false);
+        }
+        else if(hp== 0)
+        {
+            life1.SetActive(false);
+        }
+    }
 
 }

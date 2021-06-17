@@ -16,7 +16,7 @@ public class CollisionManager : MonoBehaviour
     private void Awake() {
         maxHealth = Health;
         //track je max hp
-        Healthscript.SetMaxHp(maxHealth);
+        //Healthscript.SetMaxHp(maxHealth);
     }
     public enum ShipState
     {
@@ -33,25 +33,25 @@ public class CollisionManager : MonoBehaviour
         if (Health == 3)
         {
             //update hp bar visually
-            Healthscript.UpdateHealth(Health);
+            //Healthscript.UpdateHealth(Health);
             Currentstate = ShipState.Undamaged;
         }
         if (Health == 2)
         {
             //update hp bar visually
-            Healthscript.UpdateHealth(Health);
+           // Healthscript.UpdateHealth(Health);
             Currentstate = ShipState.SlightlyDamaged;
         }
         if (Health == 1)
         {
             //update hp bar visually
-            Healthscript.UpdateHealth(Health);
+           // Healthscript.UpdateHealth(Health);
             Currentstate = ShipState.VeryDamaged;
         }
         if (Health == 0)
         {
             //update hp bar visually
-            Healthscript.UpdateHealth(Health);
+            //Healthscript.UpdateHealth(Health);
             Currentstate = ShipState.Broken;
         }
         if(Health <= 0)

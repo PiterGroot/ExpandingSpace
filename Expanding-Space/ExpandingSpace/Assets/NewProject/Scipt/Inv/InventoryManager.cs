@@ -7,7 +7,7 @@ public class InventoryManager : MonoBehaviour
 
     public List<string> items = new List<string>();
     //items
-    public Sprite HealSprite;
+    public GameObject HealSprite;
     public Sprite ShieldSprite;
     public Sprite ShotgunSprite;
     public Sprite SpeedSprite;
@@ -25,6 +25,7 @@ public class InventoryManager : MonoBehaviour
     public Image Itemslot3;
     void Start()
     {
+     
         PlayerPrefs.SetString("HealUpgrade", "yes");
         PlayerPrefs.SetString("ShieldUpgrade", "yes");
         PlayerPrefs.SetString("SpeedUpgrade", "yes");
@@ -63,12 +64,13 @@ public class InventoryManager : MonoBehaviour
     }
     public void Slot1()
     {
-        Debug.Log("slot 1 wrkt");
+       // Debug.Log("slot 1 wrkt");
         switch (items[0])
         {
             case "Heal":
                 // qDebug.Log("het is HEal");
-                Itemslot1.sprite = HealSprite;
+                Instantiate(HealSprite, new Vector2(Itemslot1.transform.position.x,Itemslot1.transform.position.y), Quaternion.identity);
+                // Itemslot1.sprite = HealSprite;
                 break;
             case "Shield":
                 Itemslot1.sprite = ShieldSprite;
@@ -87,12 +89,12 @@ public class InventoryManager : MonoBehaviour
     }
     public void Slot2()
     {
-        Debug.Log("slot 2 wrkt");
+       // Debug.Log("slot 2 wrkt");
         switch (items[1])
         {
             case "Heal":
                 // qDebug.Log("het is HEal");
-                Itemslot2.sprite = HealSprite;
+                //Itemslot2.sprite = HealSprite;
                 break;
             case "Shield":
                 Itemslot2.sprite = ShieldSprite;
@@ -111,12 +113,12 @@ public class InventoryManager : MonoBehaviour
     }
     public void Slot3()
     {
-        Debug.Log("slot 3 wrkt");
+        //Debug.Log("slot 3 wrkt");
         switch (items[2])
         {
             case "Heal":
                 // qDebug.Log("het is HEal");
-                Itemslot3.sprite = HealSprite;
+                //Itemslot3.sprite = HealSprite;
                 break;
             case "Shield":
                 Itemslot3.sprite = ShieldSprite;
