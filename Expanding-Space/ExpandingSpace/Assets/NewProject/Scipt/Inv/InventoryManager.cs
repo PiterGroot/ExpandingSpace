@@ -8,10 +8,10 @@ public class InventoryManager : MonoBehaviour
     public List<string> items = new List<string>();
     //items
     public GameObject HealSprite;
-    public Sprite ShieldSprite;
+    public GameObject ShieldSprite;
     public Sprite ShotgunSprite;
     public Sprite SpeedSprite;
-    public Sprite FirerateSprite;
+    public GameObject FirerateSprite;
 
     //what did i buy?
     public string Heal;
@@ -28,7 +28,7 @@ public class InventoryManager : MonoBehaviour
      
         PlayerPrefs.SetString("HealUpgrade", "yes");
         PlayerPrefs.SetString("ShieldUpgrade", "yes");
-        PlayerPrefs.SetString("SpeedUpgrade", "yes");
+        PlayerPrefs.SetString("FirerateUpgrade", "yes");
         Heal = PlayerPrefs.GetString("HealUpgrade");
         Shield = PlayerPrefs.GetString("ShieldUpgrade");
         Shotgun = PlayerPrefs.GetString("ShotgunUpgrade");
@@ -73,16 +73,18 @@ public class InventoryManager : MonoBehaviour
                 // Itemslot1.sprite = HealSprite;
                 break;
             case "Shield":
-                Itemslot1.sprite = ShieldSprite;
+                //Itemslot1.sprite = ShieldSprite;
+                Instantiate(ShieldSprite, new Vector2(Itemslot1.transform.position.x, Itemslot1.transform.position.y), Quaternion.identity);
                 break;
             case "Speed":
-                Itemslot1.sprite = SpeedSprite;
+                //Itemslot1.sprite = SpeedSprite;
                 break;
             case "Firerate":
-                Itemslot1.sprite = FirerateSprite;
+                Instantiate(FirerateSprite, new Vector2(Itemslot1.transform.position.x, Itemslot1.transform.position.y), Quaternion.identity);
+                //Itemslot1.sprite = FirerateSprite;
                 break;
             case "Shotgun":
-                Itemslot1.sprite = ShotgunSprite;
+               // Itemslot1.sprite = ShotgunSprite;
                 break;
 
         }
@@ -93,20 +95,22 @@ public class InventoryManager : MonoBehaviour
         switch (items[1])
         {
             case "Heal":
-                // qDebug.Log("het is HEal");
+                Instantiate(HealSprite, new Vector2(Itemslot2.transform.position.x, Itemslot1.transform.position.y), Quaternion.identity);
                 //Itemslot2.sprite = HealSprite;
                 break;
             case "Shield":
-                Itemslot2.sprite = ShieldSprite;
+                Instantiate(ShieldSprite, new Vector2(Itemslot2.transform.position.x, Itemslot1.transform.position.y), Quaternion.identity);
+                //Itemslot2.sprite = ShieldSprite;
                 break;
             case "Speed":
-                Itemslot2.sprite = SpeedSprite;
+               // Itemslot2.sprite = SpeedSprite;
                 break;
             case "Firerate":
-                Itemslot2.sprite = FirerateSprite;
+                Instantiate(FirerateSprite, new Vector2(Itemslot2.transform.position.x, Itemslot1.transform.position.y), Quaternion.identity);
+                // Itemslot2.sprite = FirerateSprite;
                 break;
             case "Shotgun":
-                Itemslot2.sprite = ShotgunSprite;
+              //  Itemslot2.sprite = ShotgunSprite;
                 break;
 
         }
@@ -117,20 +121,23 @@ public class InventoryManager : MonoBehaviour
         switch (items[2])
         {
             case "Heal":
+                Instantiate(HealSprite, new Vector2(Itemslot3.transform.position.x, Itemslot1.transform.position.y), Quaternion.identity);
                 // qDebug.Log("het is HEal");
                 //Itemslot3.sprite = HealSprite;
                 break;
             case "Shield":
-                Itemslot3.sprite = ShieldSprite;
+                Instantiate(ShieldSprite, new Vector2(Itemslot3.transform.position.x, Itemslot1.transform.position.y), Quaternion.identity);
+                // Itemslot3.sprite = ShieldSprite;
                 break;
             case "Speed":
-                Itemslot3.sprite = SpeedSprite;
+               // Itemslot3.sprite = SpeedSprite;
                 break;
             case "Firerate":
-                Itemslot3.sprite = FirerateSprite;
+                Instantiate(FirerateSprite, new Vector2(Itemslot3.transform.position.x, Itemslot1.transform.position.y), Quaternion.identity);
+                //Itemslot3.sprite = FirerateSprite;
                 break;
             case "Shotgun":
-                Itemslot3.sprite = ShotgunSprite;
+             //Itemslot3.sprite = ShotgunSprite;
                 break;
 
         }

@@ -2973,7 +2973,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454735552}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -4672,7 +4672,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715002527}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -7458,7 +7458,7 @@ RectTransform:
   m_GameObject: {fileID: 1295467139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 454735553}
   - {fileID: 715002528}
@@ -11027,11 +11027,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  HealSprite: {fileID: 7572953714277991435, guid: 97152fada1fc36c41a6a8cdcb4d57c11, type: 3}
-  ShieldSprite: {fileID: 21300000, guid: 0337a69555935464b939bb25bfc9aa62, type: 3}
+  HealSprite: {fileID: 7101463193333334810, guid: 538bb6ed76c471543874863718bb5330, type: 3}
+  ShieldSprite: {fileID: 7572953714277991435, guid: 97152fada1fc36c41a6a8cdcb4d57c11, type: 3}
   ShotgunSprite: {fileID: 21300000, guid: c72199f35a448c34c8f0f7e7b3b48009, type: 3}
   SpeedSprite: {fileID: 21300000, guid: d274c1e38972afd44a45ec62a36dd34a, type: 3}
-  FirerateSprite: {fileID: 21300000, guid: 23fd96257800ec446b5d3929e367a6e6, type: 3}
+  FirerateSprite: {fileID: 3366179110759221781, guid: 1cefcda7235363c46a377dedf49b1c2a, type: 3}
   Heal: 
   Shield: 
   Shotgun: 
@@ -11099,7 +11099,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1947059152
 RectTransform:
@@ -11146,7 +11146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981411281}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -11184,17 +11184,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981411281}
-  m_LocalRotation: {x: -0, y: -0, z: 0.0072822245, w: 0.9999735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1295467140}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.834}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58.700012, y: -2.2999878}
-  m_SizeDelta: {x: 85.43, y: 77.59}
+  m_AnchoredPosition: {x: 58.7, y: -2.79}
+  m_SizeDelta: {x: 85.43, y: 79.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2007271226
 GameObject:
