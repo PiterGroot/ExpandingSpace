@@ -11,13 +11,23 @@ public class DropDown : MonoBehaviour
     public GameObject Button2;
     public TextMeshProUGUI selected;
     private bool MenuOpen = false;
-    public string Selected ="Normal";
-    
+    public string Selected ;
+    public TriggerDialogue dialogue;
 
 
-    private void Start()
+    public void Start()
     {
-        
+        if (PlayerPrefs.GetFloat("DialogueSpeed") ==0.05f)
+        {
+            Debug.Log("05 ding");
+            Selected = "Normal";
+        }
+        else if(PlayerPrefs.GetFloat("DialogueSpeed") == 0.02f)
+        {
+            Debug.Log("02 ding");
+            
+            Selected = "Fast";
+        }
     }
 
     public void DropDOwnOpenen()
@@ -59,7 +69,7 @@ public class DropDown : MonoBehaviour
         Button2.SetActive(false);
         Selected = "Fast ";
         selected.text = Selected;
-        PlayerPrefs.SetFloat("DialogueSpeed",PlayerPrefs.GetFloat("DialogueSpeed") -0.02f);
+        PlayerPrefs.SetFloat("DialogueSpeed",PlayerPrefs.GetFloat("DialogueSpeed") -0.03f);
         Debug.Log(PlayerPrefs.GetFloat("DialogueSpeed"));
     }
 }

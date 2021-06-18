@@ -51,7 +51,7 @@ public class Health : MonoBehaviour
     public void Update()
     {
         hp = CollitionManager.Health;
-        Debug.Log(hp);
+
         if(hp==2)
         {
             life3.SetActive(false);
