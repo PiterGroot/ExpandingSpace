@@ -2,20 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RandomText : MonoBehaviour
 {
+    public bool Heal;
+    public bool Shield;
+    public bool VerspreidShot;
+    public bool Speed;
+    public bool Firerate;
+
     int NumberOftext;
     public Text TextChanger;
-    public Button Button; 
+    public Button Button;
+    public Button KoopButton;
+    public TextMeshProUGUI Beschrijving;
+    public TextMeshProUGUI NaamProduct;
+    public TextMeshProUGUI Prijs;
+    public InventoryManager InvManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //string BoughtSpeed = invManager.SpeedGk();
     }
 
-    // Update is called once per frame
+    // Update is called once per framehgj
     void Update()
     {
         switch (NumberOftext)
@@ -37,7 +49,7 @@ public class RandomText : MonoBehaviour
                 Button.onClick.AddListener(ButtonFirerate);
                 break;
             case 5:
-                TextChanger.text = "Meer Pew Pew";
+                TextChanger.text = "Verspreid Schot";
                 Button.onClick.AddListener(ButtonShotgun);
                 break;
         }
@@ -74,28 +86,64 @@ public class RandomText : MonoBehaviour
 
     void ButtonSpeed()
     {
-        Debug.Log("Test Speed");
+        NaamProduct.text = "Snelheid'";
+        Beschrijving.text = "Je snelheid van je schip gaat omhoog";
+        Prijs.text = "5";
+      //  KoopButton.onClick.AddListener();
     }
 
     void ButtonHealth()
     {
-        Debug.Log("Test Health");
+        NaamProduct.text = "Repareren";
+        Beschrijving.text = "Je repareert het schip en het krijgt er 1 hartje ervoor terug";
+        Prijs.text = "15";
     }
 
     void ButtonShield()
     {
-        Debug.Log("Test Shield");
+        NaamProduct.text = "Schild";
+        Beschrijving.text = "Je krijgt voor 30 seconden een schild hierdoor kan je niet geraakt worden";
+        Prijs.text = "30";
     }
 
     void ButtonFirerate()
     {
-        Debug.Log("Test Firerate");
+        NaamProduct.text = "Vuur Snelheid";
+        Beschrijving.text = "Je kan voor 30 seconde sneller schieten";
+        Prijs.text = "20";
     }
 
     void ButtonShotgun()
     {
-        Debug.Log("Test Shotgun");
+        NaamProduct.text = "Verspreid Schot";
+        Beschrijving.text = "Je schot wordt verdubbelt naar 3 ";
+        Prijs.text = "50";
+
     }
 
 
+    public void buy()
+    {
+      
+        if (NaamProduct.text == "Vuur Snelheid")
+        {
+            InvManager.SpeedGk();
+        }
+        else if (NaamProduct.text == "Verspreid Schot")
+        {
+            InvManager.VerspreidShotGk();
+        } 
+        else if(NaamProduct.text== "Shild")
+        {
+            InvManager.ShieldGk();
+        }
+        else if(NaamProduct.text == "Repareren")
+        {
+            InvManager.ReparerenGk();
+        }
+        else if(NaamProduct.text== "Snelheid")
+        {
+            InvManager.SpeedGk();
+        }
+    }
 }

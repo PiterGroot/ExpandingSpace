@@ -47,7 +47,7 @@ public class TriggerDialogue : MonoBehaviour
 
 
     private void Start() {
-        TalkingSpeed = PlayerPrefs.GetFloat("DialogueSpeed");
+       
         if(DialogueID == string.Empty){
             DialogueID = "NULL";
             Debug.LogError("Please fill in a valid DialogueID to stay organised", this.gameObject);
@@ -155,7 +155,8 @@ public class TriggerDialogue : MonoBehaviour
        }
     } 
     private void Update() {
-        if(Input.GetKeyDown(ActivateKey) && canManuallyActivate)
+        TalkingSpeed = PlayerPrefs.GetFloat("DialogueSpeed");
+        if (Input.GetKeyDown(ActivateKey) && canManuallyActivate)
         {
            StartCoroutine(ActivateDialogue());
         }
