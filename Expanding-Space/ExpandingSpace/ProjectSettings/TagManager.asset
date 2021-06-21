@@ -19,6 +19,7 @@ TagManager:
   - SnailMoving
   - SnailShooting
   - Boss
+  - BossDialogue
   layers:
   - Default
   - TransparentFX
