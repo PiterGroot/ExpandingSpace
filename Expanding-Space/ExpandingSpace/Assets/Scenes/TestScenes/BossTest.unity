@@ -351,8 +351,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7bc94cd82fc6c4aa627837400ed40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Heal: 0
+  Shield: 0
+  VerspreidShot: 0
+  Speed: 0
+  Firerate: 0
   TextChanger: {fileID: 160578201}
   Button: {fileID: 62466322}
+  KoopButton: {fileID: 0}
+  Beschrijving: {fileID: 0}
+  NaamProduct: {fileID: 0}
+  Prijs: {fileID: 0}
+  InvManager: {fileID: 0}
 --- !u!114 &62466322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2682,8 +2692,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7bc94cd82fc6c4aa627837400ed40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Heal: 0
+  Shield: 0
+  VerspreidShot: 0
+  Speed: 0
+  Firerate: 0
   TextChanger: {fileID: 715501795}
   Button: {fileID: 430156669}
+  KoopButton: {fileID: 0}
+  Beschrijving: {fileID: 0}
+  NaamProduct: {fileID: 0}
+  Prijs: {fileID: 0}
+  InvManager: {fileID: 0}
 --- !u!114 &430156669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4399,7 +4419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 121676189414264571, guid: 3c2b59db13cb73c48ad762ee779eff45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.2226486
+      value: 6.222649
       objectReference: {fileID: 0}
     - target: {fileID: 121676189414264571, guid: 3c2b59db13cb73c48ad762ee779eff45, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6125,6 +6145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68b5dbe74f84e549bd9b6522d3c195f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 1
   speed: 4
   rb: {fileID: 1177505988}
 --- !u!212 &1177505984
@@ -6789,37 +6810,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc08c47459fbe84c8e8e69397bda58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1261039953}
-  colors:
-    serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.9260169, b: 0, a: 1}
-    key2: {r: 0.3056475, g: 1, b: 0, a: 0}
-    key3: {r: 0.3056475, g: 1, b: 0, a: 0}
-    key4: {r: 0.3056475, g: 1, b: 0, a: 0}
-    key5: {r: 0.3056475, g: 1, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 24094
-    ctime1: 44718
-    ctime2: 65535
-    ctime3: 65535
-    ctime4: 65535
-    ctime5: 65535
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 1
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 2
-  fill: {fileID: 1273896297}
+  hp: 0
+  CollitionManager: {fileID: 0}
+  life3: {fileID: 0}
+  life2: {fileID: 0}
+  life1: {fileID: 0}
 --- !u!114 &1261039953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7329,8 +7324,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7bc94cd82fc6c4aa627837400ed40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Heal: 0
+  Shield: 0
+  VerspreidShot: 0
+  Speed: 0
+  Firerate: 0
   TextChanger: {fileID: 1159393050}
   Button: {fileID: 1429554847}
+  KoopButton: {fileID: 0}
+  Beschrijving: {fileID: 0}
+  NaamProduct: {fileID: 0}
+  Prijs: {fileID: 0}
+  InvManager: {fileID: 0}
 --- !u!114 &1429554847
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,12 @@ using System;
 
 public class Boss : MonoBehaviour
 {
+
+    private int WaveCount;
     public float Health;
+    [SerializeField] private Animator bossanim;
+    [SerializeField] private float FlightDuration = 7;
+    [SerializeField] private int ShootWaves = 5;
     [SerializeField]private bool canShoot;
     [SerializeField]private float StartDelay;
     [SerializeField]private float DialogueTime;
@@ -33,19 +38,29 @@ public class Boss : MonoBehaviour
         StartCoroutine(ShootAttack(BulletCount, 3.5f));
     }
     private IEnumerator ShootAttack(int amountofbullets, float duration){
-        Invoke("DisableShooting", duration);
-            for (int i = 0; i < amountofbullets; i++){
-                if(canShoot){
+        WaveCount++;
+        if(WaveCount < ShootWaves){
+            Invoke("DisableShooting", duration);
+            for (int i = 0; i < amountofbullets; i++)
+            {
+                if (canShoot)
+                {
                     yield return new WaitForSeconds(ShootSpeed);
-                    StartCoroutine(ShootBullet(BulletMultiplier)); 
+                    StartCoroutine(ShootBullet(BulletMultiplier));
                 }
             }
         }
+        else
+        {
+            bossanim.SetBool("isFlying", true);
+            WaveCount = 0;
+            Invoke("DisableShooting", duration);
+        }
+    }
     private void DisableShooting(){
         canShoot = false;
         Invoke("InvokeShootAttack", TriggerInterval);
     }
-
     private IEnumerator ShootBullet(int count){
         for (int i = 0; i < count; i++){
             yield return new WaitForSeconds(ShootSpeed + 0.1f);

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  AimSpeed: 50
+  AimSpeed: 100
   CanAim: 1
 --- !u!1 &4101532442840525133
 GameObject:
@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 121676189414264571}
   - component: {fileID: 1960992915746340608}
   - component: {fileID: 1694680251102692638}
+  - component: {fileID: 1955583695}
   m_Layer: 0
   m_Name: BossObj
   m_TagString: Untagged
@@ -143,6 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
+  bossanim: {fileID: 1955583695}
+  FlightDuration: 7
+  ShootWaves: 5
   canShoot: 0
   StartDelay: 1.5
   DialogueTime: 5
@@ -154,3 +158,22 @@ MonoBehaviour:
   ShootSpeed: 0.233
   BulletCount: 3000
   BulletMultiplier: 1
+--- !u!95 &1955583695
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4101532442840525133}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 188f16db9536e884daac5445cd43f7f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
