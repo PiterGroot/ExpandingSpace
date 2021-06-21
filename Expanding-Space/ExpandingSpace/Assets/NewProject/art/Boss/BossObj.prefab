@@ -143,12 +143,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
+  canShoot: 0
   StartDelay: 1.5
   DialogueTime: 5
   BossDialogue: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
   GunPos: {fileID: 672983832}
   bullet: {fileID: 5084456572454157646, guid: 6f678c9bd30bd5b40bd74ebe32a84932, type: 3}
-  AimSpeed: 0
+  PauseInterval: 2.5
+  TriggerInterval: 1.5
   ShootSpeed: 0.233
   BulletCount: 3000
   BulletMultiplier: 1
