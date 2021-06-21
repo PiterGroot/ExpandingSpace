@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6070532332671887245}
   - component: {fileID: 1418183056790303292}
   - component: {fileID: 7896492608540768721}
-  m_Layer: 0
+  - component: {fileID: 7914985863389097512}
+  m_Layer: 6
   m_Name: Meteors_7
   m_TagString: Meteor
   m_Icon: {fileID: 0}
@@ -172,10 +173,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5e74c89fb656946a77c405cf1409df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Particle: {fileID: 0}
+  Particle: {fileID: 3932786869825341019, guid: f4d17287d6903f043acc914332996f88, type: 3}
   spawner: {fileID: 0}
   canMove: 1
-  RotSpeed: 10
+  RotSpeed: 0.25
   MoveSpeed: 0
-  MinMaxMoveSpeed: {x: 0, y: 0}
-  MinMaxSize: {x: 0.8, y: 1.2}
+  MinMaxMoveSpeed: {x: 1, y: 3.5}
+  MinMaxSize: {x: 0.95, y: 1.3}
+--- !u!50 &7914985863389097512
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4545595825921608583}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
