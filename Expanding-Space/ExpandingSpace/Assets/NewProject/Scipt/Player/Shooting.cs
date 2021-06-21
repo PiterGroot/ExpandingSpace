@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    [SerializeField] private bool canShootOverride;
     [SerializeField] private WaveSpawner waveSpawner;
     [SerializeField] private int fpsLimiter;
     [SerializeField] private bool canShoot;
@@ -31,6 +32,17 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         if (!godMode && canShoot)
+        {
+            ShootTimer -= 1;
+
+            if (ShootTimer <= 0 && Input.GetKey("space"))
+            {
+                ShootTimer = shootTimerMax;
+                FindObjectOfType<AudioManager>().Play("Laser");
+                Instantiate(Bullet, transform.position + new Vector3(1.2f, -.2f), Quaternion.identity);
+            }
+        }
+        else if (canShootOverride)
         {
             ShootTimer -= 1;
 

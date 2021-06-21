@@ -6984,6 +6984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfddf78bd09768b4bb055d08cd925573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShootOverride: 1
   waveSpawner: {fileID: 190022791}
   fpsLimiter: 100
   canShoot: 1

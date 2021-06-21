@@ -18,6 +18,7 @@ TagManager:
   - DespawnBullet
   - SnailMoving
   - SnailShooting
+  - Boss
   layers:
   - Default
   - TransparentFX

@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeteorExplosion: {fileID: 3932786869825341019, guid: f4d17287d6903f043acc914332996f88, type: 3}
+  SmallExplosion: {fileID: 1607366770112939588, guid: 33d574bad967da941a527c46d5ce41ba, type: 3}
 --- !u!60 &2329305423750569087
 PolygonCollider2D:
   m_ObjectHideFlags: 0

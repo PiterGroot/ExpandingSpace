@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private GameObject MeteorExplosion;
+    [SerializeField] private GameObject MeteorExplosion, SmallExplosion;
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +28,13 @@ public class Bullet : MonoBehaviour
         if (collision.collider.tag == "SnailShooting")
         {
             collision.gameObject.GetComponent<MovingForShooting>().KillSelf();
+            Destroy(gameObject);
+        }
+        if (collision.collider.tag == "Boss")
+        {
+            Instantiate(SmallExplosion, transform.position, Quaternion.identity);
+            collision.gameObject.GetComponent<Boss>().TakeDamage();
+            RandomExplosionSound();
             Destroy(gameObject);
         }
 

@@ -57,6 +57,10 @@ public class Boss : MonoBehaviour
             Invoke("DisableShooting", duration);
         }
     }
+    public void TakeDamage()
+    {
+        Health -= UnityEngine.Random.Range(1, 5);
+    }
     private void DisableShooting(){
         canShoot = false;
         Invoke("InvokeShootAttack", TriggerInterval);
