@@ -16,7 +16,7 @@ public class Boss : MonoBehaviour
     [SerializeField] private bool canShoot;
     [SerializeField] private float StartDelay;
     [SerializeField] private float DialogueTime;
-    [SerializeField] private TriggerDialogue BossDialogue;
+    [SerializeField] private TriggerDialogue BossDialogue, BossFly;
     [SerializeField] private Transform GunPos;
     [SerializeField] private GameObject bullet;
     [SerializeField] private float PauseInterval = 2.5f;
@@ -27,6 +27,7 @@ public class Boss : MonoBehaviour
 
     private void Start()
     {
+        BossFly = GameObject.FindGameObjectWithTag("BossDialogue1").GetComponent<TriggerDialogue>();
         BossDialogue = GameObject.FindGameObjectWithTag("BossDialogue").GetComponent<TriggerDialogue>();
         canShoot = true;
         StartCoroutine(TriggerBossDialogue());
@@ -60,6 +61,7 @@ public class Boss : MonoBehaviour
         }
         else
         {
+            BossFly.StartCoroutine(BossFly.ActivateDialogue());
             bossanim.SetBool("isFlying", true);
             WaveCount = 0;
             Invoke("DisableShooting", duration);
