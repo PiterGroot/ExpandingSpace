@@ -15,7 +15,7 @@ public class TriggerDialogue : MonoBehaviour
     private string SentenceOrder;
     private bool isDisabled = false;
 
-    [SerializeField]private bool ActivateThisDialogue;
+    [SerializeField]public bool ActivateThisDialogue;
     [Header("Refrences")]
     [SerializeField]private Animator DialogueAnim;
     [SerializeField]private GameObject ObjectToFollow;
