@@ -36,14 +36,14 @@ public class InventoryManager : MonoBehaviour
     public RandomText RandomText;
     private void Update()
     {
-        Heal = RandomText.Heal;
-        Shield = RandomText.Shield;
-        VerspreidShot = RandomText.VerspreidShot;
-        Speed = RandomText.Speed;
-        Firerate = RandomText.Firerate;
-        Slot1();
-        Slot2();
-        Slot3();
+       // Heal = RandomText.Heal;
+       // Shield = RandomText.Shield;
+        //VerspreidShot = RandomText.VerspreidShot;
+        //Speed = RandomText.Speed;
+        //Firerate = RandomText.Firerate;
+        //Slot1();
+        //Slot2();
+        //Slot3();
         MakeList();
 
 

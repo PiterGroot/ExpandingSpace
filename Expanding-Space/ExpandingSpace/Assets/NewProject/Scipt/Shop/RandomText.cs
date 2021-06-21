@@ -24,7 +24,7 @@ public class RandomText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //string BoughtSpeed = invManager.SpeedGk();
+        
     }
 
     // Update is called once per framehgj
@@ -86,10 +86,10 @@ public class RandomText : MonoBehaviour
 
     void ButtonSpeed()
     {
-        NaamProduct.text = "Snelheid'";
+        NaamProduct.text = "Snelheid";
         Beschrijving.text = "Je snelheid van je schip gaat omhoog";
         Prijs.text = "5";
-      //  KoopButton.onClick.AddListener();
+        Button.onClick.AddListener(buy);
     }
 
     void ButtonHealth()
@@ -97,6 +97,7 @@ public class RandomText : MonoBehaviour
         NaamProduct.text = "Repareren";
         Beschrijving.text = "Je repareert het schip en het krijgt er 1 hartje ervoor terug";
         Prijs.text = "15";
+        Button.onClick.AddListener(buy);
     }
 
     void ButtonShield()
@@ -104,6 +105,7 @@ public class RandomText : MonoBehaviour
         NaamProduct.text = "Schild";
         Beschrijving.text = "Je krijgt voor 30 seconden een schild hierdoor kan je niet geraakt worden";
         Prijs.text = "30";
+        Button.onClick.AddListener(buy);
     }
 
     void ButtonFirerate()
@@ -111,6 +113,7 @@ public class RandomText : MonoBehaviour
         NaamProduct.text = "Vuur Snelheid";
         Beschrijving.text = "Je kan voor 30 seconde sneller schieten";
         Prijs.text = "20";
+        Button.onClick.AddListener(buy);
     }
 
     void ButtonShotgun()
@@ -118,6 +121,7 @@ public class RandomText : MonoBehaviour
         NaamProduct.text = "Verspreid Schot";
         Beschrijving.text = "Je schot wordt verdubbelt naar 3 ";
         Prijs.text = "50";
+        Button.onClick.AddListener(buy);
 
     }
 
@@ -128,22 +132,27 @@ public class RandomText : MonoBehaviour
         if (NaamProduct.text == "Vuur Snelheid")
         {
             InvManager.SpeedGk();
+            Debug.Log("s");
         }
         else if (NaamProduct.text == "Verspreid Schot")
         {
             InvManager.VerspreidShotGk();
+            Debug.Log("vs");
         } 
-        else if(NaamProduct.text== "Shild")
+        else if(NaamProduct.text== "Schild")
         {
             InvManager.ShieldGk();
+            Debug.Log("sh");
         }
         else if(NaamProduct.text == "Repareren")
         {
             InvManager.ReparerenGk();
+            Debug.Log("r");
         }
         else if(NaamProduct.text== "Snelheid")
         {
             InvManager.SpeedGk();
+            Debug.Log("sn");
         }
     }
 }
