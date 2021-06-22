@@ -4459,6 +4459,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1694680251102692638, guid: 3c2b59db13cb73c48ad762ee779eff45, type: 3}
+      propertyPath: BossFly
+      value: 
+      objectReference: {fileID: 1058006146}
     - target: {fileID: 4101532442840525133, guid: 3c2b59db13cb73c48ad762ee779eff45, type: 3}
       propertyPath: m_Name
       value: BossObj
@@ -5459,7 +5463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
       propertyPath: Sentences.Array.data[0]
-      value: Je hebt mij boos gemaakt. Hier krijg je spijt van!
+      value: Auw stop met schieten!
       objectReference: {fileID: 0}
     - target: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
       propertyPath: Sentences.Array.data[1]
@@ -5550,6 +5554,18 @@ PrefabInstance:
     - target: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
       propertyPath: DialogueOffset.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
+      propertyPath: Sentences.Array.data[0]
+      value: Aardelingen, waarom verstoren jullie altijd mijn plannen!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
+      propertyPath: Sentences.Array.data[1]
+      value: Voor dit moeten jullie boeten!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
+      propertyPath: Sentences.Array.data[2]
+      value: VOEL MIJN WOEDE!!!
       objectReference: {fileID: 0}
     - target: {fileID: 8945681180856260157, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
       propertyPath: m_Name
@@ -5796,6 +5812,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82aee83b72de95c4ba035ee18e19a474, type: 3}
+--- !u!114 &1058006146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
+  m_PrefabInstance: {fileID: 953186702}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3b40d1e2315ad428a5882bc003673f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1115943659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6486,7 +6513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ddea42db37864a849d48c1cbcce6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GodMode: 1
+  GodMode: 0
   Health: 3
   Healthscript: {fileID: 1261039952}
   Currentstate: 0
@@ -6997,7 +7024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  CollitionManager: {fileID: 0}
+  CollitionManager: {fileID: 1177505987}
   life3: {fileID: 0}
   life2: {fileID: 0}
   life1: {fileID: 0}

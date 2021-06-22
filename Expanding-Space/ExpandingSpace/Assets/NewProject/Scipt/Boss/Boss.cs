@@ -13,7 +13,6 @@ public class Boss : MonoBehaviour
     [SerializeField] private Animator bossanim;
     [SerializeField] private float FlightDuration = 7;
     [SerializeField] private int ShootWaves = 5;
-    [SerializeField] private bool canShoot;
     [SerializeField] private float StartDelay;
     [SerializeField] private float DialogueTime;
     [SerializeField] private TriggerDialogue BossDialogue, BossFly;
@@ -24,6 +23,7 @@ public class Boss : MonoBehaviour
     [SerializeField, Range(0, .5f)] private float ShootSpeed;
     [SerializeField] private int BulletCount;
     [SerializeField] private int BulletMultiplier;
+    public bool canShoot;
 
     private void Start()
     {
@@ -44,42 +44,53 @@ public class Boss : MonoBehaviour
         canShoot = true;
         StartCoroutine(ShootAttack(BulletCount, 3.5f));
     }
+    private void InvokeShootFlyAttack()
+    {
+        canShoot = true;
+        StartCoroutine(ShootFlyAttack(BulletCount, 3.5f));
+    }
     private IEnumerator ShootAttack(int amountofbullets, float duration)
     {
         WaveCount++;
         if (WaveCount < ShootWaves)
         {
             Invoke("DisableShooting", duration);
-            for (int i = 0; i < amountofbullets; i++)
-            {
-                if (canShoot)
-                {
+            for (int i = 0; i < amountofbullets; i++){
+                if (canShoot){
                     yield return new WaitForSeconds(ShootSpeed);
                     StartCoroutine(ShootBullet(BulletMultiplier));
                 }
             }
         }
-        else
-        {
+        else{
             BossFly.StartCoroutine(BossFly.ActivateDialogue());
             bossanim.SetBool("isFlying", true);
             WaveCount = 0;
-            Invoke("DisableShooting", duration);
+            Invoke("DisableSFlyhooting", duration);
         }
     }
-    public void TakeDamage()
-    {
+    private IEnumerator ShootFlyAttack(int amountofbullets, float duration){
+            Invoke("DisableSFlyhooting", duration);
+            for (int i = 0; i < amountofbullets; i++){
+                if (canShoot){
+                    yield return new WaitForSeconds(ShootSpeed);
+                    StartCoroutine(ShootBullet(BulletMultiplier));
+                }
+            }
+    }
+    public void TakeDamage(){
         Health -= UnityEngine.Random.Range(1, 5);
     }
-    private void DisableShooting()
-    {
+    private void DisableShooting(){
         canShoot = false;
         Invoke("InvokeShootAttack", TriggerInterval);
     }
-    private IEnumerator ShootBullet(int count)
-    {
-        for (int i = 0; i < count; i++)
-        {
+     private void DisableSFlyhooting(){
+        canShoot = false;
+        Invoke("InvokeShootFlyAttack", TriggerInterval);
+    }
+    private IEnumerator ShootBullet(int count){
+        for (int i = 0; i < count; i++){
             yield return new WaitForSeconds(ShootSpeed + 0.1f);
             Instantiate(bullet, GunPos.position, GunPos.rotation);
             FindObjectOfType<AudioManager>().Play("Laser");

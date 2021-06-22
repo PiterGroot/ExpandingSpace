@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    private Boss BossScript;
     [SerializeField] private bool canShootOverride;
     [SerializeField] private WaveSpawner waveSpawner;
     [SerializeField] private int fpsLimiter;
@@ -13,9 +14,11 @@ public class Shooting : MonoBehaviour
     public int ShootTimer;
     [HideInInspector]public int shootTimerMax;
     private void Awake(){
+        BossScript = FindObjectOfType<Boss>();
         shootTimerMax = ShootTimer;
         Application.targetFrameRate = fpsLimiter;
         InvokeRepeating("CheckWaveSpawner", 0, 1f);
+        Invoke("EnableShooting", 14f);
     }
     private void CheckWaveSpawner()
     {
@@ -27,6 +30,9 @@ public class Shooting : MonoBehaviour
         {
             canShoot = false;
         }
+    }
+    void EnableShooting(){
+        canShootOverride = true;
     }
     // Update is called once per frame
     void Update()
