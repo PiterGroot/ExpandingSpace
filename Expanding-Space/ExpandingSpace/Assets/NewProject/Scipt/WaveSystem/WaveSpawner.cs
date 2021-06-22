@@ -33,6 +33,8 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField]private TextMeshProUGUI EnemiesLeft;
     [SerializeField]private TriggerDialogue PlayerChoice;
     [SerializeField] private TriggerDialogue UitlegDia;
+    [SerializeField]private BossSpawner bossSpawner;
+    [SerializeField]private GameObject Player;
     
     private void Awake() {
         SpawnRate += .05f;
@@ -79,7 +81,7 @@ public class WaveSpawner : MonoBehaviour
             else if(CurrentWave <= 10 && CurrentWave > 5){
                 CurrentEnemies.Add(MediumEnemies[RandInt(0, MediumEnemies.Count)]);
             }
-             else if(CurrentWave >= 11){
+             else if(CurrentWave >= 8){
                 CurrentEnemies.Add(HardEnemies[RandInt(0, HardEnemies.Count)]);
             }
         }
@@ -132,8 +134,12 @@ public class WaveSpawner : MonoBehaviour
                 CancelInvoke("PlayerChoiceDialogue");
                 StartCoroutine(PlayerChoice.ActivateDialogue());
                 isInWave = false;
-
             }
+        }
+    }
+    private void Update() {
+        if(CurrentWave == 11 && SpawnedAllEnemies){
+            bossSpawner.TriggerFight();
         }
     }
     private void FixedUpdate() {
@@ -141,6 +147,7 @@ public class WaveSpawner : MonoBehaviour
         EnemiesLeft.text = $"ENEMIES LEFT:{currentEnemyCount.ToString()}";
     }
     public void StartedBossFight(){
+        Player.transform.position = new Vector3(-4.92f, 0, 0);
         Destroy(gameObject);
     }
 }

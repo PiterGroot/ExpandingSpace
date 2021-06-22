@@ -1192,6 +1192,8 @@ MonoBehaviour:
   EnemiesLeft: {fileID: 325207216}
   PlayerChoice: {fileID: 1718565330}
   UitlegDia: {fileID: 1012676750}
+  bossSpawner: {fileID: 247645329}
+  Player: {fileID: 1177505982}
 --- !u!1 &219809041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1509,17 @@ Transform:
   m_Father: {fileID: 460145147}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247645329 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 994350279162581944, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+  m_PrefabInstance: {fileID: 1049288657}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e034215f3b7d8d74e94f3e085d9c6abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &293419181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4958005964355780152, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
@@ -6405,6 +6418,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035985131}
   m_CullTransparentMesh: 1
+--- !u!1001 &1049288657
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 994350279162581944, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: TriggerBossFight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581945, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994350279162581947, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: m_Name
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603434568254276179, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: DialogueBox
+      value: 
+      objectReference: {fileID: 1554694131}
+    - target: {fileID: 5603434568254276179, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: DialogueAnim
+      value: 
+      objectReference: {fileID: 1554694132}
+    - target: {fileID: 5603434568262269908, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: DialogueBox
+      value: 
+      objectReference: {fileID: 1554694131}
+    - target: {fileID: 5603434568262269908, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
+      propertyPath: DialogueAnim
+      value: 
+      objectReference: {fileID: 1554694132}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 586ab3e4f027b0a46950fde001b408f7, type: 3}
 --- !u!1001 &1115943659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9992,7 +10082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780153, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 1
+      value: 0.087
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780153, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: sounds.Array.data[1].volume

@@ -13,7 +13,7 @@ public class BossSpawner : MonoBehaviour
         spawnerScript = FindObjectOfType<WaveSpawner>();
     }
     // Start is called before the first frame update
-    private void TriggerFight(){
+    public void TriggerFight(){
         spawnerScript.StartedBossFight();
         Instantiate(BossObj, SpawnPosition.transform.position, Quaternion.identity);
     }
