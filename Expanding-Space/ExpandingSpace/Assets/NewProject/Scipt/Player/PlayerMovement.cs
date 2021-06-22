@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject SpaceShip;
     [SerializeField] private WaveSpawner spawner;
     [SerializeField]private GameObject HubFoundation;
-    [SerializeField] private GameObject Shop;
+    [SerializeField] private TriggerDialogue Shopkeep;
+    [SerializeField] private TriggerDialogue SlakDia;
     
     //Walking
     public bool canMove;
@@ -66,20 +67,35 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.name == "Exit" && Input.GetKey(KeyCode.F)){
-            HubFoundation.SetActive(false);
-            spawner.waitForPlayerChoice = true;
-            SpaceShip.SetActive(true);
-            CallFunctionRandomizer1.Randomized();
-            CallFunctionRandomizer2.Randomized();
-            CallFunctionRandomizer3.Randomized();
-            FindObjectOfType<AudioManager>().Stop("OST");
+
+            if (PlayerPrefs.GetInt("Slak") != 1)
+            {
+                StartCoroutine(SlakDia.ActivateDialogue());
+                PlayerPrefs.SetInt("Slak", 1);
+                Invoke("Exits", 7);
+                
+            }
+            else
+            {
+                Exits();
+            }
         }
         if (collision.gameObject.tag == "Shop" && Input.GetKey(KeyCode.F))
         {
+            Shopkeep.StartCoroutine(Shopkeep.ActivateDialogue());
             HubFoundation.SetActive(false);
-            Shop.SetActive(true);
-            
 
         }
+    }
+
+    void Exits()
+    {
+        HubFoundation.SetActive(false);
+        spawner.waitForPlayerChoice = true;
+        SpaceShip.SetActive(true);
+        CallFunctionRandomizer1.Randomized();
+        CallFunctionRandomizer2.Randomized();
+        CallFunctionRandomizer3.Randomized();
+        FindObjectOfType<AudioManager>().Stop("OST");
     }
 }

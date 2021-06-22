@@ -271,6 +271,8 @@ Transform:
   - {fileID: 2390876756518711561}
   - {fileID: 2390876756580491835}
   - {fileID: 6601797400631278407}
+  - {fileID: 5979123856447278072}
+  - {fileID: 8693188380701952151}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -368,12 +370,197 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292e6d91d70d0a347994cd7e62cb436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CallFunctionRandomizer1: {fileID: 0}
+  CallFunctionRandomizer2: {fileID: 0}
+  CallFunctionRandomizer3: {fileID: 0}
   SpaceShip: {fileID: 0}
   spawner: {fileID: 0}
   HubFoundation: {fileID: 2390876756640367926}
+  Shop: {fileID: 0}
   canMove: 0
   rb: {fileID: 6601797400631278427}
   speed: 10
+  RightWalk: {fileID: 0}
+  LeftWalk: {fileID: 0}
+  Standing: {fileID: 0}
+--- !u!1001 &4887914179713713222
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2390876756640367927}
+    m_Modifications:
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[0]
+      value: Welkom in het schip. Hier kan je tussen golven  om uit te rusten.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[1]
+      value: Je kan hier ook de winkel gebruiken waar je power-ups koopt.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[2]
+      value: De winkel is aan de rechterkant bij de computer methet boord shop er
+        op.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[3]
+      value: Als je de winkel in wilt gaan, loop er dan heen en druk op F.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[4]
+      value: Als je de winkel in wilt gaan, loop er dan heen en druk op F.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[5]
+      value: 'We gaan nu bijna de tweede golf in, dus kijk maar snel even rond. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[6]
+      value: Als je terug wilt gaan naar de besturing van het schip, loop dan naar
+        de linkerkant, naar de deur en druk dan op F.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350303, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_Name
+      value: HubDemo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+--- !u!4 &8693188380701952151 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+  m_PrefabInstance: {fileID: 4887914179713713222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7605218289496606505
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2390876756640367927}
+    m_Modifications:
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: HasMissionSelect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[0]
+      value: Beep, Beep hoe kan ik u helpen?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: Sentences.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350303, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: m_Name
+      value: ShopKeeper
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+--- !u!4 &5979123856447278072 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+  m_PrefabInstance: {fileID: 7605218289496606505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8857549479590226654
 PrefabInstance:
   m_ObjectHideFlags: 0

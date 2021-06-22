@@ -32,6 +32,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField]private TextMeshProUGUI WaveDisplay;
     [SerializeField]private TextMeshProUGUI EnemiesLeft;
     [SerializeField]private TriggerDialogue PlayerChoice;
+    [SerializeField] private TriggerDialogue UitlegDia;
     
     private void Awake() {
         SpawnRate += .05f;
@@ -119,9 +120,20 @@ public class WaveSpawner : MonoBehaviour
     }
     private void PlayerChoiceDialogue(){
         if(CanSpawn){
-            CancelInvoke("PlayerChoiceDialogue");
-            StartCoroutine(PlayerChoice.ActivateDialogue());
-            isInWave = false;
+            if (PlayerPrefs.GetInt("EersteUitleg") != 1)
+            {
+                CancelInvoke("PlayerChoiceDialogue");
+                StartCoroutine(UitlegDia.ActivateDialogue());
+                isInWave = false;
+                PlayerPrefs.SetInt("EersteUitleg", 1);
+            }
+            else
+            {
+                CancelInvoke("PlayerChoiceDialogue");
+                StartCoroutine(PlayerChoice.ActivateDialogue());
+                isInWave = false;
+
+            }
         }
     }
     private void FixedUpdate() {
