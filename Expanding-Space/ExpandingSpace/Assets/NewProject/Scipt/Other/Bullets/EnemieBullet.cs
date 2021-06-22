@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class EnemieBullet : MonoBehaviour
 {
-    // Update is called once per frame
+    public PowerUpManager powerUpManager;
+    public Health health;
+    [HideInInspector] public CollisionManager collisionManager;
+
+
+
+    private void Start()
+    {
+        collisionManager = FindObjectOfType<CollisionManager>();
+    }
     void Update()
     {
         transform.Translate(new Vector2(-12, 0) * Time.deltaTime);
@@ -14,8 +23,17 @@ public class EnemieBullet : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
         {
-            collision.gameObject.GetComponent<CollisionManager>().Health--;
-            Destroy(gameObject);
+            if (collisionManager.shield > 0)
+            {
+                collision.gameObject.GetComponent<CollisionManager>().shield--;
+                Destroy(gameObject);
+            }
+            else
+            {
+                collision.gameObject.GetComponent<CollisionManager>().Health--;
+                Destroy(gameObject);
+            }
+
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

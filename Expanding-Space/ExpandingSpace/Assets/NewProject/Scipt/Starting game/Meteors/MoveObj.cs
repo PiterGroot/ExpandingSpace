@@ -7,36 +7,43 @@ public class MoveObj : MonoBehaviour
     private bool _Magnitude;
     private Rigidbody2D rb2d;
     [SerializeField] private GameObject Particle;
-    [SerializeField]private WaveSpawner spawner;
-    [SerializeField]private bool canMove = true;
-    [SerializeField]private float RotSpeed = 10;
+    [SerializeField] private WaveSpawner spawner;
+    [SerializeField] private bool canMove = true;
+    [SerializeField] private float RotSpeed = 10;
     [SerializeField] private float MoveSpeed;
+
+    [HideInInspector] public CollisionManager collisionManager;
     public Vector2 MinMaxMoveSpeed;
     public Vector2 MinMaxSize = new Vector2(.8f, 1.2f);
     private void Start()
     {
+        collisionManager = FindObjectOfType<CollisionManager>();
+
         spawner = FindObjectOfType<WaveSpawner>();
 
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         MoveSpeed = Random.Range(MinMaxMoveSpeed.x, MinMaxMoveSpeed.y);
-        
+
         bool Magnitude = Random.value >= 0.5;
         _Magnitude = Magnitude;
 
         float randSize = Random.Range(MinMaxSize.x, MinMaxSize.y);
         gameObject.transform.localScale *= randSize;
     }
-   
+
     // Update is called once per frame
     void Update()
     {
-        if(this._Magnitude){
+        if (this._Magnitude)
+        {
             transform.Rotate(new Vector3(0, 0, RotSpeed));
         }
-        else{
+        else
+        {
             transform.Rotate(new Vector3(0, 0, -RotSpeed));
         }
-        if(canMove){
+        if (canMove)
+        {
             rb2d.velocity = new Vector2(-MoveSpeed, 0f);
         }
     }
@@ -54,17 +61,31 @@ public class MoveObj : MonoBehaviour
         }
         if (collision.collider.CompareTag("Player"))
         {
-            collision.collider.GetComponent<CollisionManager>().Health--;
-            Instantiate(Particle, transform.position, Quaternion.identity);
-            RandomExplosionSound();
-            spawner.EnemyKilled();
-            Destroy(gameObject);
+            if (collisionManager.shield > 0)
+            {
+                collision.gameObject.GetComponent<CollisionManager>().shield--;
+                Instantiate(Particle, transform.position, Quaternion.identity);
+                RandomExplosionSound();
+                spawner.EnemyKilled();
+                Destroy(gameObject);
+            }
+            else
+            {
+                collision.gameObject.GetComponent<CollisionManager>().Health--;
+                Instantiate(Particle, transform.position, Quaternion.identity);
+                RandomExplosionSound();
+                spawner.EnemyKilled();
+                Destroy(gameObject);
+            }
+
         }
     }
 
-    private void RandomExplosionSound(){
+    private void RandomExplosionSound()
+    {
         int randInt = Random.Range(0, 3);
-        switch (randInt){
+        switch (randInt)
+        {
             case 0:
                 FindObjectOfType<AudioManager>().Play("Explosion");
                 break;

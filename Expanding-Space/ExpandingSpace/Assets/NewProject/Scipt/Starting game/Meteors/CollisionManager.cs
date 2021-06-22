@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class CollisionManager : MonoBehaviour
 {
-    [SerializeField]private bool GodMode = false;
+    [SerializeField] private bool GodMode = false;
     public int Health = 3;
     private int maxHealth;
+    public int shield;
     //Zoekt het heathbar script
     public Health Healthscript;
     public ShipState Currentstate = ShipState.Undamaged;
-    private void Awake() {
+    private void Awake()
+    {
         maxHealth = Health;
         //track je max hp
     }
@@ -26,7 +28,8 @@ public class CollisionManager : MonoBehaviour
     }
     private void Update()
     {
-        if(GodMode){
+        if (GodMode)
+        {
             Health = maxHealth;
         }
         if (Health == 3)
@@ -49,7 +52,7 @@ public class CollisionManager : MonoBehaviour
             //update hp bar visually
             Currentstate = ShipState.Broken;
         }
-        if(Health <= 0)
+        if (Health <= 0)
         {
             print("DEAD");
             Destroy(gameObject);

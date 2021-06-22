@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 public class InventoryManager : MonoBehaviour
 {
     //items
@@ -10,12 +11,7 @@ public class InventoryManager : MonoBehaviour
     public Sprite ShotgunSprite;
     public Sprite SpeedSprite;
     public GameObject FirerateSprite;
-
-    //bools to check the itemslots
-    public bool Slot1Free;
-    public bool Slot2Free;
-    public bool Slot3Free;
-
+    public List<string> items = new List<string>();
     //bools to check the items
     public bool Heal;
     public bool Shield;
@@ -29,127 +25,191 @@ public class InventoryManager : MonoBehaviour
     public Image Itemslot3;
     public GameObject hub;
 
-    public RandomText RandomText;
+    //slot checks
+    public bool slotused1 = true;
+    public bool slotused2 = true;
+    public bool slotused3 = true;
+
 
     private void Start()
     {
-        Slot1Free = true;
-        Slot2Free = true;
-        Slot3Free = true;
+
+
+
     }
     private void Update()
     {
-        MakeList();
-    } 
-
-    void MakeList()
-    {
-        if(Slot1Free == true)
-        {
-            if (Heal == true)
-            {
-                Slot1Free = false;
-            }
-            if (Shield == true)
-            {
-                Slot1Free = false;
-            }
-            if (VerspreidShot == true)
-            {
-                Slot1Free = false;
-            }
-            if (Speed == true)
-            {
-                Slot1Free = false;
-            }
-            if (Firerate == true)
-            {
-                Slot1Free = false;
-            }
-        }
-        else if (Slot2Free == true)
-        {
-            if (Heal == true)
-            {
-                Slot2Free = false;
-            }
-            if (Shield == true)
-            {
-                Slot2Free = false;
-            }
-            if (VerspreidShot == true)
-            {
-                Slot2Free = false;
-            }
-            if (Speed == true)
-            {
-                Slot2Free = false;
-            }
-            if (Firerate == true)
-            {
-                Slot2Free = false;
-            }
-        }
-        else if (Slot3Free == true)
-        {
-            if (Heal == true)
-            {
-                Slot3Free = false;
-            }
-            if (Shield == true)
-            {
-                Slot3Free = false;
-            }
-            if (VerspreidShot == true)
-            {
-                Slot3Free = false;
-            }
-            if (Speed == true)
-            {
-                Slot3Free = false;
-            }
-            if (Firerate == true)
-            {
-                Slot3Free = false;
-            }
-        }
 
 
     }
 
-    //add functies
+
+    //add functies 
     public void ReparerenGk()
     {
         Debug.Log("Heal gekocht!");
         Heal = true;
-        MakeList();
+        items.Add("Heal");
+
+
     }
     public void ShieldGk()
     {
         Debug.Log("Shield gekocht!");
+        items.Add("Shield");
         Shield = true;
-        MakeList();
+
+
+
     }
     public void VerspreidShotGk()
     {
         Debug.Log("Verspreid gekocht!");
+        items.Add("Shotgun");
         VerspreidShot = true;
-        MakeList();
+
+
+
     }
     public void FirerateGk()
     {
         Debug.Log("Firerate gekocht!");
+        items.Add("Firerate");
         Firerate = true;
-        MakeList();
+
+
+
     }
-   public void SpeedGk()
+    public void SpeedGk()
     {
         Debug.Log("speed gekocht!");
+        items.Add("Speed");
         Speed = true;
-        MakeList();
-    }
-   
 
-    
+
+
+    }
+
+
+    //Display functions
+    public void Slot1()
+    {
+        if (slotused1 == true)
+        {
+            Debug.Log("slot 1 wrkt");
+            switch (items[0])
+            {
+                case "Heal":
+                    // qDebug.Log("het is HEal");
+                    Instantiate(HealSprite, new Vector2(-7.92f, -4.21f), Quaternion.identity);
+                    slotused1 = false;
+                    Slot2();
+                    break;
+                case "Shield":
+                    Instantiate(ShieldSprite, new Vector2(-7.92f, -4.21f), Quaternion.identity);
+                    slotused1 = false;
+                    Slot2();
+                    break;
+                case "Speed":
+                    Instantiate(SpeedSprite, new Vector2(-7.92f, -4.21f), Quaternion.identity);
+                    slotused1 = false;
+                    Slot2();
+                    break;
+                case "Firerate":
+                    Instantiate(FirerateSprite, new Vector2(-7.92f, -4.21f), Quaternion.identity);
+                    slotused1 = false;
+                    Slot2();
+                    break;
+                case "Shotgun":
+                    Instantiate(ShotgunSprite, new Vector2(-7.92f, -4.21f), Quaternion.identity);
+                    slotused1 = false;
+                    Slot2();
+                    break;
+            }
+        }
+        else
+        {
+            Debug.Log("Slot is used");
+        }
+    }
+    public void Slot2()
+    {
+        if (slotused2 == true)
+        {
+            Debug.Log("slot 2 wrkt");
+            switch (items[1])
+            {
+                case "Heal":
+                    // qDebug.Log("het is HEal");
+                    Instantiate(HealSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    slotused2 = false;
+                    Slot3();
+                    break;
+                case "Shield":
+                    Instantiate(ShieldSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    slotused2 = false;
+                    Slot3();
+                    break;
+                case "Speed":
+                    Instantiate(SpeedSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    slotused2 = false;
+                    Slot3();
+                    break;
+                case "Firerate":
+                    Instantiate(FirerateSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    slotused2 = false;
+                    Slot3();
+                    break;
+                case "Shotgun":
+                    Instantiate(ShotgunSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    slotused2 = false;
+                    Slot3();
+                    break;
+
+            }
+        }
+        else
+        {
+            Debug.Log("Slot is used");
+        }
+    }
+    public void Slot3()
+    {
+        if (slotused3 == true)
+        {
+            Debug.Log("slot 3 wrkt");
+            switch (items[2])
+            {
+                case "Heal":
+                    // qDebug.Log("het is HEal");
+                    Instantiate(HealSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    slotused3 = false;
+                    break;
+                case "Shield":
+                    Instantiate(ShieldSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    slotused3 = false;
+                    break;
+                case "Speed":
+                    Instantiate(SpeedSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    slotused3 = false;
+                    break;
+                case "Firerate":
+                    Instantiate(FirerateSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    slotused3 = false;
+                    break;
+                case "Shotgun":
+                    Instantiate(ShotgunSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    slotused3 = false;
+                    break;
+
+            }
+        }
+        else
+        {
+            Debug.Log("Slot is used");
+        }
+    }
 }
+
+
 
