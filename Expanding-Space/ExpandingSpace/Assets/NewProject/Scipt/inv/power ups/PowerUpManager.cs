@@ -42,7 +42,7 @@ public class PowerUpManager : MonoBehaviour
                 }
                 break;
             case "Shield":
-                //shieldborder.SetActive(true);
+                shieldborder.SetActive(true);
                 collisionManager.shield=3;
                 break;
             case "Speed":

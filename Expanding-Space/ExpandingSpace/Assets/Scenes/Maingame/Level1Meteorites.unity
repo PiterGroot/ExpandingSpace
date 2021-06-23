@@ -11415,7 +11415,8 @@ MonoBehaviour:
   ShotgunSprite: {fileID: 44708062346777694, guid: 22dce00a34a121c49bb9e04ae6478ccf, type: 3}
   SpeedSprite: {fileID: 7363093017985441666, guid: 624c6021f4a72104985362cb69f115ea, type: 3}
   FirerateSprite: {fileID: 44708062346777694, guid: 22dce00a34a121c49bb9e04ae6478ccf, type: 3}
-  items: []
+  items:
+  - Shield
   Heal: 0
   Shield: 0
   VerspreidShot: 0
@@ -13439,12 +13440,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  shield: 0
   CollitionManager: {fileID: 1177505987}
   life3: {fileID: 1475126646}
   life2: {fileID: 219809041}
   life1: {fileID: 658423455}
-  powerUpManager: {fileID: 0}
+  powerUpManager: {fileID: 1722461971}
 --- !u!114 &2069020014
 MonoBehaviour:
   m_ObjectHideFlags: 0
