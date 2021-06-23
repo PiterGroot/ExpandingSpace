@@ -1017,10 +1017,10 @@ MonoBehaviour:
   CountingDown: 0
   SpawnedAllEnemies: 0
   waitForPlayerChoice: 1
-  StartDelay: 13
+  StartDelay: 30
   TimeBetweenWaves: 0
   StartEnemyCount: 15
-  CurrentWave: 0
+  CurrentWave: 8
   SpawnRate: 0.8
   EasyEnemies:
   - {fileID: 7577834277968503113, guid: 2b9a8d1955dfcd74ca8b9304e579085a, type: 3}
@@ -1031,11 +1031,42 @@ MonoBehaviour:
   - {fileID: 5085637171596352902, guid: 22a9090a16b1fb14b81279bc412bd465, type: 3}
   - {fileID: 6081251811988507, guid: 4b076ac6a57217e4caeac15d9bca2ce8, type: 3}
   - {fileID: 4545595825921608583, guid: be058c986e9e384428d86ef20f61ca14, type: 3}
+  - {fileID: 4795494663067430447, guid: 846db254268a3f349a5e46be0402b331, type: 3}
+  - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
   MediumEnemies:
   - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
   - {fileID: 4795494663067430447, guid: 846db254268a3f349a5e46be0402b331, type: 3}
-  HardEnemies:
+  - {fileID: 7577834277968503113, guid: 2b9a8d1955dfcd74ca8b9304e579085a, type: 3}
+  - {fileID: 5870387721395280943, guid: 10ec87e848c1ad347a7cdbbe547bc668, type: 3}
+  - {fileID: 8819076087376188740, guid: 7f6afa9563780524bb46fb1ebfa73243, type: 3}
+  - {fileID: 5498519888875724703, guid: b4078a246a2efd443bd53008452be6e6, type: 3}
+  - {fileID: 1035788385137393479, guid: 10621706ca84f1b47932f252c7d520d9, type: 3}
+  - {fileID: 5085637171596352902, guid: 22a9090a16b1fb14b81279bc412bd465, type: 3}
+  - {fileID: 6081251811988507, guid: 4b076ac6a57217e4caeac15d9bca2ce8, type: 3}
+  - {fileID: 4545595825921608583, guid: be058c986e9e384428d86ef20f61ca14, type: 3}
+  - {fileID: 4545595825921608583, guid: be058c986e9e384428d86ef20f61ca14, type: 3}
+  - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
+  - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
+  - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
+  - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
   - {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
+  - {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
+  HardEnemies:
+  - {fileID: 4545595825921608583, guid: be058c986e9e384428d86ef20f61ca14, type: 3}
+  - {fileID: 7577834277968503113, guid: 2b9a8d1955dfcd74ca8b9304e579085a, type: 3}
+  - {fileID: 5870387721395280943, guid: 10ec87e848c1ad347a7cdbbe547bc668, type: 3}
+  - {fileID: 8819076087376188740, guid: 7f6afa9563780524bb46fb1ebfa73243, type: 3}
+  - {fileID: 5498519888875724703, guid: b4078a246a2efd443bd53008452be6e6, type: 3}
+  - {fileID: 1035788385137393479, guid: 10621706ca84f1b47932f252c7d520d9, type: 3}
+  - {fileID: 5085637171596352902, guid: 22a9090a16b1fb14b81279bc412bd465, type: 3}
+  - {fileID: 6081251811988507, guid: 4b076ac6a57217e4caeac15d9bca2ce8, type: 3}
+  - {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
+  - {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
+  - {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
+  - {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
+  - {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
+  - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
+  - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
   CurrentEnemies: []
   WaveDisplay: {fileID: 1846125034}
   EnemiesLeft: {fileID: 325207216}
@@ -7650,11 +7681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[0]
-      value: Goed gedaan! Je bent echt een natuur talent!
+      value: Goed gedaan! Je bent echt een natuurtalent!
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[1]
-      value: Je ziet zo meteen twee knoppen verschijnen
+      value: Je ziet zo meteen twee knoppen verschijnen.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[2]
@@ -9175,7 +9206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1500642682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9564,19 +9595,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[3]
-      value: Mochten er meteoren komen gebruik de Spatiebar om te schieten.
+      value: Mochten er meteorieten komen gebruik de spatiestoets om te schieten.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[4]
-      value: "over meteoren gesproken\u2026"
+      value: "Over meteorieten gesproken\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[5]
-      value: 'We komen in een meteoren regen!! '
+      value: We komen in een meteoren regen!
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[6]
-      value: ontwijk de meteoren en dan praten we wel verder
+      value: Ontwijk de meteorieten en dan praten we wel verder.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: m_RootOrder
@@ -11001,31 +11032,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780153, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 1
+      value: 0.511
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780153, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: sounds.Array.data[2].volume
-      value: 1
+      value: 0.511
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780153, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: sounds.Array.data[3].volume
-      value: 1
+      value: 0.497
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780153, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: sounds.Array.data[4].volume
-      value: 1
+      value: 0.488
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780153, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: sounds.Array.data[5].volume
-      value: 1
+      value: 0.552
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780153, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: sounds.Array.data[6].volume
-      value: 1
+      value: 0.652
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780153, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: sounds.Array.data[7].volume
-      value: 1
+      value: 0.652
       objectReference: {fileID: 0}
     - target: {fileID: 4958005964355780154, guid: 878c1bd602c4b0446981cba34b5be328, type: 3}
       propertyPath: m_RootOrder
@@ -11206,7 +11237,7 @@ PrefabInstance:
       objectReference: {fileID: 1177505982}
     - target: {fileID: 255437068578553292, guid: 8c0ba2b837a011b4eb6cef1d722d08fc, type: 3}
       propertyPath: Sentences.Array.data[0]
-      value: Goed gedaan!! Wil je een pauze houden of verder gaan.
+      value: Goed gedaan! Wil je een pauze houden of verder gaan.
       objectReference: {fileID: 0}
     - target: {fileID: 255437068578553293, guid: 8c0ba2b837a011b4eb6cef1d722d08fc, type: 3}
       propertyPath: m_RootOrder

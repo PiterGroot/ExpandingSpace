@@ -138,7 +138,8 @@ public class WaveSpawner : MonoBehaviour
         }
     }
     private void Update() {
-        if(CurrentWave == 11 && SpawnedAllEnemies){
+        if(CurrentWave == 10 && SpawnedAllEnemies && currentEnemyCount == 0)
+        {
             bossSpawner.TriggerFight();
         }
     }
@@ -148,6 +149,7 @@ public class WaveSpawner : MonoBehaviour
     }
     public void StartedBossFight(){
         Player.transform.position = new Vector3(-4.92f, 0, 0);
+        FindObjectOfType<Shooting>().Timer();
         Destroy(gameObject);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovingForShooting : MonoBehaviour
 {
     [SerializeField] private WaveSpawner spawner;
+    [SerializeField] private ParticleSystem explosion;
     public float MoveSpeed;
     private Rigidbody2D rb2d;
     public Vector2 MinMaxMoveSpeed;
@@ -29,6 +30,8 @@ public class MovingForShooting : MonoBehaviour
     public void KillSelf()
     {
         spawner.EnemyKilled();
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("Explosion");
         Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)

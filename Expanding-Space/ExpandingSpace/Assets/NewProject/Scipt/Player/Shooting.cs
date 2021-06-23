@@ -8,7 +8,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private bool canShootOverride;
     [SerializeField] private WaveSpawner waveSpawner;
     [SerializeField] private int fpsLimiter;
-    [SerializeField] private bool canShoot;
+    [SerializeField] public bool canShoot;
     [SerializeField] private bool godMode;
     public GameObject Bullet;
     public int ShootTimer;
@@ -18,7 +18,6 @@ public class Shooting : MonoBehaviour
         shootTimerMax = ShootTimer;
         Application.targetFrameRate = fpsLimiter;
         InvokeRepeating("CheckWaveSpawner", 0, 1f);
-        Invoke("EnableShooting", 14f);
     }
     private void CheckWaveSpawner()
     {
@@ -30,6 +29,11 @@ public class Shooting : MonoBehaviour
         {
             canShoot = false;
         }
+    }
+    public void Timer()
+    {
+        canShoot = false;
+        Invoke("EnableShooting", 14f);
     }
     void EnableShooting(){
         canShootOverride = true;

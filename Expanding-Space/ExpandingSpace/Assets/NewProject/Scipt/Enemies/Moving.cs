@@ -6,6 +6,7 @@ public class Moving : MonoBehaviour
 {
     [SerializeField] private WaveSpawner spawner;
     [SerializeField] private float MoveSpeed;
+    [SerializeField] private ParticleSystem explosion;
     public Vector2 MinMaxMoveSpeed;
     private Rigidbody2D rb2d;
     // Start is called before the first frame update
@@ -24,6 +25,8 @@ public class Moving : MonoBehaviour
     public void KillSelf()
     {
         spawner.EnemyKilled();
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("Explosion");
         Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
