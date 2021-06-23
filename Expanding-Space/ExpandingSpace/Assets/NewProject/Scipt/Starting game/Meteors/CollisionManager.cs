@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class CollisionManager : MonoBehaviour
 {
+    [SerializeField] private Animator GODMODE;
+    [SerializeField] private GameObject godmode;
     [SerializeField] private bool GodMode = false;
     public int Health = 3;
     private int maxHealth;
@@ -26,8 +28,22 @@ public class CollisionManager : MonoBehaviour
         VeryDamaged,
         Broken
     }
+    public void DisableGOD()
+    {
+        godmode.SetActive(false);
+    }
     private void Update()
     {
+        if(Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.G))
+        {
+            GodMode = !GodMode;
+            if (GodMode)
+            {
+                godmode.SetActive(true);
+                GODMODE.SetTrigger("GOD");
+                Invoke("DisableGOD", 1.5f);
+            }
+        }
         if (GodMode)
         {
             Health = maxHealth;
