@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject SpaceShip;
     [SerializeField] private WaveSpawner spawner;
     [SerializeField]private GameObject HubFoundation;
+    [SerializeField] private GameObject Shop;
     [SerializeField] private TriggerDialogue Shopkeep;
     [SerializeField] private TriggerDialogue SlakDia;
     
@@ -83,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Shop" && Input.GetKey(KeyCode.F))
         {
             Shopkeep.StartCoroutine(Shopkeep.ActivateDialogue());
-            HubFoundation.SetActive(false);
+
 
         }
     }

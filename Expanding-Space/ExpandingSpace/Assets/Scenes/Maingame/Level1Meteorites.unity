@@ -1020,7 +1020,7 @@ MonoBehaviour:
   StartDelay: 30
   TimeBetweenWaves: 0
   StartEnemyCount: 15
-  CurrentWave: 8
+  CurrentWave: 0
   SpawnRate: 0.8
   EasyEnemies:
   - {fileID: 7577834277968503113, guid: 2b9a8d1955dfcd74ca8b9304e579085a, type: 3}
@@ -2112,6 +2112,10 @@ PrefabInstance:
       value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 5979123856447278073, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: NameTag
+      value: Beep de Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979123856447278073, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: PauseTime
       value: 1
       objectReference: {fileID: 0}
@@ -2130,7 +2134,11 @@ PrefabInstance:
     - target: {fileID: 5979123856447278073, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: ObjectToFollow
       value: 
-      objectReference: {fileID: 1619420539}
+      objectReference: {fileID: 975848367}
+    - target: {fileID: 5979123856447278073, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: ActivateThisDialogue
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6157684718914710570, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -2161,7 +2169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6601797400631278407, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.32
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 6601797400631278407, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2582,7 +2590,6 @@ GameObject:
   m_Component:
   - component: {fileID: 326766306}
   - component: {fileID: 326766308}
-  - component: {fileID: 326766307}
   m_Layer: 0
   m_Name: hub winkel
   m_TagString: Untagged
@@ -2604,32 +2611,6 @@ Transform:
   m_Father: {fileID: 1619420540}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &326766307
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326766305}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.19536972, y: 0.09768492}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.41, y: 4.8}
-    newSize: {x: 9.41, y: 4.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 7.260933, y: 1.1531013}
-  m_EdgeRadius: 0
 --- !u!212 &326766308
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2669,7 +2650,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 794a050ab51d7fb4fb718381052b1d59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6156,7 +6137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836045518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.39, y: 0.39, z: 4.3449974}
+  m_LocalPosition: {x: -5.39, y: -0.47, z: 4.3449974}
   m_LocalScale: {x: 0.464099, y: 0.464099, z: 0.2998597}
   m_Children: []
   m_Father: {fileID: 315643850}
@@ -7027,6 +7008,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 17.671698, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &975848367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 975848368}
+  m_Layer: 0
+  m_Name: Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &975848368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975848367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1619420540}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1006620889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10377,6 +10388,7 @@ Transform:
   m_LocalScale: {x: 0.42798233, y: 0.53497696, z: 0.1464025}
   m_Children:
   - {fileID: 326766306}
+  - {fileID: 975848368}
   m_Father: {fileID: 315643850}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10414,7 +10426,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.7331767, y: 0}
+  m_Offset: {x: -0.35684776, y: -2.4999251}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10425,7 +10437,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.266342, y: 7.2}
+  m_Size: {x: 13.513681, y: 2.2001495}
   m_EdgeRadius: 0
 --- !u!212 &1619420543
 SpriteRenderer:
@@ -10466,7 +10478,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5210c0a2eb78dc14c84f620e4b75222b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

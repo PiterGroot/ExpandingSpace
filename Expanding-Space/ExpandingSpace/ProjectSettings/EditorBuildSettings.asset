@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maingame/MainMenu.unity
     guid: 5d98d7005ed35fa4dbd64e6c7fdef92d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Maingame/Level1Meteorites.unity
-    guid: 75c40b0adf055a244a7257fac4eebeef
+    guid: f0d5cbd181861f145aa5d435e9a5649b
   - enabled: 1
     path: Assets/Scenes/Maingame/GameOver.unity
     guid: 24bef5614c0009247b7c5ebc95f8a783
