@@ -7,4 +7,4 @@
 <h4> Wat is de opdracht precies? </h4>
 <h4> Wij gaan in deze module met z'n allen een space game maken. Ons team bestaat uit 3 developers (João, Guido, Michelle en Piter) en 3 artist (Marissa, Jack, Roos en Nisa) </h4>
 
-<h1>
+<h4> Dit is de nieuwe github, de oude github kan je hier vinden: https://github.com/Minoord/Expanding-Space </h4>
