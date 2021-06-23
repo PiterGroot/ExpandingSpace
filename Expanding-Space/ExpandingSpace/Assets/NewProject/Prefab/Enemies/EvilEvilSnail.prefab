@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558f00083337a30459c6e17f6f08e323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoneyReward: 15
   spawner: {fileID: 0}
   MoveSpeed: 8
   explosion: {fileID: 4644808102954653844, guid: d7bf149a783215b438cbfe8d3167a94c, type: 3}

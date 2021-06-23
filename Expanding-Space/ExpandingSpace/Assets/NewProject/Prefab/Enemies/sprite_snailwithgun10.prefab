@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
+  MoneyReward: 10
   explosion: {fileID: 4644808102954653844, guid: d7bf149a783215b438cbfe8d3167a94c, type: 3}
   MoveSpeed: 3
   MinMaxMoveSpeed: {x: 1, y: 3}

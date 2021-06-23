@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Moving : MonoBehaviour
 {
+    [SerializeField] private float MoneyReward; 
     [SerializeField] private WaveSpawner spawner;
     [SerializeField] private float MoveSpeed;
     [SerializeField] private ParticleSystem explosion;
@@ -25,6 +26,8 @@ public class Moving : MonoBehaviour
     public void KillSelf()
     {
         spawner.EnemyKilled();
+        FindObjectOfType<Wallet>().AddMoney(MoneyReward);
+        FindObjectOfType<AudioManager>().Play("Coin");
         Instantiate(explosion, transform.position, Quaternion.identity);
         FindObjectOfType<AudioManager>().Play("Explosion");
         Destroy(gameObject);
