@@ -8,8 +8,8 @@ public class InventoryManager : MonoBehaviour
     //items
     public GameObject HealSprite;
     public GameObject ShieldSprite;
-    public Sprite ShotgunSprite;
-    public Sprite SpeedSprite;
+    public GameObject ShotgunSprite;
+    public GameObject SpeedSprite;
     public GameObject FirerateSprite;
     public List<string> items = new List<string>();
     //bools to check the items

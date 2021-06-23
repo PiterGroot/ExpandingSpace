@@ -13,7 +13,7 @@ public class RandomText : MonoBehaviour
     public bool Firerate;
 
     int NumberOftext;
-    public Text TextChanger;
+    public TextMeshProUGUI TextChanger;
     public Button Button;
     public Button KoopButton;
     public TextMeshProUGUI Beschrijving;
