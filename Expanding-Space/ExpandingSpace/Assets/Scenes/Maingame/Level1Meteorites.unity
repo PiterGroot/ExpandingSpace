@@ -8042,6 +8042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ddea42db37864a849d48c1cbcce6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GODMODE: {fileID: 0}
+  godmode: {fileID: 0}
   GodMode: 0
   Health: 3
   shield: 0
@@ -11535,17 +11537,19 @@ MonoBehaviour:
   ShotgunSprite: {fileID: 44708062346777694, guid: 22dce00a34a121c49bb9e04ae6478ccf, type: 3}
   SpeedSprite: {fileID: 7363093017985441666, guid: 624c6021f4a72104985362cb69f115ea, type: 3}
   FirerateSprite: {fileID: 44708062346777694, guid: 22dce00a34a121c49bb9e04ae6478ccf, type: 3}
-  items:
-  - Shield
+  items: []
   Heal: 0
   Shield: 0
   VerspreidShot: 0
   Speed: 0
   Firerate: 0
-  Itemslot1: {fileID: 1993459191}
+  Itemslot1: {fileID: 1482838919}
   Itemslot2: {fileID: 132904308}
   Itemslot3: {fileID: 1512982029}
   hub: {fileID: 315643849}
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  item3: {fileID: 0}
   slotused1: 1
   slotused2: 1
   slotused3: 1
@@ -13074,17 +13078,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 440075735496261745, guid: 17eb0f4f58d25bd49b5a30acc715b0ef, type: 3}
   m_PrefabInstance: {fileID: 348116579}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1993459191 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1371580682561541244, guid: 4b09915b112e8d44886a839eb37f8996, type: 3}
-  m_PrefabInstance: {fileID: 1554694130}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2007271226
 GameObject:
   m_ObjectHideFlags: 0
