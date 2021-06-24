@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public void SceneSwitch(string SceneName)
     {
         Debug.Log("werk");
+        PlayerPrefs.DeleteAll();
         //PlayerPrefs.SetInt("punten", 0);
         //PlayerPrefs.SetInt("lvl1Done", 0);
         SceneManager.LoadScene(SceneName); 
@@ -27,5 +28,6 @@ public class MainMenu : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+
     }
 }
