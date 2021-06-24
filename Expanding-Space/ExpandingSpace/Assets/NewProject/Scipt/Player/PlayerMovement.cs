@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("HEy");
                 StartCoroutine(SlakDia.ActivateDialogue());
                 PlayerPrefs.SetInt("Slak", 1);
-                Invoke("Exits", 9);
+                Invoke("Exits", 20);
                 
             }
             else

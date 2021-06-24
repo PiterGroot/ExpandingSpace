@@ -1124,7 +1124,6 @@ MonoBehaviour:
   - {fileID: 6081251811988507, guid: 4b076ac6a57217e4caeac15d9bca2ce8, type: 3}
   - {fileID: 4545595825921608583, guid: be058c986e9e384428d86ef20f61ca14, type: 3}
   - {fileID: 4795494663067430447, guid: 846db254268a3f349a5e46be0402b331, type: 3}
-  - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
   MediumEnemies:
   - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
   - {fileID: 4795494663067430447, guid: 846db254268a3f349a5e46be0402b331, type: 3}
@@ -2053,7 +2052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2390876756580491781, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2390876756580491781, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -2283,6 +2282,51 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: NameTag
+      value: Kap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: DialogueBox
+      value: 
+      objectReference: {fileID: 1554694131}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: DialogueAnim
+      value: 
+      objectReference: {fileID: 1554694132}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: ObjectToFollow
+      value: 
+      objectReference: {fileID: 836045518}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: DialogueOffset.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: Sentences.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: Sentences.Array.data[0]
+      value: Welkom in het schip. Hier kan je tussen golven uit rusten.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: Sentences.Array.data[2]
+      value: De winkel is aan de rechterkant bij de computer met het boord shop er
+        op.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: Sentences.Array.data[4]
+      value: 'We gaan nu bijna de tweede golf in, dus kijk maar snel even rond. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: Sentences.Array.data[5]
+      value: 'Als je terug wilt gaan naar de besturing van het schip, '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: Sentences.Array.data[6]
+      value: loop dan naar de linkerkant, naar de deur en druk dan op F.
+      objectReference: {fileID: 0}
     - target: {fileID: 8693188380701952151, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2392,6 +2436,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8232341904483703331, guid: 74b518efad596ff40b8319c74362977e, type: 3}
   m_PrefabInstance: {fileID: 315643848}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &315643862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315643849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04d905d01456c34a8f626a660674966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DemoDia: {fileID: 451324496}
 --- !u!1 &318964862
 GameObject:
   m_ObjectHideFlags: 0
@@ -3503,6 +3560,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1428587922723107666, guid: 04e3a1ca5b1471b49910a9c66d4e193d, type: 3}
   m_PrefabInstance: {fileID: 435756165}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &451324496 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+  m_PrefabInstance: {fileID: 315643848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3b40d1e2315ad428a5882bc003673f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &455864595
 GameObject:
   m_ObjectHideFlags: 0
@@ -7759,6 +7827,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
+      propertyPath: NameTag
+      value: Kap
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: DialogueBox
       value: 
       objectReference: {fileID: 1554694131}
@@ -9656,7 +9728,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: NameTag
-      value: Spaceship
+      value: Kap
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: DialogueID
@@ -10114,11 +10186,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: NameTag
-      value: Spaceship
+      value: Kap
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: PauseTime
-      value: 1.1
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: DialogueID
@@ -10150,11 +10222,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 408bfa4d202dc594ab64760b02a6f5d6, type: 3}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: DialogueOffset.y
-      value: 1.5
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: DialogueOffset.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: HasMissionSelect
@@ -10166,11 +10238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[0]
-      value: Hey nu we terug zijn zie ik iets raars op de radar.
+      value: Hey nu we terug gaan zie ik iets raars op de radar.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[1]
@@ -10182,21 +10254,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[3]
-      value: Als je ze neerschiet krijg je geld van de regering als bedankje dat
-        je de aarde beschermd.
+      value: 'Als je ze neerschiet krijg je geld van de regering, '
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[4]
-      value: Zo probeer zoveel mogelijk neer te schieten, zodat je nieuwe power-ups
-        kan kopen!
+      value: als bedankje dat je de aarde beschermd.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[5]
-      value: 'We komen in een meteoren regen!! '
+      value: 'Zo probeer zoveel mogelijk neer te schieten, '
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[6]
-      value: ontwijk de meteoren en dan praten we wel verder.
+      value: zodat je nieuwe power-ups kan kopen!
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: m_RootOrder
@@ -11354,6 +11424,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 255437068578553292, guid: 8c0ba2b837a011b4eb6cef1d722d08fc, type: 3}
+      propertyPath: NameTag
+      value: Kap
+      objectReference: {fileID: 0}
+    - target: {fileID: 255437068578553292, guid: 8c0ba2b837a011b4eb6cef1d722d08fc, type: 3}
       propertyPath: DialogueBox
       value: 
       objectReference: {fileID: 1554694131}
@@ -11527,7 +11601,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722461967}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0e65238fc3cc344a9dee99f1b187fe, type: 3}
   m_Name: 
@@ -11571,6 +11645,8 @@ MonoBehaviour:
   Shieldlife2: {fileID: 1347389309}
   Shieldlife3: {fileID: 564449794}
   collisionManager: {fileID: 1177505987}
+  shotgunpart1: {fileID: 0}
+  shotgunpart2: {fileID: 0}
 --- !u!222 &1722461972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13396,6 +13472,10 @@ PrefabInstance:
     - target: {fileID: 1428587924151436338, guid: 04e3a1ca5b1471b49910a9c66d4e193d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428587924274593422, guid: 04e3a1ca5b1471b49910a9c66d4e193d, type: 3}
+      propertyPath: m_Text
+      value: Pauze
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04e3a1ca5b1471b49910a9c66d4e193d, type: 3}
