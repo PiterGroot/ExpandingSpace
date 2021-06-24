@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject SpaceShip;
     [SerializeField] private WaveSpawner spawner;
     [SerializeField]private GameObject HubFoundation;
-    [SerializeField] private GameObject Shop;
     [SerializeField] private TriggerDialogue Shopkeep;
     [SerializeField] private TriggerDialogue SlakDia;
     
@@ -67,13 +66,14 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Exit" && Input.GetKey(KeyCode.F)){
+        if(collision.gameObject.name == "Exit" && Input.GetKeyDown(KeyCode.F)){
 
             if (PlayerPrefs.GetInt("Slak") != 1)
             {
+                Debug.Log("HEy");
                 StartCoroutine(SlakDia.ActivateDialogue());
                 PlayerPrefs.SetInt("Slak", 1);
-                Invoke("Exits", 7);
+                Invoke("Exits", 9);
                 
             }
             else
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
                 Exits();
             }
         }
-        if (collision.gameObject.tag == "Shop" && Input.GetKey(KeyCode.F))
+        if (collision.gameObject.tag == "Shop" && Input.GetKeyDown(KeyCode.F))
         {
             Shopkeep.StartCoroutine(Shopkeep.ActivateDialogue());
 

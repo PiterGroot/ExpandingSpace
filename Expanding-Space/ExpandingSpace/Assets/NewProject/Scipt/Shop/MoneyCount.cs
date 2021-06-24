@@ -12,7 +12,11 @@ public class MoneyCount : MonoBehaviour
     {
         if (UpdateUI)
         {
-            MoneyDisplay.text = $"$ {PlayerPrefs.GetFloat("Wallet").ToString()}";
+            MoneyDisplay.text = $"{PlayerPrefs.GetFloat("Wallet").ToString()}";
         }
+    }
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
