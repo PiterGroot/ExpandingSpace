@@ -14,6 +14,7 @@ public class RandomText : MonoBehaviour
 
     int MoneyBuy;
     float Geld;
+    public bool Canbuy;
 
     int NumberOftext;
     public TextMeshProUGUI TextChanger;
@@ -28,7 +29,7 @@ public class RandomText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        Canbuy = true;
     }
 
     // Update is called once per framehgj
@@ -139,34 +140,39 @@ public class RandomText : MonoBehaviour
     public void buy()
     {
       
-        if (NaamProduct.text == "Vuur Snelheid" &&  Geld >= MoneyBuy)
+        if (NaamProduct.text == "Vuur Snelheid" &&  Geld >= MoneyBuy && Canbuy == true)
         {
             InvManager.FirerateGk();
             Portemonee.BuyItem(20);
+            Canbuy = false;
             Debug.Log("s");
         }
-        else if (NaamProduct.text == "Verspreid Schot" && Geld >= MoneyBuy)
+        else if (NaamProduct.text == "Verspreid Schot" && Geld >= MoneyBuy && Canbuy == true)
         {
             InvManager.VerspreidShotGk();
             Portemonee.BuyItem(50);
+            Canbuy = false;
             Debug.Log("vs");
         } 
-        else if(NaamProduct.text== "Schild" && Geld >= MoneyBuy)
+        else if(NaamProduct.text== "Schild" && Geld >= MoneyBuy && Canbuy == true)
         {
             InvManager.ShieldGk();
             Portemonee.BuyItem(30);
+            Canbuy = false;
             Debug.Log("sh");
         }
-        else if(NaamProduct.text == "Repareren" && Geld >= MoneyBuy)
+        else if(NaamProduct.text == "Repareren" && Geld >= MoneyBuy && Canbuy == true)
         {
             InvManager.ReparerenGk();
             Portemonee.BuyItem(15);
+            Canbuy = false;
             Debug.Log("r");
         }
-        else if(NaamProduct.text== "Snelheid" && Geld >= MoneyBuy)
+        else if(NaamProduct.text== "Snelheid" && Geld >= MoneyBuy && Canbuy == true)
         {
             InvManager.SpeedGk();
             Portemonee.BuyItem(5);
+            Canbuy = false;
             Debug.Log("sn");
         }
         

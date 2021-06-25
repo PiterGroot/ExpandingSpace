@@ -161,7 +161,7 @@ RectTransform:
   m_GameObject: {fileID: 11432610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.9750443, y: 4.6558495, z: 4.6558495}
+  m_LocalScale: {x: 8.195677, y: 4.6558495, z: 4.6558495}
   m_Children:
   - {fileID: 459884502}
   m_Father: {fileID: 1554694133}
@@ -169,7 +169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -838.91, y: 400.1}
+  m_AnchoredPosition: {x: -824, y: 400.1}
   m_SizeDelta: {x: 109.07, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11432612
@@ -431,9 +431,10 @@ MonoBehaviour:
   VerspreidShot: 0
   Speed: 0
   Firerate: 0
+  Canbuy: 0
   TextChanger: {fileID: 549319074}
   Button: {fileID: 62466322}
-  KoopButton: {fileID: 0}
+  KoopButton: {fileID: 622717889}
   Beschrijving: {fileID: 921162916}
   NaamProduct: {fileID: 776951225}
   Prijs: {fileID: 1642836790}
@@ -1340,9 +1341,10 @@ MonoBehaviour:
   VerspreidShot: 0
   Speed: 0
   Firerate: 0
+  Canbuy: 0
   TextChanger: {fileID: 1646257389}
   Button: {fileID: 222196576}
-  KoopButton: {fileID: 0}
+  KoopButton: {fileID: 622717889}
   Beschrijving: {fileID: 921162916}
   NaamProduct: {fileID: 776951225}
   Prijs: {fileID: 1642836790}
@@ -2423,6 +2425,18 @@ PrefabInstance:
       propertyPath: speed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: CanBuy1
+      value: 
+      objectReference: {fileID: 62466321}
+    - target: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: CanBuy2
+      value: 
+      objectReference: {fileID: 1880082647}
+    - target: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+      propertyPath: CanBuy3
+      value: 
+      objectReference: {fileID: 222196575}
     - target: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: SlakDia
       value: 
@@ -3649,7 +3663,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
   m_PrefabInstance: {fileID: 315643848}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1821896681}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba3b40d1e2315ad428a5882bc003673f, type: 3}
@@ -3854,7 +3868,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 10.2708435, z: 72.40752, w: 0}
+  m_margin: {x: -10.268608, y: 10.2708435, z: 140.86514, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6686,6 +6700,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837234336}
   m_CullTransparentMesh: 1
+--- !u!114 &841963560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+  m_PrefabInstance: {fileID: 315643848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292e6d91d70d0a347994cd7e62cb436a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &852495996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9261,8 +9286,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2390876756580491834, guid: 74b518efad596ff40b8319c74362977e, type: 3}
   m_PrefabInstance: {fileID: 315643848}
   m_PrefabAsset: {fileID: 0}
---- !u!60 &1442393953
-PolygonCollider2D:
+--- !u!61 &1442393953
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9274,7 +9299,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.21132338}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9284,18 +9309,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.7553873, y: 2.347165}
-      - {x: 1.3952686, y: 2.6252418}
-      - {x: -0.95036817, y: 2.5895443}
-      - {x: -2.2095497, y: 2.6313682}
-      - {x: -2.477976, y: 2.4228687}
-      - {x: -2.4719152, y: 0.15900606}
-      - {x: -1.4773449, y: -1.0527847}
-      - {x: -1.5223827, y: -2.9057846}
-      - {x: 1.7929946, y: -2.927921}
-      - {x: 1.7258332, y: 0.3840226}
+  serializedVersion: 2
+  m_Size: {x: 2.9541135, y: 5.501685}
+  m_EdgeRadius: 0
 --- !u!1 &1475126646
 GameObject:
   m_ObjectHideFlags: 0
@@ -9617,7 +9633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1500642682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10774,7 +10790,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.35684776, y: -2.4999251}
+  m_Offset: {x: -0.018842697, y: -1.3272369}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10785,7 +10801,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.513681, y: 2.2001495}
+  m_Size: {x: 2.021494, y: 7.1857505}
   m_EdgeRadius: 0
 --- !u!212 &1619420543
 SpriteRenderer:
@@ -12046,6 +12062,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1821896681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8693188380701952153, guid: 74b518efad596ff40b8319c74362977e, type: 3}
+  m_PrefabInstance: {fileID: 315643848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1821896683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821896681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419d167ca9feb064e9df4205daf1211d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 21
+  moveScript: {fileID: 841963560}
 --- !u!1 &1822351295
 GameObject:
   m_ObjectHideFlags: 0
@@ -12828,6 +12863,7 @@ MonoBehaviour:
   VerspreidShot: 0
   Speed: 0
   Firerate: 0
+  Canbuy: 0
   TextChanger: {fileID: 306361321}
   Button: {fileID: 1880082648}
   KoopButton: {fileID: 622717889}

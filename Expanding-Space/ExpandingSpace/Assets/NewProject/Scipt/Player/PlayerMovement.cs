@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Randomizer CallFunctionRandomizer1;
     [SerializeField] Randomizer CallFunctionRandomizer2;
     [SerializeField] Randomizer CallFunctionRandomizer3;
+    [SerializeField] RandomText CanBuy1;
+    [SerializeField] RandomText CanBuy2;
+    [SerializeField] RandomText CanBuy3;
 
     // Game and Shop activeren
     [SerializeField] private GameObject SpaceShip;
@@ -71,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
             if (PlayerPrefs.GetInt("Slak") != 1)
             {
                 Debug.Log("HEy");
+                canMove = false;
                 StartCoroutine(SlakDia.ActivateDialogue());
                 PlayerPrefs.SetInt("Slak", 1);
                 Invoke("Exits", 20);
@@ -97,6 +101,10 @@ public class PlayerMovement : MonoBehaviour
         CallFunctionRandomizer1.Randomized();
         CallFunctionRandomizer2.Randomized();
         CallFunctionRandomizer3.Randomized();
+        CanBuy1.Canbuy = true;
+        CanBuy2.Canbuy = true;
+        CanBuy3.Canbuy = true;
+        canMove = true;
         FindObjectOfType<AudioManager>().Stop("OST");
     }
 }
