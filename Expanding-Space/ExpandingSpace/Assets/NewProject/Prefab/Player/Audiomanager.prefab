@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8010375477432219991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8010375477432219989}
+  - component: {fileID: 8010375477432219990}
+  - component: {fileID: 3162919099589591199}
+  m_Layer: 0
+  m_Name: Audiomanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8010375477432219989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010375477432219991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8010375477432219990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010375477432219991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69120059fff712049b8657c9a3515b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: Test
+    clip: {fileID: 8300000, guid: a39f14171bcd99946a5b11c7ad656af4, type: 3}
+    volume: 0.087
+    pitch: 0.68
+    loop: 0
+    source: {fileID: 0}
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: OST
+    clip: {fileID: 8300000, guid: bf73021638b9c5745a9ae43d2baf1431, type: 3}
+    volume: 0.511
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: Laser
+    clip: {fileID: 8300000, guid: 4117062463d88ae4b96f47ff4fc47e46, type: 3}
+    volume: 0.511
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: Select
+    clip: {fileID: 8300000, guid: afc98952a3eb5b0429b54dfe79c01cd5, type: 3}
+    volume: 0.497
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: Explosion
+    clip: {fileID: 8300000, guid: 3311e9ba0bac51d43a764701e2b838af, type: 3}
+    volume: 0.488
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: Explosion1
+    clip: {fileID: 8300000, guid: 601e40d8713013944a81600f8c7be62e, type: 3}
+    volume: 0.552
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: Explosion2
+    clip: {fileID: 8300000, guid: 31125bd63f217aa47a09d20f62305c8c, type: 3}
+    volume: 0.652
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: Explosion3
+    clip: {fileID: 8300000, guid: 5a96e38321a66ab44b4348db2c58f1e7, type: 3}
+    volume: 0.652
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - mixer: {fileID: 24300002, guid: c7165b89f70fe7a4da46cd1ff4993912, type: 2}
+    name: Boom
+    clip: {fileID: 8300000, guid: f210cfa883943b842bf23a8e6788f1c8, type: 3}
+    volume: 0.45
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!114 &3162919099589591199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010375477432219991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7a3e079aa5b804fae89e4ed54030cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -782,8 +782,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133810136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -414.3636, y: 85.32, z: -9720}
-  m_LocalScale: {x: 10.896484, y: 1346.8737, z: 108}
+  m_LocalPosition: {x: -414.3636, y: 6.17, z: -9720}
+  m_LocalScale: {x: 10.896484, y: 1099.049, z: 108}
   m_Children: []
   m_Father: {fileID: 1154102114}
   m_RootOrder: 14
@@ -2168,6 +2168,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602233981}
   m_CullTransparentMesh: 1
+--- !u!1001 &614754651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219989, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010375477432219991, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+      propertyPath: m_Name
+      value: Audiomanager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
 --- !u!1 &664866667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,6 +2720,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Level1Meteorites
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1675607035}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: stopOST
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &841559768
@@ -4895,6 +4964,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675607035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8010375477432219990, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
+  m_PrefabInstance: {fileID: 614754651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69120059fff712049b8657c9a3515b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1728858065
 GameObject:
   m_ObjectHideFlags: 0

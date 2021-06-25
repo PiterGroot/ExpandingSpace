@@ -31,6 +31,7 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
             s.source.outputAudioMixerGroup = s.mixer;
         }      
+        CheckScene();
     }
     private void OnApplicationQuit()
     {
@@ -51,6 +52,20 @@ public class AudioManager : MonoBehaviour
             return;
         s.source.Stop();
     }
+     public void CheckScene(){
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (scene.name == "MainMenu"){
+            FindObjectOfType<AudioManager>().Play("OST");
+        }
+        else{
+            FindObjectOfType<AudioManager>().Stop("OST");
+        }
+    }
+    public void stopOST(){
+        FindObjectOfType<AudioManager>().Stop("OST");
+    }
+     
 
 }
 
