@@ -47,7 +47,7 @@ public class InventoryManager : MonoBehaviour
         {
             Slot1();
         }
-        catch(InvalidCastException e)
+        catch(Exception e)
         {
 
         }
@@ -55,7 +55,7 @@ public class InventoryManager : MonoBehaviour
         {
             Slot2();
         }
-        catch (InvalidCastException e)
+        catch (Exception e)
         {
 
         }
@@ -63,7 +63,7 @@ public class InventoryManager : MonoBehaviour
         {
             Slot3();
         }
-        catch (InvalidCastException e)
+        catch (Exception e)
         {
 
         }
