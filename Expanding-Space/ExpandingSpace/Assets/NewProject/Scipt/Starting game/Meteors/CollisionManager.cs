@@ -39,6 +39,7 @@ public class CollisionManager : MonoBehaviour
             GodMode = !GodMode;
             if (GodMode)
             {
+                FindObjectOfType<AudioManager>().Play("Boom");
                 godmode.SetActive(true);
                 GODMODE.SetTrigger("GOD");
                 Invoke("DisableGOD", 1.5f);

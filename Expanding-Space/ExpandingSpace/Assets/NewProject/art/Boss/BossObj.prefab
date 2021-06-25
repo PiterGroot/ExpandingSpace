@@ -145,12 +145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aef36cd40d754546ac99ecbabd3536e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 30
+  Health: 80
   bigexplosion: {fileID: 4026188393325255872, guid: f17f877e0d1bdc349bb555de21b8b28e, type: 3}
   bossanim: {fileID: 1955583695}
   FlightDuration: 7
   ShootWaves: 5
-  canShoot: 0
   StartDelay: 1.5
   DialogueTime: 12.5
   BossDialogue: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
@@ -162,6 +161,7 @@ MonoBehaviour:
   ShootSpeed: 0.233
   BulletCount: 3000
   BulletMultiplier: 1
+  canShoot: 0
 --- !u!95 &1955583695
 Animator:
   serializedVersion: 3

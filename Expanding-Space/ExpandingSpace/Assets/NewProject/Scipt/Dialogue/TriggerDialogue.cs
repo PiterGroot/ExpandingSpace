@@ -9,11 +9,13 @@ public class TriggerDialogue : MonoBehaviour
 {
     private TextMeshProUGUI Conversation;
     private TextMeshProUGUI Name;
-    private bool isTalking = false;
+    [HideInInspector]public bool isTalking = false;
     private bool canActivate = true;
     private int currentSentence = -1;
     private string SentenceOrder;
     private bool isDisabled = false;
+    private GameObject pauzescreen;
+    //private bool isDone = false;
 
     [SerializeField]public bool ActivateThisDialogue;
     [Header("Refrences")]
@@ -47,7 +49,7 @@ public class TriggerDialogue : MonoBehaviour
 
 
     private void Start() {
-       
+       pauzescreen = GameObject.FindGameObjectWithTag("pausescreen");
         if(DialogueID == string.Empty){
             DialogueID = "NULL";
             Debug.LogError("Please fill in a valid DialogueID to stay organised", this.gameObject);
@@ -156,6 +158,12 @@ public class TriggerDialogue : MonoBehaviour
     } 
     private void Update() {
         TalkingSpeed = PlayerPrefs.GetFloat("DialogueSpeed");
+        if(isTalking){
+            pauzescreen.SetActive(false);
+        }
+        else{
+            pauzescreen.SetActive(true);
+        }
         if (Input.GetKeyDown(ActivateKey) && canManuallyActivate)
         {
            StartCoroutine(ActivateDialogue());

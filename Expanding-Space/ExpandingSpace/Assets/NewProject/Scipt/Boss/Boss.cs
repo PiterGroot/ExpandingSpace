@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
-    private bool canDie = true;
+    private bool canDie = false;
     private int WaveCount;
     public float Health;
+    private float maxHealth = 80;
     [SerializeField] private ParticleSystem bigexplosion;
     [SerializeField] private Animator bossanim;
     [SerializeField] private float FlightDuration = 7;
@@ -27,6 +28,9 @@ public class Boss : MonoBehaviour
 
     private void Start()
     {
+        canDie = false;
+        Health = maxHealth;
+        GameObject.FindGameObjectWithTag("healthbar").transform.GetChild(0).gameObject.SetActive(true);
         BossFly = GameObject.FindGameObjectWithTag("BossDialogue1").GetComponent<TriggerDialogue>();
         BossDialogue = GameObject.FindGameObjectWithTag("BossDialogue").GetComponent<TriggerDialogue>();
         canShoot = true;
@@ -38,6 +42,7 @@ public class Boss : MonoBehaviour
         BossDialogue.StartCoroutine(BossDialogue.ActivateDialogue());
         yield return new WaitForSeconds(DialogueTime);
         StartCoroutine(ShootAttack(BulletCount, 3.5f));
+        canDie = true;
     }
     private void InvokeShootAttack()
     {
@@ -97,6 +102,9 @@ public class Boss : MonoBehaviour
         }
     }
     private void Update(){
+        if(!canDie){
+            Health = maxHealth;
+        }
         if(Health <= 0 && canDie){
             canDie = false;
             gameObject.GetComponent<SpriteRenderer>().sprite = null;

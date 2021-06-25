@@ -75,10 +75,10 @@ public class WaveSpawner : MonoBehaviour
         StartEnemyCount++;
         SpawnRate -= .05f;
         for (int i = 0; i < StartEnemyCount; i++){
-            if(CurrentWave <= 5){
+            if(CurrentWave <= 4){
                 CurrentEnemies.Add(EasyEnemies[RandInt(0, EasyEnemies.Count)]);
             }
-            else if(CurrentWave <= 10 && CurrentWave > 5){
+            else if(CurrentWave <= 10 && CurrentWave > 4){
                 CurrentEnemies.Add(MediumEnemies[RandInt(0, MediumEnemies.Count)]);
             }
              else if(CurrentWave >= 8){

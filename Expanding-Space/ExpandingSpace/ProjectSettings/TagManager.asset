@@ -21,6 +21,8 @@ TagManager:
   - Boss
   - BossDialogue
   - BossDialogue1
+  - pausescreen
+  - healthbar
   layers:
   - Default
   - TransparentFX

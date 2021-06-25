@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class IntroMove : MonoBehaviour
 {
-    [SerializeField] private TriggerDialogue introDialogue;
+    [SerializeField]private int time = 15;
     [SerializeField] private SpaceShip moveScript;
     private void Awake()
     {
         moveScript.canMove = false;
-        Invoke("DisableMovement", 15.5f);
+        Invoke("DisableMovement", time);
     }
     private void DisableMovement()
     {
