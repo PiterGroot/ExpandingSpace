@@ -12,6 +12,9 @@ public class RandomText : MonoBehaviour
     public bool Speed;
     public bool Firerate;
 
+    int MoneyBuy;
+    float Geld;
+
     int NumberOftext;
     public TextMeshProUGUI TextChanger;
     public Button Button;
@@ -20,11 +23,12 @@ public class RandomText : MonoBehaviour
     public TextMeshProUGUI NaamProduct;
     public TextMeshProUGUI Prijs;
     public InventoryManager InvManager;
+    [SerializeField] private Wallet Portemonee; 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per framehgj
@@ -53,6 +57,8 @@ public class RandomText : MonoBehaviour
                 Button.onClick.AddListener(ButtonShotgun);
                 break;
         }
+
+        Geld = Portemonee.GetMoney();
     }
 
     //Change text
@@ -89,6 +95,7 @@ public class RandomText : MonoBehaviour
         NaamProduct.text = "Snelheid";
         Beschrijving.text = "Je snelheid van je schip gaat omhoog";
         Prijs.text = "5";
+        MoneyBuy = 5;        
         Button.onClick.AddListener(buy);
     }
 
@@ -97,6 +104,7 @@ public class RandomText : MonoBehaviour
         NaamProduct.text = "Repareren";
         Beschrijving.text = "Je repareert het schip en het krijgt er 1 hartje ervoor terug";
         Prijs.text = "15";
+        MoneyBuy = 15;
         Button.onClick.AddListener(buy);
     }
 
@@ -105,6 +113,7 @@ public class RandomText : MonoBehaviour
         NaamProduct.text = "Schild";
         Beschrijving.text = "Je krijgt voor 30 seconden een schild hierdoor kan je niet geraakt worden";
         Prijs.text = "30";
+        MoneyBuy = 30;
         Button.onClick.AddListener(buy);
     }
 
@@ -113,6 +122,7 @@ public class RandomText : MonoBehaviour
         NaamProduct.text = "Vuur Snelheid";
         Beschrijving.text = "Je kan voor 30 seconde sneller schieten";
         Prijs.text = "20";
+        MoneyBuy = 20;
         Button.onClick.AddListener(buy);
     }
 
@@ -121,6 +131,7 @@ public class RandomText : MonoBehaviour
         NaamProduct.text = "Verspreid Schot";
         Beschrijving.text = "Je schot wordt verdubbelt naar 3 ";
         Prijs.text = "50";
+        MoneyBuy = 50; 
         Button.onClick.AddListener(buy);
 
     }
@@ -129,30 +140,36 @@ public class RandomText : MonoBehaviour
     public void buy()
     {
       
-        if (NaamProduct.text == "Vuur Snelheid")
+        if (NaamProduct.text == "Vuur Snelheid" &&  Geld >= MoneyBuy)
         {
             InvManager.SpeedGk();
+            Portemonee.BuyItem(20);
             Debug.Log("s");
         }
-        else if (NaamProduct.text == "Verspreid Schot")
+        else if (NaamProduct.text == "Verspreid Schot" && Geld >= MoneyBuy)
         {
             InvManager.VerspreidShotGk();
+            Portemonee.BuyItem(50);
             Debug.Log("vs");
         } 
-        else if(NaamProduct.text== "Schild")
+        else if(NaamProduct.text== "Schild" && Geld >= MoneyBuy)
         {
             InvManager.ShieldGk();
+            Portemonee.BuyItem(30);
             Debug.Log("sh");
         }
-        else if(NaamProduct.text == "Repareren")
+        else if(NaamProduct.text == "Repareren" && Geld >= MoneyBuy)
         {
             InvManager.ReparerenGk();
+            Portemonee.BuyItem(15);
             Debug.Log("r");
         }
-        else if(NaamProduct.text== "Snelheid")
+        else if(NaamProduct.text== "Snelheid" && Geld >= MoneyBuy)
         {
             InvManager.SpeedGk();
+            Portemonee.BuyItem(5);
             Debug.Log("sn");
         }
+        
     }
 }

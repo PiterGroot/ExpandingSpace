@@ -15,6 +15,7 @@ public class Wallet : MonoBehaviour
     public void BuyItem(float money)
     {
         CurrentWallet -= money;
+        
     }
     public float GetMoney(){
         return PlayerPrefs.GetFloat("Wallet");
