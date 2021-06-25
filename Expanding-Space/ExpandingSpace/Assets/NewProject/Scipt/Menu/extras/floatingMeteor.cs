@@ -8,8 +8,8 @@ public class floatingMeteor : MonoBehaviour
     void Start()
     {
         
-        int rot = Random.Range(1, 2);
-
+        int rot = Random.Range(1, 3);
+        InvokeRepeating("randSide", 2, 2);
         switch (rot)
         {
             case 1:
@@ -23,17 +23,14 @@ public class floatingMeteor : MonoBehaviour
         }
     }
 
-
-   
-
     public int rand()
     {
-        int side = Random.Range(1, 3);
+        int side = Random.Range(1, 5);
         return side;
     }
     public int randrot()
     {
-        int rot = Random.Range(1, 2);
+        int rot = Random.Range(1, 3);
         return rot;
     }
 
@@ -46,24 +43,21 @@ public class floatingMeteor : MonoBehaviour
         {
             case 1:
                 rb.AddForce(transform.up * 0.3f, ForceMode2D.Impulse);
-                
-
                 break;
             case 2:
                 rb.AddForce(transform.right * 0.3f, ForceMode2D.Impulse);
-               
-
                 break;
             case 3:
-                rb.AddForce(transform.forward * 0.3f, ForceMode2D.Impulse);
-              
+                rb.AddForce(transform.right * -0.3f, ForceMode2D.Impulse);
                 break;
-
+            case 4:
+                rb.AddForce(transform.up * -0.3f, ForceMode2D.Impulse);
+                break;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.name == "meteor")
+        if (collision.collider.name == "meteor" || collision.collider.name == "bounce")
         {
             collision.gameObject.GetComponent<floatingMeteor>().randSide();
         }

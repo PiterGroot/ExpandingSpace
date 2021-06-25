@@ -23,6 +23,7 @@ TagManager:
   - BossDialogue1
   - pausescreen
   - healthbar
+  - bounce
   layers:
   - Default
   - TransparentFX
