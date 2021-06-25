@@ -96,7 +96,7 @@ public class RandomText : MonoBehaviour
         Beschrijving.text = "Je snelheid van je schip gaat omhoog";
         Prijs.text = "5";
         MoneyBuy = 5;        
-        Button.onClick.AddListener(buy);
+        
     }
 
     void ButtonHealth()
@@ -105,7 +105,7 @@ public class RandomText : MonoBehaviour
         Beschrijving.text = "Je repareert het schip en het krijgt er 1 hartje ervoor terug";
         Prijs.text = "15";
         MoneyBuy = 15;
-        Button.onClick.AddListener(buy);
+        
     }
 
     void ButtonShield()
@@ -114,7 +114,7 @@ public class RandomText : MonoBehaviour
         Beschrijving.text = "Je krijgt voor 30 seconden een schild hierdoor kan je niet geraakt worden";
         Prijs.text = "30";
         MoneyBuy = 30;
-        Button.onClick.AddListener(buy);
+        
     }
 
     void ButtonFirerate()
@@ -123,7 +123,7 @@ public class RandomText : MonoBehaviour
         Beschrijving.text = "Je kan voor 30 seconde sneller schieten";
         Prijs.text = "20";
         MoneyBuy = 20;
-        Button.onClick.AddListener(buy);
+        
     }
 
     void ButtonShotgun()
@@ -132,8 +132,7 @@ public class RandomText : MonoBehaviour
         Beschrijving.text = "Je schot wordt verdubbelt naar 3 ";
         Prijs.text = "50";
         MoneyBuy = 50; 
-        Button.onClick.AddListener(buy);
-
+        
     }
 
 
@@ -142,7 +141,7 @@ public class RandomText : MonoBehaviour
       
         if (NaamProduct.text == "Vuur Snelheid" &&  Geld >= MoneyBuy)
         {
-            InvManager.SpeedGk();
+            InvManager.FirerateGk();
             Portemonee.BuyItem(20);
             Debug.Log("s");
         }

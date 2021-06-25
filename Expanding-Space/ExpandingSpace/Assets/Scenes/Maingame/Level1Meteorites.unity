@@ -2172,7 +2172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2390876756640367926, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2390876756640367927, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: m_RootOrder
@@ -9617,7 +9617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1500642682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11549,7 +11549,7 @@ MonoBehaviour:
   ShieldSprite: {fileID: 4545089112755167229, guid: fbadc50f8e03a554a9d43d97165eb2d6, type: 3}
   ShotgunSprite: {fileID: 44708062346777694, guid: 22dce00a34a121c49bb9e04ae6478ccf, type: 3}
   SpeedSprite: {fileID: 7363093017985441666, guid: 624c6021f4a72104985362cb69f115ea, type: 3}
-  FirerateSprite: {fileID: 44708062346777694, guid: 22dce00a34a121c49bb9e04ae6478ccf, type: 3}
+  FirerateSprite: {fileID: 4431901682269523239, guid: cdc0e51db2276d54181f6bde335761c5, type: 3}
   items: []
   Heal: 0
   Shield: 0
@@ -12031,7 +12031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00f77023dc07f94b80063b39ede4243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentWallet: 0
+  CurrentWallet: 100
 --- !u!4 &1820541679
 Transform:
   m_ObjectHideFlags: 0
