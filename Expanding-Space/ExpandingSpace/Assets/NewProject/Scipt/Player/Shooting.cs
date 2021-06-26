@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    private ParticleSystem shootEffect;
     private Boss BossScript;
     [SerializeField] private bool canShootOverride;
     [SerializeField] private WaveSpawner waveSpawner;
@@ -47,9 +48,10 @@ public class Shooting : MonoBehaviour
 
             if (ShootTimer <= 0 && Input.GetKey("space"))
             {
+                transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
                 ShootTimer = shootTimerMax;
                 FindObjectOfType<AudioManager>().Play("Laser");
-                Instantiate(Bullet, transform.position + new Vector3(1.2f, -.2f), Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(0.571f, -0.074f), Quaternion.identity);
             }
         }
         else if (canShootOverride)
@@ -58,9 +60,10 @@ public class Shooting : MonoBehaviour
 
             if (ShootTimer <= 0 && Input.GetKey("space"))
             {
+                transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
                 ShootTimer = shootTimerMax;
                 FindObjectOfType<AudioManager>().Play("Laser");
-                Instantiate(Bullet, transform.position + new Vector3(1.2f, -.2f), Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(0.571f, -0.074f), Quaternion.identity);
             }
         }
         else if(godMode && canShoot)
@@ -68,10 +71,11 @@ public class Shooting : MonoBehaviour
             ShootTimer -= 1;
             if (ShootTimer <= 0 && Input.GetKey("space"))
             {
+                transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
                 ShootTimer = 0;
                 FindObjectOfType<AudioManager>().Play("Laser");
-                Instantiate(Bullet, transform.position + new Vector3(1.2f, -.7f), Quaternion.identity);
-                Instantiate(Bullet, transform.position + new Vector3(1.2f, .7f), Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(0.571f, -0.074f), Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(0.571f, -0.074f), Quaternion.identity);
                 Instantiate(Bullet, transform.position, Quaternion.identity);
             }
         }
