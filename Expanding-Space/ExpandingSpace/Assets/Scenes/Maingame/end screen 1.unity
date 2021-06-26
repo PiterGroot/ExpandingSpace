@@ -144,11 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4154167984405087179, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.15
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4154167984405087179, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4154167984405087179, guid: 0ca02e12bbf872c46bb296a0262eceb0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -592,8 +592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 506, y: -312}
-  m_SizeDelta: {x: 78975.59, y: 22320.96}
+  m_AnchoredPosition: {x: 960, y: -375}
+  m_SizeDelta: {x: 104099.33, y: 22320.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1096282546
 GameObject:
@@ -631,8 +631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -542, y: 316}
-  m_SizeDelta: {x: 65168.58, y: 17408.027}
+  m_AnchoredPosition: {x: -65, y: 321}
+  m_SizeDelta: {x: 108974.03, y: 19662.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1096282548
 BoxCollider2D:
@@ -696,8 +696,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 748ba6ae560100b428bfbd9e23b41119, type: 2}
+  m_sharedMaterial: {fileID: 3320099267793880730, guid: 748ba6ae560100b428bfbd9e23b41119, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 1.6194191, y: 1.065979, z: -24325.148, w: -1.7127342}
+  m_margin: {x: 1.6194191, y: 1.065979, z: -173.20312, w: -1.7127342}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1061,8 +1061,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Terug naar begin scherm
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 748ba6ae560100b428bfbd9e23b41119, type: 2}
+  m_sharedMaterial: {fileID: 3320099267793880730, guid: 748ba6ae560100b428bfbd9e23b41119, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 1444029780}
   - component: {fileID: 1444029779}
   m_Layer: 0
-  m_Name: TestShip
+  m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1209,8 +1209,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ddea42db37864a849d48c1cbcce6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GODMODE: {fileID: 0}
+  godmode: {fileID: 0}
   GodMode: 0
   Health: 3
+  shield: 0
+  Healthscript: {fileID: 0}
   Currentstate: 0
 --- !u!60 &1444029782
 PolygonCollider2D:
@@ -1229,7 +1233,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.75, y: 3.75}
+    oldSize: {x: 12.8, y: 7.2}
     newSize: {x: 3.75, y: 3.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1248,6 +1252,7 @@ PolygonCollider2D:
       - {x: -0.375, y: 0.995}
       - {x: -0.205, y: 1.7249999}
       - {x: -0.205, y: 1.875}
+      - {x: -0.6501581, y: 3.2056975}
       - {x: -1.145, y: 1.875}
       - {x: -1.145, y: 1.5749999}
       - {x: -1.125, y: 1.555}
@@ -1259,6 +1264,7 @@ PolygonCollider2D:
       - {x: -1.115, y: -0.85499996}
       - {x: -1.145, y: -1.5749999}
       - {x: -1.145, y: -1.875}
+      - {x: -0.5637119, y: -3.3135922}
       - {x: -0.205, y: -1.875}
       - {x: -0.195, y: -1.645}
       - {x: -0.355, y: -0.97499996}
@@ -1275,6 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68b5dbe74f84e549bd9b6522d3c195f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 1
   speed: 4
   rb: {fileID: 1444029779}
 --- !u!212 &1444029784
@@ -1317,7 +1324,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 408bfa4d202dc594ab64760b02a6f5d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 313a7ef074f025441978e78558fab1ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1336,7 +1343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444029778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.08, y: 0, z: 98.45}
+  m_LocalPosition: {x: 0.27, y: 0, z: 98.45}
   m_LocalScale: {x: 0.3974, y: 0.3184, z: 1}
   m_Children:
   - {fileID: 1250496915}
@@ -1479,7 +1486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673680141}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.76, z: 0}
+  m_LocalPosition: {x: 0, y: -3.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 339278957}

@@ -45,10 +45,10 @@ public class Shooting : MonoBehaviour
         if (!godMode && canShoot)
         {
             ShootTimer -= 1;
-
+         
             if (ShootTimer <= 0 && Input.GetKey("space"))
             {
-                transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
+                this.gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
                 ShootTimer = shootTimerMax;
                 FindObjectOfType<AudioManager>().Play("Laser");
                 Instantiate(Bullet, transform.position + new Vector3(0.571f, -0.074f), Quaternion.identity);
