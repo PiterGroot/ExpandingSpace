@@ -26,6 +26,7 @@ public class SchootingEnemie : MonoBehaviour
             if (ShootTimer <= 0)
             {
                 ShootTimer = 600;
+                FindObjectOfType<AudioManager>().Play("Laser");
                 Instantiate(Bullet, Spawnpoint, Quaternion.identity);
             }
         }

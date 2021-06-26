@@ -107,8 +107,8 @@ public class Boss : MonoBehaviour
         }
         if(Health <= 0 && canDie){
             canDie = false;
-            gameObject.GetComponent<SpriteRenderer>().sprite = null;
-            Instantiate(bigexplosion, transform.position, Quaternion.identity);
+            transform.position = new Vector3(0, -200, 0);
+            Instantiate(bigexplosion, new Vector3(0, 0, 0), Quaternion.identity);
             RandomExplosionSound();
             Invoke("LoadScene", 2f);
         }

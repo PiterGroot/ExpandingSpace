@@ -48,7 +48,7 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(CountDownDisplay(StartDelay));
-        WaveDisplay.text = $"WAVE:0";
+        WaveDisplay.text = $"GOLF:0";
         CurrentWave++;
     }
     private IEnumerator CountDownDisplay(float timeInSeconds)
@@ -63,7 +63,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1f);
             timeInSeconds--;
         }
-        WaveDisplay.text = $"WAVE:{CurrentWave.ToString()}";
+        WaveDisplay.text = $"GOLF:{CurrentWave.ToString()}";
         //next wave
         CountingDown = false;
         FillWaveSpawner();
@@ -75,13 +75,13 @@ public class WaveSpawner : MonoBehaviour
         StartEnemyCount++;
         SpawnRate -= .05f;
         for (int i = 0; i < StartEnemyCount; i++){
-            if(CurrentWave <= 4){
+            if(CurrentWave <= 2){
                 CurrentEnemies.Add(EasyEnemies[RandInt(0, EasyEnemies.Count)]);
             }
-            else if(CurrentWave <= 10 && CurrentWave > 4){
+            else if(CurrentWave <= 4 && CurrentWave > 2){
                 CurrentEnemies.Add(MediumEnemies[RandInt(0, MediumEnemies.Count)]);
             }
-             else if(CurrentWave >= 8){
+             else if(CurrentWave >= 5){
                 CurrentEnemies.Add(HardEnemies[RandInt(0, HardEnemies.Count)]);
             }
         }
@@ -138,7 +138,7 @@ public class WaveSpawner : MonoBehaviour
         }
     }
     private void Update() {
-        if(CurrentWave == 10 && SpawnedAllEnemies && currentEnemyCount == 0)
+        if(CurrentWave == 6 && SpawnedAllEnemies && currentEnemyCount == 0)
         {
             bossSpawner.TriggerFight();
         }

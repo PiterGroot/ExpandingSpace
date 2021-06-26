@@ -33,10 +33,6 @@ public class AudioManager : MonoBehaviour
         }      
         CheckScene();
     }
-    private void OnApplicationQuit()
-    {
-        PlayerPrefs.SetInt("Entrance", 0);
-    }
 
     // Update is called once per frame
     public void Play(string name)

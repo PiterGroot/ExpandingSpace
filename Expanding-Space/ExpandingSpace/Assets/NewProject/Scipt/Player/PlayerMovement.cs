@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Exits()
     {
-        FindObjectOfType<waveSong>().play();
+        FindObjectOfType<WaveMusic>().playMusic();
         HubFoundation.SetActive(false);
         spawner.waitForPlayerChoice = true;
         SpaceShip.SetActive(true);

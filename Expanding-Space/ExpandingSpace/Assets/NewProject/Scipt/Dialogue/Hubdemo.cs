@@ -15,8 +15,6 @@ public class Hubdemo : MonoBehaviour
         {
             StartCoroutine(DemoDia.ActivateDialogue());
             PlayerPrefs.SetInt("Demo", 1);
-
-
         }
     }
 
@@ -28,8 +26,8 @@ public class Hubdemo : MonoBehaviour
 
     public void Loadhub()
     {
-        print("LOAADDD");
-        hub.SetActive(true);
-        FindObjectOfType<waveSong>().p();
+        //print("LOAADDD");
+        //hub.SetActive(true);
+        //FindObjectOfType<waveSong>().p();
     }
 }
