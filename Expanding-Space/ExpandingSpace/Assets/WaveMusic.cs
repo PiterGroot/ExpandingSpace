@@ -14,6 +14,10 @@ public class WaveMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        print("Start");
+        Invoke("Play", 1f);
+    }
+    void Play(){
         FindObjectOfType<AudioManager>().Play("e");
     }
     public void playMusic()
@@ -24,5 +28,10 @@ public class WaveMusic : MonoBehaviour
         print("Stop the music");
         FindObjectOfType<AudioManager>().Stop("e");
     }
-   
+   public void PlayOST(){
+         FindObjectOfType<AudioManager>().Play("OST");
+   }
+   public void Select(){
+         FindObjectOfType<AudioManager>().Play("Select");
+   }
 }

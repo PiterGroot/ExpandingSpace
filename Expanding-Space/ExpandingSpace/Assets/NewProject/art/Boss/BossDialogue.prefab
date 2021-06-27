@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3b40d1e2315ad428a5882bc003673f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTalking: 0
   ActivateThisDialogue: 0
   DialogueAnim: {fileID: 0}
   ObjectToFollow: {fileID: 0}
@@ -62,7 +63,7 @@ MonoBehaviour:
   PauseTime: 2.3
   VoiceSoundEffectName: Test
   NameTag: Boss
-  ProfilePicture: {fileID: -8275988251090921964, guid: d4e6e0dcdeb3f434fba234f0cfdde999, type: 3}
+  ProfilePicture: {fileID: 21300000, guid: 2c1921a2e7943f4419536d6ece466489, type: 3}
   Sentences:
   - Nu ben ik er klaar mee!
   - Als mijn leger je niet kan verslaan dan doe ik het wel.
