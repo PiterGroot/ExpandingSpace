@@ -14,7 +14,7 @@ public class RandomText : MonoBehaviour
 
     int MoneyBuy;
     float Geld;
-    public bool Canbuy;
+
 
     int NumberOftext;
     public TextMeshProUGUI TextChanger;
@@ -25,12 +25,6 @@ public class RandomText : MonoBehaviour
     public TextMeshProUGUI Prijs;
     public InventoryManager InvManager;
     [SerializeField] private Wallet Portemonee; 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Canbuy = true;
-    }
 
     // Update is called once per framehgj
     void Update()
@@ -142,39 +136,34 @@ public class RandomText : MonoBehaviour
     {
         if (InvManager.items.Count <= 2)
         {
-            if (NaamProduct.text == "Vuur Snelheid" && Geld >= MoneyBuy && Canbuy == true)
+            if (NaamProduct.text == "Vuur Snelheid" && Geld >= MoneyBuy)
             {
                 InvManager.FirerateGk();
                 Portemonee.BuyItem(20);
-                //Canbuy = false;
                 Debug.Log("s");
             }
-            else if (NaamProduct.text == "Verspreid Schot" && Geld >= MoneyBuy && Canbuy == true)
+            else if (NaamProduct.text == "Verspreid Schot" && Geld >= MoneyBuy)
             {
                 InvManager.VerspreidShotGk();
                 Portemonee.BuyItem(50);
-               // Canbuy = false;
                 Debug.Log("vs");
             }
-            else if (NaamProduct.text == "Schild" && Geld >= MoneyBuy && Canbuy == true)
+            else if (NaamProduct.text == "Schild" && Geld >= MoneyBuy)
             {
                 InvManager.ShieldGk();
                 Portemonee.BuyItem(30);
-                //Canbuy = false;
                 Debug.Log("sh");
             }
-            else if (NaamProduct.text == "Repareren" && Geld >= MoneyBuy && Canbuy == true)
+            else if (NaamProduct.text == "Repareren" && Geld >= MoneyBuy)
             {
                 InvManager.ReparerenGk();
                 Portemonee.BuyItem(15);
-                //Canbuy = false;
                 Debug.Log("r");
             }
-            else if (NaamProduct.text == "Snelheid" && Geld >= MoneyBuy && Canbuy == true)
+            else if (NaamProduct.text == "Snelheid" && Geld >= MoneyBuy)
             {
                 InvManager.SpeedGk();
                 Portemonee.BuyItem(5);
-                //Canbuy = false;
                 Debug.Log("sn");
             }
         }

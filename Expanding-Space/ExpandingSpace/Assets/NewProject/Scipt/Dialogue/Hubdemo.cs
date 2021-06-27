@@ -6,7 +6,7 @@ public class Hubdemo : MonoBehaviour
 {
     [SerializeField] private TriggerDialogue DemoDia;
 
-    public GameObject hub;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -24,10 +24,4 @@ public class Hubdemo : MonoBehaviour
         
     }
 
-    public void Loadhub()
-    {
-        //print("LOAADDD");
-        //hub.SetActive(true);
-        //FindObjectOfType<waveSong>().p();
-    }
 }

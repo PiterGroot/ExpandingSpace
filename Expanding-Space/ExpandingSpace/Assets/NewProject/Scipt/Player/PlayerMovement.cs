@@ -102,9 +102,6 @@ public class PlayerMovement : MonoBehaviour
         CallFunctionRandomizer1.Randomized();
         CallFunctionRandomizer2.Randomized();
         CallFunctionRandomizer3.Randomized();
-        CanBuy1.Canbuy = true;
-        CanBuy2.Canbuy = true;
-        CanBuy3.Canbuy = true;
         canMove = true;
         FindObjectOfType<AudioManager>().Stop("OST");
     }
