@@ -84,7 +84,7 @@ public class InventoryShop : MonoBehaviour
     {
         if (slotused1 == true)
         {
-            Debug.Log("slot 1 wrkt");
+        
             switch (inventory.items[0])
             { 
                 case "Heal":
@@ -122,14 +122,14 @@ public class InventoryShop : MonoBehaviour
         }
         else
         {
-            Debug.Log("Slot is used");
+            
         }
     }
     public void Slot2()
     {
         if (slotused2 == true)
         {
-            Debug.Log("slot 2 wrkt");
+     
             switch (inventory.items[1])
             {
                 case "Heal":
@@ -168,14 +168,14 @@ public class InventoryShop : MonoBehaviour
         }
         else
         {
-            Debug.Log("Slot is used");
+   
         }
     }
     public void Slot3()
     {
         if (slotused3 == true)
         {
-            Debug.Log("slot 3 wrkt");
+
             switch (inventory.items[2])
             {
                 case "Heal":
@@ -209,7 +209,7 @@ public class InventoryShop : MonoBehaviour
         }
         else
         {
-            Debug.Log("Slot is used");
+ 
         }
     }
 }

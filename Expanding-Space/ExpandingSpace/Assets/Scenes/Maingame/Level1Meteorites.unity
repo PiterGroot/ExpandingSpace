@@ -12663,8 +12663,7 @@ MonoBehaviour:
   ShotgunSprite: {fileID: 9032988205015174924, guid: 22dce00a34a121c49bb9e04ae6478ccf, type: 3}
   SpeedSprite: {fileID: 7363093017985441666, guid: 624c6021f4a72104985362cb69f115ea, type: 3}
   FirerateSprite: {fileID: 4431901682269523239, guid: cdc0e51db2276d54181f6bde335761c5, type: 3}
-  items:
-  - Shotgun
+  items: []
   Heal: 0
   Shield: 0
   VerspreidShot: 0
@@ -12700,6 +12699,9 @@ MonoBehaviour:
   collisionManager: {fileID: 1177505987}
   shotgunpart1: {fileID: 225031354}
   shotgunpart2: {fileID: 1627815491}
+  SpaceshipSpeed: {fileID: 1177505983}
+  shooting: {fileID: 1290311015}
+  firerate: 0
 --- !u!222 &1722461972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12784,7 +12786,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 4
   m_TargetDisplay: 0

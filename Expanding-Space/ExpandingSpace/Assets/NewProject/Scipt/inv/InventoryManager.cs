@@ -43,13 +43,15 @@ public class InventoryManager : MonoBehaviour
     }
     private void Update()
     {
+
+        
         try
         {
             Slot1();
         }
         catch(Exception e)
         {
-
+           
         }
         try
         {
@@ -57,15 +59,16 @@ public class InventoryManager : MonoBehaviour
         }
         catch (Exception e)
         {
-
+           
         }
         try
         {
+           
             Slot3();
         }
         catch (Exception e)
         {
-
+                                
         }
 
 
@@ -122,6 +125,8 @@ public class InventoryManager : MonoBehaviour
     //Display functions
     public void Slot1()
     {
+      
+
         if (slotused1 == true)
         {
        
@@ -158,6 +163,9 @@ public class InventoryManager : MonoBehaviour
                     slotused1 = false;
                     Slot2();
                     break;
+                default:
+                     Destroy(Itemslot1.transform.GetChild(0).gameObject);
+                    break;
             }
         }
         else
@@ -167,6 +175,8 @@ public class InventoryManager : MonoBehaviour
     }
     public void Slot2()
     {
+        
+       
         if (slotused2 == true)
         {
      
@@ -202,6 +212,10 @@ public class InventoryManager : MonoBehaviour
                     item2.transform.parent = Itemslot2.transform;
                     slotused2 = false;
                     Slot3();
+                    break;  
+               
+                    case"":
+                 Destroy(Itemslot2.transform.GetChild(0).gameObject);
                     break;
 
             }
@@ -244,6 +258,10 @@ public class InventoryManager : MonoBehaviour
                     item3.transform.parent = Itemslot3.transform;
                     slotused3 = false;
                     break;
+                case "":
+                    Destroy(Itemslot3.transform.GetChild(0).gameObject);
+                    break;
+
 
             }
         }

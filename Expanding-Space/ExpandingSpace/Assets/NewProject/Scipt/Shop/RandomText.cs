@@ -35,6 +35,7 @@ public class RandomText : MonoBehaviour
     // Update is called once per framehgj
     void Update()
     {
+
         switch (NumberOftext)
         {
             case 1:
@@ -139,42 +140,47 @@ public class RandomText : MonoBehaviour
 
     public void buy()
     {
-      
-        if (NaamProduct.text == "Vuur Snelheid" &&  Geld >= MoneyBuy && Canbuy == true)
+        if (InvManager.items.Count <= 2)
         {
-            InvManager.FirerateGk();
-            Portemonee.BuyItem(20);
-            Canbuy = false;
-            Debug.Log("s");
+            if (NaamProduct.text == "Vuur Snelheid" && Geld >= MoneyBuy && Canbuy == true)
+            {
+                InvManager.FirerateGk();
+                Portemonee.BuyItem(20);
+                //Canbuy = false;
+                Debug.Log("s");
+            }
+            else if (NaamProduct.text == "Verspreid Schot" && Geld >= MoneyBuy && Canbuy == true)
+            {
+                InvManager.VerspreidShotGk();
+                Portemonee.BuyItem(50);
+               // Canbuy = false;
+                Debug.Log("vs");
+            }
+            else if (NaamProduct.text == "Schild" && Geld >= MoneyBuy && Canbuy == true)
+            {
+                InvManager.ShieldGk();
+                Portemonee.BuyItem(30);
+                //Canbuy = false;
+                Debug.Log("sh");
+            }
+            else if (NaamProduct.text == "Repareren" && Geld >= MoneyBuy && Canbuy == true)
+            {
+                InvManager.ReparerenGk();
+                Portemonee.BuyItem(15);
+                //Canbuy = false;
+                Debug.Log("r");
+            }
+            else if (NaamProduct.text == "Snelheid" && Geld >= MoneyBuy && Canbuy == true)
+            {
+                InvManager.SpeedGk();
+                Portemonee.BuyItem(5);
+                //Canbuy = false;
+                Debug.Log("sn");
+            }
         }
-        else if (NaamProduct.text == "Verspreid Schot" && Geld >= MoneyBuy && Canbuy == true)
+        else
         {
-            InvManager.VerspreidShotGk();
-            Portemonee.BuyItem(50);
-            Canbuy = false;
-            Debug.Log("vs");
-        } 
-        else if(NaamProduct.text== "Schild" && Geld >= MoneyBuy && Canbuy == true)
-        {
-            InvManager.ShieldGk();
-            Portemonee.BuyItem(30);
-            Canbuy = false;
-            Debug.Log("sh");
+            print("inv full");
         }
-        else if(NaamProduct.text == "Repareren" && Geld >= MoneyBuy && Canbuy == true)
-        {
-            InvManager.ReparerenGk();
-            Portemonee.BuyItem(15);
-            Canbuy = false;
-            Debug.Log("r");
-        }
-        else if(NaamProduct.text== "Snelheid" && Geld >= MoneyBuy && Canbuy == true)
-        {
-            InvManager.SpeedGk();
-            Portemonee.BuyItem(5);
-            Canbuy = false;
-            Debug.Log("sn");
-        }
-        
     }
 }
