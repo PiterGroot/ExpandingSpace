@@ -14,6 +14,9 @@ public class PowerUpManager : MonoBehaviour
     public GameObject shotgunpart1;
     public GameObject shotgunpart2;
 
+    public SpaceShip SpaceshipSpeed;
+    public bool firerate=false;
+
     private void Start()
     {
        
@@ -24,6 +27,10 @@ public class PowerUpManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             slot1Activate();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            slot2Activate();
         }
     }
 
@@ -54,6 +61,7 @@ public class PowerUpManager : MonoBehaviour
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 break;
             case "Speed":
+                SpaceshipSpeed.speed = 7;
                 Debug.Log("Speed is active");
 
                 inventoryManager.items.RemoveAt(0);
@@ -61,7 +69,7 @@ public class PowerUpManager : MonoBehaviour
                 break;
             case "Firerate":
                 Debug.Log("Firerate is active");
-
+                firerate = true;
                 inventoryManager.items.RemoveAt(0);
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 break;
@@ -75,7 +83,60 @@ public class PowerUpManager : MonoBehaviour
 
         }
     }
-    
+
+    public void slot2Activate()
+    {
+        switch (inventoryManager.items[1])
+        {
+            case "Heal":
+                if (collisionManager.Health == 3)
+                {
+                    Debug.Log("Hp is vol");
+                }
+                else if (collisionManager.Health < 3)
+                {
+                    Debug.Log("add hp");
+                    inventoryManager.slotused1 = true;                                              //het slot is gebruikt!.
+                    collisionManager.Health += 1;                                                    //telt hp op bij de collision manager script 
+
+                    inventoryManager.items.RemoveAt(1);                                         //dit stuk reset de slot en haalt het item weg na gebruik.
+                    Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
+                }
+                break;
+            case "Shield":
+                shieldborder.SetActive(true);
+                collisionManager.shield = 3;
+
+                inventoryManager.items.RemoveAt(1);
+                Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
+                break;
+            case "Speed":
+                SpaceshipSpeed.speed = 7;
+                Debug.Log("Speed is active");
+
+                inventoryManager.items.RemoveAt(1);
+                Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
+                break;
+            case "Firerate":
+                Debug.Log("Firerate is active");
+                firerate = true;
+                inventoryManager.items.RemoveAt(1);
+                Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
+                break;
+            case "Shotgun":
+                Debug.Log("Shotgun is active");
+                shotgunpart1.SetActive(true);
+                shotgunpart2.SetActive(true);
+                inventoryManager.items.RemoveAt(1);
+                Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
+                break;
+
+        }
+    }
+
+
+
+
 }
 
 
