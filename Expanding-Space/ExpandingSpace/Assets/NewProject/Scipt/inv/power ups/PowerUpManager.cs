@@ -15,6 +15,7 @@ public class PowerUpManager : MonoBehaviour
     public GameObject shotgunpart2;
 
     public SpaceShip SpaceshipSpeed;
+    public Shooting shooting;
     public bool firerate=false;
 
     private void Start()
@@ -69,7 +70,7 @@ public class PowerUpManager : MonoBehaviour
                 break;
             case "Firerate":
                 Debug.Log("Firerate is active");
-                firerate = true;
+                shooting.shootTimerMax = 60;
                 inventoryManager.items.RemoveAt(0);
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 break;
@@ -119,7 +120,7 @@ public class PowerUpManager : MonoBehaviour
                 break;
             case "Firerate":
                 Debug.Log("Firerate is active");
-                firerate = true;
+            
                 inventoryManager.items.RemoveAt(1);
                 Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                 break;
