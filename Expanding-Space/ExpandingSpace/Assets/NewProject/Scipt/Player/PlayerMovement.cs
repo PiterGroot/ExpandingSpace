@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
                 canMove = false;
                 StartCoroutine(SlakDia.ActivateDialogue());
                 PlayerPrefs.SetInt("Slak", 1);
-                Invoke("Exits", 20);
+                Invoke("Exits", 22);
                 
             }
             else

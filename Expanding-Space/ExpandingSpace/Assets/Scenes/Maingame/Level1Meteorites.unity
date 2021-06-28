@@ -1720,7 +1720,6 @@ MonoBehaviour:
   - {fileID: 5085637171596352902, guid: 22a9090a16b1fb14b81279bc412bd465, type: 3}
   - {fileID: 6081251811988507, guid: 4b076ac6a57217e4caeac15d9bca2ce8, type: 3}
   - {fileID: 4545595825921608583, guid: be058c986e9e384428d86ef20f61ca14, type: 3}
-  - {fileID: 4795494663067430447, guid: 846db254268a3f349a5e46be0402b331, type: 3}
   MediumEnemies:
   - {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
   - {fileID: 4795494663067430447, guid: 846db254268a3f349a5e46be0402b331, type: 3}
@@ -3163,7 +3162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8693188380701952153, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9082606217158263726, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: Shop
