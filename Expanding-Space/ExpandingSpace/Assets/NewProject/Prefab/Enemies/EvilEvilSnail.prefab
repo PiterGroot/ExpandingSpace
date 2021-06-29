@@ -120,9 +120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoneyReward: 10
   spawner: {fileID: 0}
-  MoveSpeed: 8
+  MoveSpeed: 5
   explosion: {fileID: 4644808102954653844, guid: d7bf149a783215b438cbfe8d3167a94c, type: 3}
-  MinMaxMoveSpeed: {x: 2, y: 8}
+  MinMaxMoveSpeed: {x: 2, y: 5}
 --- !u!50 &315990213181861996
 Rigidbody2D:
   serializedVersion: 4
