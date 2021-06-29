@@ -14,7 +14,7 @@ public class MovingForShooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 1700;
+        timer = 700;
         spawner = FindObjectOfType<WaveSpawner>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         MoveSpeed = Random.Range(MinMaxMoveSpeed.x, MinMaxMoveSpeed.y);
