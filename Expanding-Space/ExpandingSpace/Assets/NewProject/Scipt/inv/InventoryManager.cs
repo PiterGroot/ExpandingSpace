@@ -51,7 +51,7 @@ public class InventoryManager : MonoBehaviour
         }
         catch(Exception e)
         {
-           
+            
         }
         try
         {

@@ -10,28 +10,35 @@ public class MainMenu : MonoBehaviour
     public GameObject Mainmenu;
     public GameObject controles;
     public Sprite bgselected;
-    public Image bgws;
-    public Image bgad;
+    public GameObject WS;
+    public GameObject bgad;
+
+
+
+    public void Start()
+    {
+        PlayerPrefs.SetString("Controles", "ad");
+    }
     public void SceneSwitch(string SceneName)
     {
+        PlayerPrefs.DeleteKey("Wallet");
+        PlayerPrefs.DeleteKey("Demo");
+        PlayerPrefs.DeleteKey("EersteUitleg");
 
-        PlayerPrefs.DeleteAll();
-        //PlayerPrefs.SetInt("punten", 0);
-        //PlayerPrefs.SetInt("lvl1Done", 0);
         SceneManager.LoadScene(SceneName);
     }
-
-    public void play(){
+    public void start()
+    {
         controles.SetActive(true);
         Mainmenu.SetActive(false);
-        }
+    }
     public void Opties()
     {
         Mainmenu.SetActive(false);
         Options.SetActive(true);
     }
     public void Back()
-    { 
+    {
         Options.SetActive(false);
         controles.SetActive(false);
         Mainmenu.SetActive(true);
@@ -43,16 +50,22 @@ public class MainMenu : MonoBehaviour
         Mainmenu.SetActive(false);
     }
 
-    public void ws()
+    public void controlesws()
     {
-        bgws.sprite = bgselected ;
+        PlayerPrefs.SetString("Controles", "ws");
+        print(PlayerPrefs.GetString("Controles"));
     }
-    public void ad()
+
+
+    public void controllesad()
     {
-        bgad.sprite = bgselected;
+
+        PlayerPrefs.SetString("Controles", "ad");
+        Debug.Log(PlayerPrefs.GetString("Controles"));
     }
     public void Exit()
     {
+        PlayerPrefs.DeleteAll();
         Application.Quit();
 
     }

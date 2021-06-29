@@ -28,7 +28,19 @@ public class Pauze : MonoBehaviour
         
 
     }
+    public void controlesws()
+    {
+        PlayerPrefs.SetString("Controles", "ws");
+        print(PlayerPrefs.GetString("Controles"));
+    }
 
+
+    public void controllesad()
+    {
+
+        PlayerPrefs.SetString("Controles", "ad");
+        Debug.Log(PlayerPrefs.GetString("Controles"));
+    }
     public void Menu()
     {
         if (playGame == true)
