@@ -215,7 +215,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 678240474}
-  - component: {fileID: 678240473}
   m_Layer: 0
   m_Name: TEst
   m_TagString: Untagged
@@ -223,32 +222,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &678240473
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678240472}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.9486313}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 9.928295}
-  m_EdgeRadius: 0
 --- !u!4 &678240474
 Transform:
   m_ObjectHideFlags: 0
@@ -329,6 +302,10 @@ PrefabInstance:
     - target: {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 315990213181861995, guid: ff3e4b3440de0c0499a4d0c965b50e68, type: 3}
       propertyPath: m_TagString
@@ -412,6 +389,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4795494663067430447, guid: 846db254268a3f349a5e46be0402b331, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795494663067430447, guid: 846db254268a3f349a5e46be0402b331, type: 3}
       propertyPath: m_TagString
       value: Snail
       objectReference: {fileID: 0}
@@ -424,6 +405,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1362842331058439816, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
+      propertyPath: Move
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5139373035340237148, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -432,13 +417,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: sprite_snailwithgun10
       objectReference: {fileID: 0}
+    - target: {fileID: 8632583922817070690, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
+      propertyPath: m_TagString
+      value: SnailShooting
+      objectReference: {fileID: 0}
     - target: {fileID: 8632583922817070695, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8632583922817070695, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.59
+      value: 14.06
       objectReference: {fileID: 0}
     - target: {fileID: 8632583922817070695, guid: f7ae4cfb0d5ab794c9b9db1dbfca4bad, type: 3}
       propertyPath: m_LocalPosition.y

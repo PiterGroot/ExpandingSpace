@@ -10,9 +10,11 @@ public class MovingForShooting : MonoBehaviour
     public float MoveSpeed;
     private Rigidbody2D rb2d;
     public Vector2 MinMaxMoveSpeed;
+    public int timer;
     // Start is called before the first frame update
     void Start()
     {
+        timer = 1700;
         spawner = FindObjectOfType<WaveSpawner>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         MoveSpeed = Random.Range(MinMaxMoveSpeed.x, MinMaxMoveSpeed.y);
@@ -24,10 +26,19 @@ public class MovingForShooting : MonoBehaviour
         rb2d.velocity = new Vector2(-MoveSpeed, 0f);
         if (transform.position.x <= 7)
         {
-            rb2d.velocity = new Vector2(0, 0f);
-
+            timer -= 1;
+            if (timer <= 0)
+            {
+                rb2d.velocity = new Vector2(-MoveSpeed, 0f);
+            }
+            else
+            {
+                rb2d.velocity = new Vector2(0, 0f);
+            }
         }
     }
+
+
     public void KillSelf()
     {
         FindObjectOfType<Wallet>().AddMoney(MoneyReward);
