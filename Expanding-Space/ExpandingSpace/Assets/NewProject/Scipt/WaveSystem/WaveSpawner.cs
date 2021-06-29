@@ -138,7 +138,7 @@ public class WaveSpawner : MonoBehaviour
         }
     }
     private void Update() {
-        if(CurrentWave == 2 && SpawnedAllEnemies && currentEnemyCount == 0)
+        if(CurrentWave == 6 && SpawnedAllEnemies && currentEnemyCount == 0)
         {
             bossSpawner.TriggerFight();
         }
