@@ -7,6 +7,7 @@ using TMPro;
 
 public class TriggerDialogue : MonoBehaviour
 {
+    private bool resetSpeed;
     private TextMeshProUGUI Conversation;
     private TextMeshProUGUI Name;
     [HideInInspector]public bool isTalking = false;

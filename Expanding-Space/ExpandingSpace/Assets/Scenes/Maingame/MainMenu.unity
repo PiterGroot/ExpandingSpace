@@ -1480,8 +1480,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: /
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1382ac3a520da44478e2e296eb1f8e1b, type: 2}
-  m_sharedMaterial: {fileID: 2387937243844938428, guid: 1382ac3a520da44478e2e296eb1f8e1b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3903,7 +3903,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1382ac3a520da44478e2e296eb1f8e1b, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2387937243844938428, guid: 1382ac3a520da44478e2e296eb1f8e1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4844,7 +4844,6 @@ MonoBehaviour:
   bg: {fileID: 814686441}
   bghover: {fileID: 21300000, guid: 8c83c7635c2303c4e9a5459709fb282e, type: 3}
   bgnormal: {fileID: 21300000, guid: 0dd8817531a32194c85700052a0727ce, type: 3}
-  bgselected: {fileID: 21300000, guid: c4be75989f2a88345a4fe714a13d1e94, type: 3}
 --- !u!65 &814686440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8996,7 +8995,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1382ac3a520da44478e2e296eb1f8e1b, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2387937243844938428, guid: 1382ac3a520da44478e2e296eb1f8e1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9293,6 +9292,7 @@ GameObject:
   - component: {fileID: 1644890561}
   - component: {fileID: 1644890560}
   - component: {fileID: 1644890559}
+  - component: {fileID: 1644890562}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9365,6 +9365,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1644890562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644890558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6a607c607d1834bb11401a91f7342b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1675607035 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8010375477432219990, guid: 4ce74b0b043026345b2915ad3615f44e, type: 3}
@@ -11159,7 +11171,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1382ac3a520da44478e2e296eb1f8e1b, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2387937243844938428, guid: 1382ac3a520da44478e2e296eb1f8e1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -11392,7 +11404,6 @@ MonoBehaviour:
   bg: {fileID: 2037954568}
   bghover: {fileID: 21300000, guid: 8c83c7635c2303c4e9a5459709fb282e, type: 3}
   bgnormal: {fileID: 21300000, guid: 0dd8817531a32194c85700052a0727ce, type: 3}
-  bgselected: {fileID: 21300000, guid: c4be75989f2a88345a4fe714a13d1e94, type: 3}
 --- !u!65 &2037954567
 BoxCollider:
   m_ObjectHideFlags: 0
