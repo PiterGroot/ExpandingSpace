@@ -151,7 +151,7 @@ MonoBehaviour:
   FlightDuration: 7
   ShootWaves: 5
   StartDelay: 1.5
-  DialogueTime: 12.5
+  DialogueTime: 8
   BossDialogue: {fileID: 4616121734729682944, guid: 6db73aa9ed4bffd42bf8bbe7b1916e54, type: 3}
   BossFly: {fileID: 0}
   GunPos: {fileID: 672983832}

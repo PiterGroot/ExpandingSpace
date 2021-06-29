@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4495661243170920938}
   m_Layer: 8
   m_Name: Bullet.Enemie
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

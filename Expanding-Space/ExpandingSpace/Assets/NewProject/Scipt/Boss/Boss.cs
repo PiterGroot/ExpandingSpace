@@ -10,6 +10,7 @@ public class Boss : MonoBehaviour
     private int WaveCount;
     public float Health;
     private float maxHealth = 80;
+    
     [SerializeField] private ParticleSystem bigexplosion;
     [SerializeField] private Animator bossanim;
     [SerializeField] private float FlightDuration = 7;
@@ -107,8 +108,12 @@ public class Boss : MonoBehaviour
         }
         if(Health <= 0 && canDie){
             canDie = false;
-            transform.position = new Vector3(0, -200, 0);
-            Instantiate(bigexplosion, new Vector3(0, 0, 0), Quaternion.identity);
+            canShoot = false;
+            foreach (GameObject bullet in GameObject.FindGameObjectsWithTag("Bullet")){
+                Destroy(bullet);
+            }
+            Instantiate(bigexplosion, transform.position, Quaternion.identity);
+            gameObject.GetComponent<SpriteRenderer>().enabled= false;
             RandomExplosionSound();
             Invoke("LoadScene", 2f);
         }
