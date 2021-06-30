@@ -12,12 +12,17 @@ public class MainMenu : MonoBehaviour
     public Sprite bgselected;
     public GameObject WS;
     public GameObject bgad;
+    
 
 
 
     public void Start()
     {
-        PlayerPrefs.SetString("Controles", "ad");
+        PlayerPrefs.GetInt("firestRun" + 1);
+        if (PlayerPrefs.GetInt("firstRun") >= 1)
+        {
+            PlayerPrefs.SetString("Controles", "ad");
+        }
     }
     public void SceneSwitch(string SceneName)
     {
@@ -29,6 +34,7 @@ public class MainMenu : MonoBehaviour
     }
     public void start()
     {
+        PlayerPrefs.SetInt("firstRun", 0);
         controles.SetActive(true);
         Mainmenu.SetActive(false);
     }

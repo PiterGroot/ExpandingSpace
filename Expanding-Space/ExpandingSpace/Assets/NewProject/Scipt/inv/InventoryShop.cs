@@ -48,8 +48,10 @@ public class InventoryShop : MonoBehaviour
     }
     private void Update()
     {
+        
         try
         {
+            print("slot 1");
             Slot1();
         }
         catch (Exception e)
@@ -58,6 +60,7 @@ public class InventoryShop : MonoBehaviour
         }
         try
         {
+            print("slot 2");
             Slot2();
         }
         catch (Exception e)
@@ -66,13 +69,15 @@ public class InventoryShop : MonoBehaviour
         }
         try
         {
+            print("slot 3");
             Slot3();
         }
         catch (Exception e)
         {
 
         }
-
+       
+      
 
     }
 
@@ -121,7 +126,7 @@ public class InventoryShop : MonoBehaviour
             }
         }
         else
-        {
+        { 
             
         }
     }
@@ -212,4 +217,5 @@ public class InventoryShop : MonoBehaviour
  
         }
     }
+
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PowerUpManager : MonoBehaviour
 {
@@ -17,25 +18,24 @@ public class PowerUpManager : MonoBehaviour
     public SpaceShip SpaceshipSpeed;
     public Shooting shooting;
     public bool firerate = false;
-
-    private void Start()
-    {
+    public GameObject Shop;
 
 
-    }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            slot1Activate();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            slot2Activate();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            slot3Activate();
+        if (Shop.activeSelf== false) { 
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                slot1Activate();
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                slot2Activate();
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                slot3Activate();
+            }
         }
     }
 
@@ -60,6 +60,7 @@ public class PowerUpManager : MonoBehaviour
                     Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
+
                 }
                 break;
             case "Shield":
@@ -85,6 +86,8 @@ public class PowerUpManager : MonoBehaviour
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
+
+
                 break;
             case "Firerate":
                 inventoryManager.slotused1 = true;                                              //het slot is gebruikt!.
@@ -97,6 +100,8 @@ public class PowerUpManager : MonoBehaviour
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
+
+   
                 break;
             case "Shotgun":
                 inventoryManager.slotused1 = true;                                              //het slot is gebruikt!.
@@ -110,6 +115,7 @@ public class PowerUpManager : MonoBehaviour
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
+
                 break;
 
         }
@@ -136,6 +142,8 @@ public class PowerUpManager : MonoBehaviour
                     Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
+
+        
                 }
                 break;
             case "Shield":
@@ -149,6 +157,8 @@ public class PowerUpManager : MonoBehaviour
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
+
+             
                 break;
             case "Speed":
                 inventoryManager.slotused1 = true;                                              //het slot is gebruikt!.
@@ -161,6 +171,8 @@ public class PowerUpManager : MonoBehaviour
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
+
+   
                 break;
             case "Firerate":
                 Debug.Log("Firerate is active");
@@ -171,6 +183,8 @@ public class PowerUpManager : MonoBehaviour
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
+
+
                 break;
             case "Shotgun":
                 Debug.Log("Shotgun is active");
@@ -184,6 +198,8 @@ public class PowerUpManager : MonoBehaviour
                 Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                 Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
+
+
                 break;
 
         }
@@ -210,7 +226,10 @@ public class PowerUpManager : MonoBehaviour
                         Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                         Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                         Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
-                    }
+
+
+
+                }
                     break;
                 case "Shield":
                     inventoryManager.slotused1 = true;                                              //het slot is gebruikt!.
@@ -223,7 +242,9 @@ public class PowerUpManager : MonoBehaviour
                     Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
-                    break;
+
+ 
+                break;
                 case "Speed":
                     inventoryManager.slotused1 = true;                                              //het slot is gebruikt!.
                     inventoryManager.slotused2 = true;                                              //het slot is gebruikt!.
@@ -235,7 +256,8 @@ public class PowerUpManager : MonoBehaviour
                     Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
-                    break;
+
+                break;
                 case "Firerate":
                     Debug.Log("Firerate is active");
                     inventoryManager.slotused1 = true;                                              //het slot is gebruikt!.
@@ -245,7 +267,9 @@ public class PowerUpManager : MonoBehaviour
                     Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
-                    break;
+
+
+                break;
                 case "Shotgun":
                     Debug.Log("Shotgun is active");
                     shotgunpart1.SetActive(true);
@@ -258,7 +282,8 @@ public class PowerUpManager : MonoBehaviour
                     Destroy(inventoryManager.Itemslot1.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot2.transform.GetChild(0).gameObject);
                     Destroy(inventoryManager.Itemslot3.transform.GetChild(0).gameObject);
-                    break;
+
+                break;
 
             }
         }

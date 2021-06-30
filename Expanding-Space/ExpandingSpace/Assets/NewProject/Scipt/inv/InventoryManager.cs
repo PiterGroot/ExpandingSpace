@@ -35,6 +35,7 @@ public class InventoryManager : MonoBehaviour
     public bool slotused3 = true;
 
 
+
     private void Start()
     {
 
@@ -125,7 +126,7 @@ public class InventoryManager : MonoBehaviour
     //Display functions
     public void Slot1()
     {
-      
+
 
         if (slotused1 == true)
         {
@@ -229,7 +230,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (slotused3 == true)
         {
-
+           
             switch (items[2])
             {
                 case "Heal":
