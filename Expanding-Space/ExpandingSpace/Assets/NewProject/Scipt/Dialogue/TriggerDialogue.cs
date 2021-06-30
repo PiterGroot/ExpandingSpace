@@ -7,7 +7,7 @@ using TMPro;
 
 public class TriggerDialogue : MonoBehaviour
 {
-    private bool resetSpeed;
+    private bool isEnabled = true;
     private TextMeshProUGUI Conversation;
     private TextMeshProUGUI Name;
     [HideInInspector]public bool isTalking = false;
@@ -66,6 +66,7 @@ public class TriggerDialogue : MonoBehaviour
                 GameObject.FindGameObjectWithTag("DialoguePicture").GetComponent<Image>().sprite = ProfilePicture;
             }
             isTalking = true;
+            isEnabled = true;
             canActivate = false;
             Conversation.text = string.Empty;
             Name.text = NameTag;
@@ -77,12 +78,13 @@ public class TriggerDialogue : MonoBehaviour
                 {
                     foreach (char letter in sentence)
                     {
-                        Conversation.text += letter;
-                        if (PlaySound && !char.IsWhiteSpace(letter))
-                        {
-                            FindObjectOfType<AudioManager>().Play(VoiceSoundEffectName);
+                        if (isEnabled) {
+                            Conversation.text += letter;
+                            if (PlaySound && !char.IsWhiteSpace(letter)) {
+                                FindObjectOfType<AudioManager>().Play(VoiceSoundEffectName);
+                            }
+                            yield return new WaitForSeconds(TalkingSpeed);
                         }
-                        yield return new WaitForSeconds(TalkingSpeed);
                     }
                     yield return new WaitForSeconds(PauseTime);
                     Conversation.text = string.Empty;
@@ -159,6 +161,9 @@ public class TriggerDialogue : MonoBehaviour
     } 
     private void Update() {
         TalkingSpeed = PlayerPrefs.GetFloat("DialogueSpeed");
+        if (isTalking && Input.GetKeyDown(KeyCode.Backspace)){
+            SkipDialogue();
+        }
         if(isTalking){
             pauzescreen.SetActive(false);
         }
@@ -176,6 +181,13 @@ public class TriggerDialogue : MonoBehaviour
         if(isTalking){
             UpdatePosition();
         }
+    }
+    private void SkipDialogue() {
+        isEnabled = false;
+        Conversation.text = string.Empty;
+        DialogueAnim.SetTrigger("DeActivate");
+        isTalking = false;
+        canActivate = true;
     }
     private void UpdatePosition(){
         if(ObjectToFollow == null)
