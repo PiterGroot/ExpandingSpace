@@ -14,6 +14,8 @@ public class Shooting : MonoBehaviour
     public GameObject Bullet;
     public int ShootTimer;
     [HideInInspector]public int shootTimerMax;
+    public PowerUpManager pwManager;
+
     private void Awake(){
         BossScript = FindObjectOfType<Boss>();
         shootTimerMax = ShootTimer;
@@ -46,12 +48,21 @@ public class Shooting : MonoBehaviour
         {
             ShootTimer -= 1;
          
-            if (ShootTimer <= 0 && Input.GetKey("space"))
+            if (ShootTimer <= 0 && Input.GetKey("space") && pwManager.shotgunpart1.activeSelf==false && pwManager.shotgunpart2.activeSelf==false)
             {
                 this.gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
                 ShootTimer = shootTimerMax;
                 FindObjectOfType<AudioManager>().Play("Laser");
                 Instantiate(Bullet, transform.position + new Vector3(0.571f, -0.074f), Quaternion.identity);
+            }
+            if (ShootTimer <= 0 && Input.GetKey("space")&& pwManager.shotgunpart1.activeSelf &&pwManager.shotgunpart2.activeSelf)
+            {
+                this.gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
+                ShootTimer = shootTimerMax;
+                FindObjectOfType<AudioManager>().Play("Laser");
+                Instantiate(Bullet, transform.position + new Vector3(0.571f, -0.074f), Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(0.571f, 0.3f), Quaternion.identity);
+                Instantiate(Bullet, transform.position + new Vector3(0.571f, -0.5f), Quaternion.identity);
             }
         }
         else if (canShootOverride)

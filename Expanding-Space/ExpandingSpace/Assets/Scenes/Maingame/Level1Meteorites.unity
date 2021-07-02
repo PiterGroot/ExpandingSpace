@@ -1936,7 +1936,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225031354}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ae3f7647bbdb144aa8a7eddcd84b9f5, type: 3}
   m_Name: 
@@ -10335,6 +10335,7 @@ MonoBehaviour:
   Bullet: {fileID: 5084456572454157646, guid: d6bc49bb736f82442b7282bc71e74adc, type: 3}
   ShootTimer: 80
   shootTimerMax: 0
+  pwManager: {fileID: 1722461971}
 --- !u!1 &1290584373
 GameObject:
   m_ObjectHideFlags: 0
@@ -12819,7 +12820,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627815491}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ae3f7647bbdb144aa8a7eddcd84b9f5, type: 3}
   m_Name: 
@@ -13739,7 +13740,10 @@ MonoBehaviour:
   ShotgunSprite: {fileID: 9032988205015174924, guid: 22dce00a34a121c49bb9e04ae6478ccf, type: 3}
   SpeedSprite: {fileID: 7363093017985441666, guid: 624c6021f4a72104985362cb69f115ea, type: 3}
   FirerateSprite: {fileID: 4431901682269523239, guid: cdc0e51db2276d54181f6bde335761c5, type: 3}
-  items: []
+  items:
+  - Firerate
+  - Firerate
+  - Firerate
   Heal: 0
   Shield: 0
   VerspreidShot: 0

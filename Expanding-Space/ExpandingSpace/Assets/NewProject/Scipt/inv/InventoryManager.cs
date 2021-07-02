@@ -147,7 +147,7 @@ public class InventoryManager : MonoBehaviour
                     Slot2();
                     break;
                 case "Speed":
-                    item1 = Instantiate(SpeedSprite, new Vector2(-7.92f, -4.21f), Quaternion.identity);
+                    item1 = Instantiate(SpeedSprite, new Vector2(-7.92f, -4.35f), Quaternion.identity);
                     item1.transform.parent = Itemslot1.transform;
                     slotused1 = false;
                     Slot2();
@@ -185,31 +185,31 @@ public class InventoryManager : MonoBehaviour
             {
                 case "Heal":
                     // qDebug.Log("het is HEal");
-                    item2= Instantiate(HealSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    item2= Instantiate(HealSprite, new Vector2(-6.70f, -4.21f), Quaternion.identity);
                     item2.transform.parent = Itemslot2.transform;
                     slotused2 = false;
                     Slot3();
                     break;
                 case "Shield":
-                    item2 = Instantiate(ShieldSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    item2 = Instantiate(ShieldSprite, new Vector2(-6.65f, -4.21f), Quaternion.identity);
                     item2.transform.parent = Itemslot2.transform;
                     slotused2 = false;
                     Slot3();
                     break;
                 case "Speed":
-                    item2 = Instantiate(SpeedSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    item2 = Instantiate(SpeedSprite, new Vector2(-6.60f, -4.35f), Quaternion.identity);
                     item2.transform.parent = Itemslot2.transform;
                     slotused2 = false;
                     Slot3();
                     break;
                 case "Firerate":
-                    item2 = Instantiate(FirerateSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    item2 = Instantiate(FirerateSprite, new Vector2(-6.60f, -4.21f), Quaternion.identity);
                     item2.transform.parent = Itemslot2.transform;
                     slotused2 = false;
                     Slot3();
                     break;
                 case "Shotgun":
-                    item2 = Instantiate(ShotgunSprite, new Vector2(-6.48f, -4.21f), Quaternion.identity);
+                    item2 = Instantiate(ShotgunSprite, new Vector2(-6.60f, -4.21f), Quaternion.identity);
                     item2.transform.parent = Itemslot2.transform;
                     slotused2 = false;
                     Slot3();
@@ -235,27 +235,27 @@ public class InventoryManager : MonoBehaviour
             {
                 case "Heal":
                     // qDebug.Log("het is HEal");
-                    item3= Instantiate(HealSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    item3= Instantiate(HealSprite, new Vector2(-5.35f, -4.21f), Quaternion.identity);
                     item3.transform.parent = Itemslot3.transform;
                     slotused3 = false;
                     break;
                 case "Shield":
-                    item3 = Instantiate(ShieldSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    item3 = Instantiate(ShieldSprite, new Vector2(-5.30f, -4.21f), Quaternion.identity);
                     item3.transform.parent = Itemslot3.transform;
                     slotused3 = false;
                     break;
                 case "Speed":
-                    item3 = Instantiate(SpeedSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    item3 = Instantiate(SpeedSprite, new Vector2(-5.30f, -4.35f), Quaternion.identity);
                     item3.transform.parent = Itemslot3.transform;
                     slotused3 = false;
                     break;
                 case "Firerate":
-                    item3 = Instantiate(FirerateSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    item3 = Instantiate(FirerateSprite, new Vector2(-5.22f, -4.21f), Quaternion.identity);
                     item3.transform.parent = Itemslot3.transform;
                     slotused3 = false;
                     break;
                 case "Shotgun":
-                    item3 = Instantiate(ShotgunSprite, new Vector2(-5.12f, -4.21f), Quaternion.identity);
+                    item3 = Instantiate(ShotgunSprite, new Vector2(-5.22f, -4.21f), Quaternion.identity);
                     item3.transform.parent = Itemslot3.transform;
                     slotused3 = false;
                     break;
