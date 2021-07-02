@@ -18,7 +18,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]private GameObject HubFoundation;
     [SerializeField] private TriggerDialogue Shopkeep;
     [SerializeField] private TriggerDialogue SlakDia;
-    
+    [SerializeField] bool ActiverenShop;
+    [SerializeField] bool ActiverenExit;
+   
+
+
     //Walking
     public bool canMove;
     [SerializeField] private Rigidbody2D rb;
@@ -66,30 +70,54 @@ public class PlayerMovement : MonoBehaviour
                 Standing.SetActive(true);
             }
         }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.gameObject.name == "Exit" && Input.GetKeyDown(KeyCode.F)){
 
-            if (PlayerPrefs.GetInt("Slak") != 1)
-            {
-                Debug.Log("HEy");
-                canMove = false;
-                StartCoroutine(SlakDia.ActivateDialogue());
-                PlayerPrefs.SetInt("Slak", 1);
-                Invoke("Exits", 25);
-                
-            }
-            else
-            {
-                Exits();
-            }
-        }
-        if (collision.gameObject.tag == "Shop" && Input.GetKeyDown(KeyCode.F))
+
+        if (ActiverenExit == true && (Input.GetKeyDown(KeyCode.F)))
         {
+                if (PlayerPrefs.GetInt("Slak") != 1)
+                {
+                    Debug.Log("HEy");
+                    canMove = false;
+                    StartCoroutine(SlakDia.ActivateDialogue());
+                    PlayerPrefs.SetInt("Slak", 1);
+                    Invoke("Exits", 25);
+
+                }
+                else
+                {
+                    Exits();
+                }
+
+        }
+
+        if (ActiverenShop == true && (Input.GetKeyDown(KeyCode.F)))
+        { 
             Shopkeep.StartCoroutine(Shopkeep.ActivateDialogue());
+        }
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Exit")
+        {
+            ActiverenExit = true;
+        }
+        if (collision.gameObject.tag == "Shop")
+        {
+            ActiverenShop = true; 
+        }
 
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Exit")
+        {
+            ActiverenExit = false;
+        }
+        if (collision.gameObject.tag == "Shop")
+        {
+            ActiverenShop = false;
         }
     }
 
