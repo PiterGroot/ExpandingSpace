@@ -3057,11 +3057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: Sentences.Array.data[0]
-      value: Welkom in het schip. Hier kan je tussen golven uit rusten.
+      value: Welkom in het schip. Hier kan je tussen de golven uitrusten.
       objectReference: {fileID: 0}
     - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: Sentences.Array.data[2]
-      value: De winkel is aan de rechterkant bij de bali waar winkel op staat.
+      value: De winkel is aan de rechterkant bij de balie waar winkel opstaat.
       objectReference: {fileID: 0}
     - target: {fileID: 8693188380701952150, guid: 74b518efad596ff40b8319c74362977e, type: 3}
       propertyPath: Sentences.Array.data[4]
@@ -4432,7 +4432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1428587924274593422, guid: 04e3a1ca5b1471b49910a9c66d4e193d, type: 3}
       propertyPath: m_Text
-      value: Pauze
+      value: Schip in
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04e3a1ca5b1471b49910a9c66d4e193d, type: 3}
@@ -9655,11 +9655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[2]
-      value: Eentje is om in het schip te gaan en de andere is om verder te gaan.
+      value: Eentje is om het schip in te gaan en de andere om verder te gaan.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[3]
-      value: Kom met mij mee het schip in dat laat ik je de winkel zien.
+      value: Kom met mij mee het schip in dan laat ik je de winkel zien.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: m_RootOrder
@@ -11753,7 +11753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[0]
-      value: Hallo, welkom aan het boord van de Paladin.
+      value: Hallo, welkom aan boord van de Paladin.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[1]
@@ -11761,19 +11761,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[2]
-      value: Wij zijn de ruimte ingestuurd om de slakken invasie tegen te houden.
+      value: Wij zijn de ruimte ingestuurd om de slakkeninvasie tegen te houden.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[3]
-      value: Gebruik A om omhoog te vliegen en D om omlaag te vliegen
+      value: Gebruik A om omhoog te vliegen en D om omlaag te vliegen.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[4]
-      value: en Gebruik spatiebalk om op meteors en slakken  te schieten.
+      value: Gebruik de spatiebalk om op meteorieten en slakken  te schieten.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[5]
-      value: Als je de game op pauze wil zetten druk dan op escape knop
+      value: Als je de game op pauze wil zetten druk dan op de escape knop.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[6]
@@ -12185,25 +12185,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[0]
-      value: Voordat we terug wil ik je nog wel uitleggen over power-ups en muntjes
+      value: Voordat we terug gaan geef ik een korte uitleg over de power-ups en
+        muntjes.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[1]
-      value: Misschien had je het al gemerkt, maar elke keer als je slakken neerschiet
+      value: Misschien had je het al gemerkt, elke keer als je slakken neerschiet
+        krijg je muntjes.
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[2]
-      value: krijg je muntjes. Elke soort slak heeft zijn eigen hoeveelheid muntjes.
+      value: ' Elke soort slak heeft zijn eigen hoeveelheid muntjes.'
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[3]
-      value: 'diegenen die alleen bewegen zijn 1 muntje waard, schietende zijn 5
-        en '
+      value: 'Diegene die alleen bewegen zijn 1 muntje waard, schietende zijn 5 en '
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[4]
-      value: De slakken die wit op hun hebben zijn 20 waard! Zo schiet er een paar
-        neer!
+      value: de slakken die wit op hun rug hebben zijn 20 waard! Dus schiet er een
+        paar neer!
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[5]
@@ -12215,7 +12216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350288, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: Sentences.Array.data[7]
-      value: Ik denk dat ik nu alles vertelt heb, dus laten we het schip in gaan!
+      value: Ik denk dat ik nu alles verteld heb, dus laten we het schip in gaan!
       objectReference: {fileID: 0}
     - target: {fileID: 4283262764994350289, guid: be7a29fcd3e14ca46b2169d02dfda765, type: 3}
       propertyPath: m_RootOrder
@@ -13572,7 +13573,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 8424d1f801e6b1a4fa8ff734c43e413f, type: 3}
     - target: {fileID: 255437068578553292, guid: 8c0ba2b837a011b4eb6cef1d722d08fc, type: 3}
       propertyPath: Sentences.Array.data[0]
-      value: Goed gedaan! Wil je het ship in of verder gaan?
+      value: Goed gedaan! Wil je het schip in of verder gaan?
       objectReference: {fileID: 0}
     - target: {fileID: 255437068578553293, guid: 8c0ba2b837a011b4eb6cef1d722d08fc, type: 3}
       propertyPath: m_RootOrder

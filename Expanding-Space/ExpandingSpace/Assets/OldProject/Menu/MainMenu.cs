@@ -12,18 +12,9 @@ public class MainMenu : MonoBehaviour
     public Sprite bgselected;
     public GameObject WS;
     public GameObject bgad;
+    public GameObject beginButton;
     
 
-
-
-    public void Start()
-    {
-        PlayerPrefs.GetInt("firestRun" + 1);
-        if (PlayerPrefs.GetInt("firstRun") >= 1)
-        {
-            PlayerPrefs.SetString("Controles", "ad");
-        }
-    }
     public void SceneSwitch(string SceneName)
     {
         PlayerPrefs.DeleteKey("Wallet");
@@ -71,8 +62,15 @@ public class MainMenu : MonoBehaviour
     }
     public void Exit()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("Wallet");
+        PlayerPrefs.DeleteKey("Slak");
+        PlayerPrefs.DeleteKey("Demo");
         Application.Quit();
 
+    }
+
+    public void ActivatedButton()
+    {
+        beginButton.SetActive(true);
     }
 }
