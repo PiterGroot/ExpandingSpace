@@ -15,4 +15,8 @@ public class IntroMove : MonoBehaviour
     {
         moveScript.canMove = true;
     }
+    public void cancel(){
+        moveScript.canMove = true;
+        CancelInvoke();
+    }
 }

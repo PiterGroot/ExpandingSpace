@@ -16,4 +16,8 @@ public class CanMove : MonoBehaviour
     {
         moveScript.canMove = true;
     }
+    public void Cancel(){
+        CancelInvoke();
+        moveScript.canMove = true;
+    }
 }

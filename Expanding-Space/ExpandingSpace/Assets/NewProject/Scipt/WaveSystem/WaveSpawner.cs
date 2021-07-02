@@ -152,4 +152,13 @@ public class WaveSpawner : MonoBehaviour
         FindObjectOfType<Shooting>().Timer();
         Destroy(gameObject);
     }
+    public void SkippedDialogue(){
+        if(CurrentWave == 1){
+            //intro
+            FindObjectOfType<IntroMove>().cancel();
+            CancelInvoke();
+            StopAllCoroutines();
+            StartCoroutine(CountDownDisplay(0f));
+        }
+    }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class TriggerDialogue : MonoBehaviour
@@ -47,6 +48,7 @@ public class TriggerDialogue : MonoBehaviour
     [SerializeField]private Vector3 DialogueOffset;
     [SerializeField]private GameObject MissionSelect;
     [SerializeField]private TriggerDialogue NextDialogue;
+    [SerializeField]private GameObject Hub;
 
 
     private void Start() {
@@ -188,6 +190,21 @@ public class TriggerDialogue : MonoBehaviour
         DialogueAnim.SetTrigger("DeActivate");
         isTalking = false;
         canActivate = true;
+        string sceneName = SceneManager.GetActiveScene().name;
+        if(sceneName == "Level1Meteorites" && !Hub.gameObject.activeSelf){
+            FindObjectOfType<WaveSpawner>().SkippedDialogue();
+            //intro
+        }
+        if(Hub.gameObject.activeSelf){
+            FindObjectOfType<CanMove>().Cancel();
+            //intro hub
+        }
+        if(Hub.gameObject.activeSelf && FindObjectOfType<PlayerMovement>().exitShop){
+            FindObjectOfType<PlayerMovement>().Skipped();
+            //exit hub
+        }
+        
+        
     }
     private void UpdatePosition(){
         if(ObjectToFollow == null)

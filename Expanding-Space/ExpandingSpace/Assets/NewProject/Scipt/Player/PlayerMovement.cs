@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool exitShop = false;
     //shop
     [SerializeField] Randomizer CallFunctionRandomizer1;
     [SerializeField] Randomizer CallFunctionRandomizer2;
@@ -76,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
         {
                 if (PlayerPrefs.GetInt("Slak") != 1)
                 {
+                    exitShop = true;
                     Debug.Log("HEy");
                     canMove = false;
                     StartCoroutine(SlakDia.ActivateDialogue());
@@ -89,12 +91,16 @@ public class PlayerMovement : MonoBehaviour
                 }
 
         }
-
+        
         if (ActiverenShop == true && (Input.GetKeyDown(KeyCode.F)))
         { 
             Shopkeep.StartCoroutine(Shopkeep.ActivateDialogue());
         }
 
+    }
+    public void Skipped(){
+        CancelInvoke();
+        Exits();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -123,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Exits()
     {
+        exitShop = false;
         FindObjectOfType<WaveMusic>().playMusic();
         HubFoundation.SetActive(false);
         spawner.waitForPlayerChoice = true;
